@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>My first page</title>
+    <style>
+      a {
+        color: green;
+      }
+      .redThing {
+        color: red;
+      }
+      #boris-link {
+        color: orange;
+      }
+      .fit-picture {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    Hello Sensehack!
+
+    <h2 style="color:blue">Hello Header 2</h2>
+
+    <p class="redThing" id="boris-link">
+      This is a link to my website
+      <a href="https://trakt.tv/users/sensehack" target="_blank">Trakt TV</a>
+    </p>
+    <img id="drake" class="fit-picture" src="test_spotify.jpg" />
+    <br />
+
+    <img id="Lol" class="fit-picture" src="test_spotify.jpg" />
+    <br />
+    <button onclick="doSomething()">Click Me!</button>
+    <button onclick="doAlerts()">Alert Me!</button>
+    <br />
+    <input type="text" id="myInputID" />
+    <input type="text" id="myImageID" />
+  </body>
+
+  <script>
+    function doSomething() {
+      document.getElementById("drake").src =
+        "http://marieclaire.fetcha.co.za/wp-content/uploads/2018/12/Screen-Shot-2018-12-07-at-1.24.07-PM.png";
+      var tempTextInput = document.getElementById("myInputID").value;
+      console.log("temp Text", tempTextInput);
+      document.getElementById("Lol").src = document.getElementById(
+        "myImageID"
+      ).value;
+    }
+
+    function doAlerts() {
+      var tempText = "Hello " + document.getElementById("myInputID").value;
+      // alert("hello world!");
+      alert(tempText);
+    }
+  </script>
+</html>
