@@ -11,3 +11,11 @@ html[theme="DarkMode"] {
 h1 {
   color: blue;
 }
+
+p {
+  font-size: 16px;
+}
+
+ul #games {
+  font-size: 12;
+}

@@ -1,4 +1,9 @@
 var isLightMode = true;
+var paraTextID = document.getElementById("paraText");
+var gamesID = document.getElementById("games");
+var gamesFontSize = window
+  .getComputedStyle(paraTextID, null)
+  .getPropertyValue("font-size");
 
 function darkMode() {
   console.log("Hello Sensehack!");
@@ -11,8 +16,9 @@ function darkMode() {
   }
 }
 
-function darkMode2() {
-  console.log("Yo Sense");
-
-//   document.documentElement.setAttribute("h2");
+function biggerSize() {
+  console.log("Yo Sense", gamesFontSize);
+  gamesFontSize += 2;
+  gamesID.style.fontSize = gamesFontSize;
+  //   document.documentElement.setAttribute("h2");
 }
