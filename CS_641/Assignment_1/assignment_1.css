@@ -1,6 +1,8 @@
 html {
   background: white;
   color: red;
+  max-width: 500px;
+  float: left;
 }
 
 html[theme="DarkMode"] {
@@ -16,6 +18,69 @@ p {
   font-size: 16px;
 }
 
+#paraText2 {
+  font-size: 18px;
+  color: magenta;
+}
+
+#games {
+  grid-column: inherit;
+  display: flex;
+  margin: 10px 10px 10px 10px;
+}
+
+li {
+  padding: 10px 10px 10px 10px;
+}
+
+li ::marker {
+  display: none;
+}
+
 ul #games {
   font-size: 12;
+}
+
+.gameImg {
+  height: 200px;
+  width: 150px;
+}
+
+.gameTitle {
+  display: -webkit-box;
+  color: green;
+}
+
+.gradientRect1 {
+  position: absolute;
+  height: 150px;
+  width: 50%;
+  float: left;
+  /* background-image: yellow; */
+  background-image: linear-gradient(yellow, black);
+}
+
+.gradientRect2 {
+  position: relative;
+  height: 150px;
+  width: 50%;
+  float: right;
+  /* background-image: yellow; */
+  background-image: linear-gradient(green, orange);
+}
+
+.cellStruct {
+  clear: both;
+  position: relative;
+  height: 150px;
+}
+
+.boxShadow {
+  /* position: absolute; */
+  height: 150px;
+  width: 100px;
+  padding: 15px;
+  background-color: aquamarine;
+  box-shadow: 10px 10px;
+  clear: both;
 }

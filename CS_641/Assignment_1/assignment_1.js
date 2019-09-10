@@ -1,10 +1,23 @@
-var isLightMode = true;
-var paraTextID = document.getElementById("paraText");
-var gamesID = document.getElementById("games");
-var gamesFontSize = window
-  .getComputedStyle(paraTextID, null)
-  .getPropertyValue("font-size");
+window.onload = init;
 
+// I could remove these comments but choose to not for easy debugging
+// Variables declaration
+var isLightMode = true;
+var paraTextID;
+var gamesFontSize;
+
+// Learned new thing about DOM not initialize at first.
+// Initialization
+function init() {
+  paraTextID = document.getElementById("paraText");
+
+  // converting the retrieved font-size to float for easy calculations
+  gamesFontSize = parseFloat(
+    window.getComputedStyle(paraTextID, null).getPropertyValue("font-size")
+  );
+}
+
+// Dark Mode toggle
 function darkMode() {
   console.log("Hello Sensehack!");
 
@@ -16,9 +29,9 @@ function darkMode() {
   }
 }
 
+// Making the elements bigger depending on current size.
 function biggerSize() {
-  console.log("Yo Sense", gamesFontSize);
+  console.log("Debug Sense", gamesFontSize);
   gamesFontSize += 2;
-  gamesID.style.fontSize = gamesFontSize;
-  //   document.documentElement.setAttribute("h2");
+  paraTextID.style.fontSize = gamesFontSize + "px";
 }
