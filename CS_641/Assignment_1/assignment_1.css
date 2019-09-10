@@ -1,0 +1,13 @@
+html {
+  background: white;
+  color: red;
+}
+
+html[theme="DarkMode"] {
+  background: black;
+  color: white;
+}
+
+h1 {
+  color: blue;
+}
