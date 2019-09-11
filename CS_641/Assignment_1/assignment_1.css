@@ -1,7 +1,7 @@
 html {
-  background: white;
+  background: #e9ca80;
   color: red;
-  max-width: 500px;
+  /* max-width: 500px; */
   float: left;
 }
 
@@ -42,13 +42,29 @@ ul #games {
 }
 
 .gameImg {
-  height: 200px;
-  width: 150px;
+  height: 240px;
+  width: 180px;
+  padding: 10px 10px 10px 10px;
+  background-image: linear-gradient(green, orange);
 }
+
+.gameImg:hover {
+  box-shadow: 10px 10px 22px 0px rgba(76, 189, 83, 1);
+}
+
+/* .gameImg:hover {
+  box-shadow: 10px 10px 22px 0px rgba(76, 189, 83, 1);
+} */
 
 .gameTitle {
   display: -webkit-box;
   color: green;
+}
+
+.switch {
+  font-size: 18px;
+  font-weight: bold;
+  color: grey;
 }
 
 .gradientRect1 {

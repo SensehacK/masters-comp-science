@@ -1,0 +1,32 @@
+.gradientRect1 {
+  position: absolute;
+  height: 150px;
+  width: 50%;
+  float: left;
+  /* background-image: yellow; */
+  background-image: linear-gradient(yellow, black);
+}
+
+.gradientRect2 {
+  position: relative;
+  height: 150px;
+  width: 50%;
+  float: right;
+  /* background-image: yellow; */
+  background-image: linear-gradient(green, orange);
+}
+
+.boxShadow {
+  /* position: absolute; */
+  height: 150px;
+  width: 100px;
+  padding: 15px;
+  background-color: aquamarine;
+  box-shadow: 10px 10px;
+  clear: both;
+}
+.cellStruct {
+  clear: both;
+  position: relative;
+  height: 150px;
+}

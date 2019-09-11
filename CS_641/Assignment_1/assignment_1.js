@@ -34,4 +34,9 @@ function biggerSize() {
   console.log("Debug Sense", gamesFontSize);
   gamesFontSize += 2;
   paraTextID.style.fontSize = gamesFontSize + "px";
+
+  document.getElementById("paraText").style.color = "green";
+
+  document.getElementById("currTextSize").innerHTML =
+    "Current Font size : " + gamesFontSize;
 }
