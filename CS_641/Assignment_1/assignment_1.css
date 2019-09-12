@@ -5,6 +5,43 @@ html {
   float: left;
 }
 
+/* For Desktop */
+@media only screen and (min-width: 500px) {
+  .gameImg {
+    width: 200px !important;
+    padding: 66px;
+    border: 2px solid red !important;
+  }
+  .gameImg img {
+    width: 200px !important;
+    padding: 66px;
+    border: 2px solid red !important;
+  }
+}
+
+/* .container is the class name for div tag */
+.container {
+  background-color: blue;
+  display: grid;
+  grid-template-rows: 1fr, 1fr;
+}
+.container .firstDiv {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+
+.container .secondDiv {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 400px) {
+  .gameImg {
+    width: 40%;
+  }
+}
+
 html[theme="DarkMode"] {
   background: black;
   color: white;

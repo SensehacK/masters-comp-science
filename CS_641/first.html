@@ -14,6 +14,38 @@
       .fit-picture {
         width: 80%;
       }
+
+      #drake {
+        width: 300px;
+        transform: rotate3d(10, 10, 10, 100deg);
+      }
+
+      @keyframes cool {
+        0% {
+          background-color: orange;
+        }
+        100% {
+          background-color: yellow;
+        }
+      }
+
+      .importantLink {
+        animation: 2s cool;
+        color: black;
+        transition: color 1s ease-in;
+      }
+
+      .importantLink:hover {
+        color: red;
+      }
+
+      table {
+        border: 2px red solid;
+      }
+
+      td {
+        border: 2px yellow solid;
+      }
     </style>
   </head>
   <body>
@@ -23,7 +55,12 @@
 
     <p class="redThing" id="boris-link">
       This is a link to my website
-      <a href="https://trakt.tv/users/sensehack" target="_blank">Trakt TV</a>
+      <a
+        class="importantLink"
+        href="https://trakt.tv/users/sensehack"
+        target="_blank"
+        >Trakt TV</a
+      >
     </p>
     <img id="drake" class="fit-picture" src="test_spotify.jpg" />
     <br />
@@ -35,6 +72,25 @@
     <br />
     <input type="text" id="myInputID" />
     <input type="text" id="myImageID" />
+
+    <table>
+      <tr>
+        <td>One</td>
+        <td>Two</td>
+      </tr>
+
+      <tr>
+        <td>Cat</td>
+        <td>Mouse</td>
+      </tr>
+    </table>
+
+    <!-- Input for Checkbox direct text -->
+    <br />
+    <input type="checkbox" id="areYouMale" />
+    <label for="areYouMale"> Are you male ?</label>
+
+    <!-- End Body tag -->
   </body>
 
   <script>
@@ -42,6 +98,7 @@
       document.getElementById("drake").src =
         "http://marieclaire.fetcha.co.za/wp-content/uploads/2018/12/Screen-Shot-2018-12-07-at-1.24.07-PM.png";
       var tempTextInput = document.getElementById("myInputID").value;
+      debugger;
       console.log("temp Text", tempTextInput);
       document.getElementById("Lol").src = document.getElementById(
         "myImageID"
