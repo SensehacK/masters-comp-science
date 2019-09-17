@@ -1,0 +1,55 @@
+body,
+html {
+  background-color: #e6e6e6;
+  height: 100%;
+}
+
+$colors: rgb(135, 135, 135), rgb(170, 169, 169), rgb(208, 208, 208),
+  rgb(161, 159, 159), rgb(96, 94, 94);
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+main {
+  display: grid;
+  //   grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1em;
+  cursor: pointer;
+
+  .card {
+    transition: transform 1s;
+    // transition: transform 2s;
+
+    @for $i from 1 to 6 {
+      &:nth-of-type(#{$i}) {
+        background-color: nth($colors, $i);
+      }
+    }
+
+    &:hover {
+      //   transform: translateY(-10px);
+      transform: translateX(10px);
+      //   transform-box: t;
+    }
+    img {
+      width: 100%;
+      max-height: 350px;
+      align-content: center;
+    }
+
+    .info {
+      padding: 1rem;
+    }
+  }
+}
+
+// img {
+//   width: 300px;
+//   height: 300px;
+// }

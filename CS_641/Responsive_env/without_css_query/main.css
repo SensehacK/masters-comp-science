@@ -1,0 +1,66 @@
+body,
+html {
+  background-color: #e6e6e6;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1em;
+  cursor: pointer;
+}
+
+main .card {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+main .card:nth-of-type(1) {
+  background-color: #878787;
+}
+
+main .card:nth-of-type(2) {
+  background-color: #aaa9a9;
+}
+
+main .card:nth-of-type(3) {
+  background-color: #d0d0d0;
+}
+
+main .card:nth-of-type(4) {
+  background-color: #a19f9f;
+}
+
+main .card:nth-of-type(5) {
+  background-color: #605e5e;
+}
+
+main .card:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+main .card img {
+  width: 100%;
+  max-height: 350px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main .card .info {
+  padding: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
