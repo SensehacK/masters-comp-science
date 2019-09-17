@@ -7,30 +7,36 @@ html {
 
 /* For Desktop */
 @media only screen and (min-width: 500px) {
-  .gameImg {
+  /* .gameImg {
     width: 200px !important;
-    padding: 66px;
+    padding: 10px;
     border: 2px solid red !important;
-  }
-  .gameImg img {
+  } */
+  /* .gameImg img {
     width: 200px !important;
-    padding: 66px;
+    padding: 100px;
     border: 2px solid red !important;
-  }
+  } */
 }
 
 /* For Mobile */
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
   .gameImg {
     width: 100%;
   }
-}
+} */
 
 /* .container is the class name for div tag */
 .container {
   background-color: rgb(204, 204, 216);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1em;
+}
+
+.container .card {
+  align-items: center;
+  display: inline-block;
 }
 
 .container .card img {
@@ -83,8 +89,8 @@ ul #games {
 }
 
 .gameImg {
-  height: 240px;
-  width: 180px;
+  /* height: 240px;
+  width: 180px; */
   padding: 10px 10px 10px 10px;
   background-image: linear-gradient(green, orange);
 }
