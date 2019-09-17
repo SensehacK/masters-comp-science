@@ -2,7 +2,7 @@ html {
   background: #e9ca80;
   color: red;
   /* max-width: 500px; */
-  float: left;
+  /* float: left; */
 }
 
 /* For Desktop */
@@ -19,28 +19,32 @@ html {
   }
 }
 
-/* .container is the class name for div tag */
-.container {
-  background-color: blue;
-  display: grid;
-  grid-template-rows: 1fr, 1fr;
-}
-.container .firstDiv {
-  display: grid;
-  grid-template-columns: 1fr, 1fr;
-}
-
-.container .secondDiv {
-  display: grid;
-  grid-template-columns: 1fr, 1fr;
-}
-
 /* For Mobile */
 @media only screen and (max-width: 400px) {
   .gameImg {
-    width: 40%;
+    width: 100%;
   }
 }
+
+/* .container is the class name for div tag */
+.container {
+  background-color: rgb(204, 204, 216);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.container .card img {
+  width: 100%;
+}
+/* .container .firstDiv {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+} */
+
+/* .container .secondDiv {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+} */
 
 html[theme="DarkMode"] {
   background: black;
@@ -61,8 +65,8 @@ p {
 }
 
 #games {
-  grid-column: inherit;
-  display: flex;
+  /* grid-column: inherit; */
+  /* display: flex; */
   margin: 10px 10px 10px 10px;
 }
 

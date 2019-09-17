@@ -1,6 +1,9 @@
 <html>
   <!-- ------------- Start Head Structure -------------- -->
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Assignment 2</title>
 
     <!-- Linking my external CSS and JS -->
@@ -15,78 +18,89 @@
 
     <h2>Listing my favorite Games</h2>
     <div class="container">
-      <div class="firstDiv">
-        <ul id="games">
-          <li>
-            <img
-              class="gameImg"
-              src="assets/game-overview-mcc-545x545-601e8b648cc94282a5aa1ef1898705a2.jpg"
-            />
-            <span class="gameTitle">Halo : Master Chief Collection</span>
-          </li>
-          <li>
+      <!-- <div class="firstDiv"> -->
+
+      <div class="card">
+        <div class="info">
+          <div class="gameImg2">
             <img
               class="gameImg"
               src="assets/red_dead_redemption_2_cover_art_1.jpg"
             />
-            <span class="gameTitle">Red Dead redemption 2</span>
-          </li>
-          <li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="info">
+          <div class="gameImg2">
             <img class="gameImg" src="assets/47872-counter-16.jpg" />
             <span class="gameTitle">Counter Strike 1.6</span>
-          </li>
-          <li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="info">
+          <div class="gameImg2">
             <img
               class="gameImg"
               src="assets/800px-rocket_league_coverart.jpg"
             />
             <span class="gameTitle">Rocket League</span>
-          </li>
-          <li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="info">
+          <div class="gameImg2">
             <img
               class="gameImg"
               src="assets/490105-forza-motorsport-7-deluxe-edition-windows-apps-front-cover.jpg"
             />
             <span class="gameTitle">Forza 7</span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-      <div class="secondDiv">
-        <ul id="games">
-          <li>
-            <img class="gameImg" src="assets/Transparent_test.png" />
-            <span class="gameTitle">Transparent Image</span>
-          </li>
 
-          <li>
-            <img class="gameImg" src="assets/overwatch-cover.jpg" />
-            <span class="gameTitle">Overwatch</span>
-          </li>
-          <li>
+      <div class="card">
+        <div class="info">
+          <div class="gameImg2">
             <img
               class="gameImg"
               src="assets/sunset-overdrive---button-1542679001413.jpg"
             />
             <span class="gameTitle">Sunset Overdrive</span>
-          </li>
-        </ul>
-      </div>
-
-      <!--Testing dynamic font size bigger-->
-      <p id="paraText">Press below button to make it larger!</p>
-      <p id="currTextSize">Default font size : 16px;</p>
-      <input type="button" value="Big Font" onclick="biggerSize()" />
-
-      <p>
-        For switching themes for the website. Some website provides dark theme
-        to suit the end user preference.
-      </p>
-      <div class="switch">
-        <div class="slider round">
-          <input type="checkbox" onclick="darkMode()" /> Switch User Mode
+          </div>
         </div>
       </div>
+
+      <div class="card">
+        <div class="info">
+          <div class="gameImg2">
+            <img class="gameImg" src="assets/overwatch-cover.jpg" />
+            <span class="gameTitle">Overwatch</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Container div end -->
+    </div>
+
+    <!--Testing dynamic font size bigger-->
+    <p id="paraText">Press below button to make it larger!</p>
+    <p id="currTextSize">Default font size : 16px;</p>
+    <input type="button" value="Big Font" onclick="biggerSize()" />
+
+    <p>
+      For switching themes for the website. Some website provides dark theme to
+      suit the end user preference.
+    </p>
+    <div class="switch">
+      <div class="slider round">
+        <input type="checkbox" onclick="darkMode()" /> Switch User Mode
+      </div>
     </div>
   </body>
 
