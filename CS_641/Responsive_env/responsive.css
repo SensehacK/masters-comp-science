@@ -1,0 +1,46 @@
+html {
+  background-color: whitesmoke;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 2em;
+  background-color: pink;
+}
+
+.wrapper > div {
+  border: yellowgreen 1px solid;
+  background-color: red;
+}
+
+.wrapper > div:nth-child(odd) {
+  background-color: blue;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 2em;
+  background-color: pink;
+}
+
+.wrapper2 > div {
+  border: yellowgreen 1px solid;
+  background-color: red;
+}
+
+.wrapper2 > div:nth-child(odd) {
+  background-color: grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background-color: green;
+}
