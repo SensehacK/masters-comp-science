@@ -21,21 +21,42 @@ html {
 
 .wrapper2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1em;
-  row-gap: 2em;
-  background-color: pink;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* Equivalent to repeating 3 times */
+  grid-template-columns: repeat(1, 1fr 2fr 3fr);
+  gap: 1em;
+  /* grid-auto-rows: 100px; */
+
+  /* Minmax has better alternative */
+  grid-auto-rows: minmax(50px, auto);
+  justify-items: center;
+  align-items: center;
 }
 
 .wrapper2 > div {
-  border: yellowgreen 1px solid;
+  border: rebeccapurple 1px solid;
+  padding: 1em;
   background-color: red;
 }
 
 .wrapper2 > div:nth-child(odd) {
-  background-color: grey;
+  background-color: yellow;
 }
 
+.nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-rows: 100px; */
+  gap: 1em;
+  align-items: center;
+  justify-items: center;
+}
+
+.nested > div {
+  border: moccasin 1px solid;
+  padding: 1em;
+  align-content: center;
+}
 h1,
 h2,
 h3,
