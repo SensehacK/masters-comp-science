@@ -20,11 +20,15 @@ html {
 }
 
 /* For Mobile */
-/* @media only screen and (max-width: 400px) {
-  .gameImg {
+@media only screen and (max-width: 400px) {
+  /* .gameImg {
     width: 100%;
+  } */
+
+  .info {
+    padding: 0rem !important;
   }
-} */
+}
 
 /* .container is the class name for div tag */
 .container {
@@ -37,6 +41,10 @@ html {
 .container .card {
   align-items: center;
   display: inline-block;
+}
+
+.container .card .info {
+  padding: 1rem;
 }
 
 .container .card img {
