@@ -5,10 +5,21 @@ html {
   /* float: left; */
 }
 
+body {
+  place-items: center;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #292929;
+}
+
 /* For Desktop */
 @media only screen and (min-width: 401px) {
   .gameImg {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px !important;
     /* width: 200px !important;
     padding: 10px;
     border: 2px solid red !important; */
@@ -107,7 +118,8 @@ ul #games {
 .gameImg {
   /* height: 240px;
   width: 180px; */
-  /* padding: 10px 10px 10px 10px; */
+  border-radius: 15px;
+  padding: 0px;
   background-image: linear-gradient(green, orange);
 }
 
@@ -162,4 +174,62 @@ ul #games {
   background-color: aquamarine;
   box-shadow: 10px 10px;
   clear: both;
+}
+
+/* Transform 3D Example */
+
+.Dcard {
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  background-color: rgb(223, 229, 192);
+  transition: transform 3s;
+}
+
+.card_wrap {
+  justify-items: center;
+  text-align: center;
+  /* position: relative; */
+  background: grey;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+  transform: translateZ(1200px);
+}
+
+.Dcard:hover .card_wrap {
+  /* background-color: springgreen; */
+  transform: rotateY(-90deg);
+}
+
+.card_oneside,
+.card_otherside {
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backface-visibility: hidden;
+}
+
+.card_oneside {
+  background: yellow;
+  /* transform: rotateX(0.25turn); */
+}
+
+.card_otherside {
+  background: blue;
+  transform: rotateY(0.25turn);
+}
+.card_otherside:hover {
+  transition-delay: 2s;
+  transition: transform 2s;
+  transform: translateY(100px);
+}
+.card_title {
+  background: springgreen;
+  transform: translateZ(200px);
+}
+.card_subtitle {
+  transition: transform 2s;
+  /* transform: translateY(100px); */
 }
