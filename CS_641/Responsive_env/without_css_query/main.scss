@@ -5,7 +5,7 @@ html {
 }
 
 $colors: rgb(135, 135, 135), rgb(170, 169, 169), rgb(208, 208, 208),
-  rgb(161, 159, 159), rgb(96, 94, 94);
+  rgb(161, 159, 159), rgb(210, 224, 159), rgb(197, 103, 103);
 
 body {
   margin: 0;
@@ -26,7 +26,9 @@ main {
     transition: transform 1s;
     // transition: transform 2s;
 
-    @for $i from 1 to 6 {
+    // Need to be greater than the variables in the colors (n + 1);
+    // Can't be 0 should be more than 1.
+    @for $i from 1 to 7 {
       &:nth-of-type(#{$i}) {
         background-color: nth($colors, $i);
       }

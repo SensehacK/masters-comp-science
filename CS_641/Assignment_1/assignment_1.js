@@ -5,6 +5,7 @@ window.onload = init;
 var isLightMode = true;
 var paraTextID;
 var gamesFontSize;
+var cardHover;
 
 // Learned new thing about DOM not initialize at first.
 // Initialization
@@ -15,6 +16,22 @@ function init() {
   gamesFontSize = parseFloat(
     window.getComputedStyle(paraTextID, null).getPropertyValue("font-size")
   );
+
+  // Tried to randomize the variable for going up or down depending on different mouse control.
+  // Algo - Create an event to watch hover start and end &
+  // then randomize the number ranging from -50 to 50 for moving the card up or down.
+
+  /*
+  cardHover = -200;
+  let root = document.documentElement;
+  root.style.setAttribute('--randomAxis', cardHover + "px");
+
+  cardHover = document.getElementsByClassName("card")
+  document
+    .getElementsByClassName("card")
+    .style.setAttribute("--randomAxis", "-100px");
+   = "var(--randomAxis) = -10px";
+  */
 }
 
 // Dark Mode toggle

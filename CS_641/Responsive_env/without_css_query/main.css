@@ -45,7 +45,11 @@ main .card:nth-of-type(4) {
 }
 
 main .card:nth-of-type(5) {
-  background-color: #605e5e;
+  background-color: #d2e09f;
+}
+
+main .card:nth-of-type(6) {
+  background-color: #c56767;
 }
 
 main .card:hover {

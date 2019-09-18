@@ -88,6 +88,7 @@ h6 {
 .col-6 {
   width: 50%;
 }
+.col-7 {
   width: 58.33%;
 }
 .col-8 {
@@ -139,5 +140,5 @@ h6 {
   border: black 1px solid;
   background-color: sienna;
   grid-column: 1/2;
-  grid-row: 3/4;
+  grid-row: 4/5;
 }
