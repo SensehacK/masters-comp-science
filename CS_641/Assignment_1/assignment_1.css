@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap");
+
 html {
   background: #e9ca80;
   color: red;
@@ -14,6 +18,7 @@ h2,
 h3 {
   text-align: center;
   color: #292929;
+  font-family: "Squada One", cursive;
 }
 
 /* For Desktop */
@@ -64,9 +69,14 @@ h3 {
   width: 100%;
 }
 
+:root {
+  --randomAxis: 10px;
+}
+
 .container .card:hover {
   transition: transform 1s;
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
+  transform: translateY(var(--randomAxis));
 }
 
 /* .container .firstDiv {
@@ -134,6 +144,7 @@ ul #games {
 .gameTitle {
   display: -webkit-box;
   color: green;
+  font-family: "Palanquin Dark", sans-serif;
 }
 
 .switch {
