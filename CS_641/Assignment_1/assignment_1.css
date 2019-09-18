@@ -6,12 +6,13 @@ html {
 }
 
 /* For Desktop */
-@media only screen and (min-width: 500px) {
-  /* .gameImg {
-    width: 200px !important;
+@media only screen and (min-width: 401px) {
+  .gameImg {
+    padding: 10px 10px 10px 10px;
+    /* width: 200px !important;
     padding: 10px;
-    border: 2px solid red !important;
-  } */
+    border: 2px solid red !important; */
+  }
   /* .gameImg img {
     width: 200px !important;
     padding: 100px;
@@ -21,9 +22,10 @@ html {
 
 /* For Mobile */
 @media only screen and (max-width: 400px) {
-  /* .gameImg {
-    width: 100%;
-  } */
+  .gameImg {
+    /* width: 100%; */
+    padding: 0px 0px 0px 0px;
+  }
 
   .info {
     padding: 0rem !important;
@@ -50,6 +52,12 @@ html {
 .container .card img {
   width: 100%;
 }
+
+.container .card:hover {
+  transition: transform 1s;
+  transform: translateY(-10px);
+}
+
 /* .container .firstDiv {
   display: grid;
   grid-template-columns: 1fr, 1fr;
@@ -99,7 +107,7 @@ ul #games {
 .gameImg {
   /* height: 240px;
   width: 180px; */
-  padding: 10px 10px 10px 10px;
+  /* padding: 10px 10px 10px 10px; */
   background-image: linear-gradient(green, orange);
 }
 
