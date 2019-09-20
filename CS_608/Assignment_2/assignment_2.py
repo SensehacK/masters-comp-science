@@ -1,7 +1,5 @@
 import random as rd
 
-shuffleLt = []
-
 
 class ShuffleDecks():
     "Class for defining shuffleDecks"
@@ -10,9 +8,12 @@ class ShuffleDecks():
     cardType = ['Spade', 'Diamond', 'Hearts', 'Club']
     shuffleList = []
 
+    def __init__(self):
+        "Constructor initialized // Calling function"
+        self.properShuffle()
+
     def retShuffle(self):
         "Created a function for Returning Shuffle"
-
         return (str(self.cardRanks[rd.randint(0, len(self.cardRanks)-1)]) + " of " + str(self.cardType[rd.randint(0, len(self.cardType)-1)]))
 
     def callShuffleN(self, numberT):
@@ -25,23 +26,24 @@ class ShuffleDecks():
         for x in self.cardRanks:
             for y in self.cardType:
                 self.shuffleList.append(x+" of " + y)
-
-# Calling Shuffle 10 times
-# ShuffleDecks().callShuffleN(10)
+        rd.shuffle(self.shuffleList)
 
 
 print("Hello Kautilya!")
-ShuffleDecks().properShuffle()
-shuffleLt = ShuffleDecks.shuffleList[:]
-# print(ShuffleDecks.shuffleList)
-# print(len(ShuffleDecks.shuffleList))
-# print(type(ShuffleDecks.shuffleList))
-# print(type(shuffleLt))
-rd.shuffle(shuffleLt)
-# print(shuffleLt.split())
-# print(len(shuffleLt))
-# print(shuffleLt)
+ShuffleDecks()
 
-for card in shuffleLt:
+# Printing whole list
+for card in ShuffleDecks.shuffleList:
     print(card)
-# ShuffleDecks().callShuffleN(100)
+
+
+# Different types of invocations
+# Calling Shuffle 10 times
+# ShuffleDecks().callShuffleN(10)
+
+# Calling Proper Shuffle function using class -> function
+# ShuffleDecks().properShuffle()
+
+# Copy List to a new list properly / Cloning list & then shuffling list
+# shuffleLt = ShuffleDecks.shuffleList[:]
+# rd.shuffle(shuffleLt)
