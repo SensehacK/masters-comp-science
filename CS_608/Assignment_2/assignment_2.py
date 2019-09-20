@@ -20,7 +20,28 @@ class ShuffleDecks():
         for _ in range(numberT):
             print(self.retShuffle())
 
+    def properShuffle(self):
+        "Shuffle for real"
+        for x in self.cardRanks:
+            for y in self.cardType:
+                self.shuffleList.append(x+" of " + y)
 
 # Calling Shuffle 10 times
-ShuffleDecks().callShuffleN(10)
+# ShuffleDecks().callShuffleN(10)
 
+
+print("Hello Kautilya!")
+ShuffleDecks().properShuffle()
+shuffleLt = ShuffleDecks.shuffleList[:]
+# print(ShuffleDecks.shuffleList)
+# print(len(ShuffleDecks.shuffleList))
+# print(type(ShuffleDecks.shuffleList))
+# print(type(shuffleLt))
+rd.shuffle(shuffleLt)
+# print(shuffleLt.split())
+# print(len(shuffleLt))
+# print(shuffleLt)
+
+for card in shuffleLt:
+    print(card)
+# ShuffleDecks().callShuffleN(100)
