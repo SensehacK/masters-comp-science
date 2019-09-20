@@ -10,6 +10,13 @@
       "name": "Launch Chrome against localhost",
       "url": "http://127.0.0.1:5500/CS_641/Assignment_1/assignment_1.html",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Python Sense",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
     }
   ]
 }

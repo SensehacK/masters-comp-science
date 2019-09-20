@@ -15,3 +15,5 @@ def runDie(times):
 
 print("Calling Function runDie")
 runDie(6)
+print("KS")
+print(Die().roll())
