@@ -131,6 +131,7 @@ ul #games {
   border-radius: 15px;
   padding: 0px;
   background-image: linear-gradient(green, orange);
+  text-align: center;
 }
 
 .gameImg:hover {
@@ -141,10 +142,21 @@ ul #games {
   box-shadow: 10px 10px 22px 0px rgba(76, 189, 83, 1);
 } */
 
+/* Span class has inline More on this https://stackoverflow.com/a/25477796 */
+/* Learn one more thing about inline & block elements */
 .gameTitle {
-  display: -webkit-box;
+  /* display: -webkit-box; */
+  display: block;
   color: green;
   font-family: "Palanquin Dark", sans-serif;
+}
+
+.buyG {
+  width: 50%;
+  height: 35px;
+  border-radius: 10px;
+  border: greenyellow 3px solid;
+  background-image: linear-gradient(rgb(0, 255, 16), black);
 }
 
 .switch {
@@ -190,7 +202,7 @@ ul #games {
 /* Transform 3D Example */
 
 .Dcard {
-  padding: 10px;
+  /* padding: 10px; */
   width: 100%;
   display: grid;
   background-color: rgb(223, 229, 192);
