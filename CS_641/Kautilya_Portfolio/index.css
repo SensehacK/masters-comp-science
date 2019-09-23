@@ -1,6 +1,6 @@
 head,
 body {
-  background: lightgrey;
+  background: #777777;
 }
 
 * {
@@ -21,8 +21,6 @@ main {
       grid-template-areas: "gHeader" "gIntro" "gIntro" "gAboutMe" "gWork" "gSkills" "gEdu" "gProjects" "gHobbies" "gContactUs" "gFooter";
   gap: 10px;
   margin: 0.5vh;
-  /* justify-content: center; */
-  /* place-content: center; */
   place-self: center;
   text-align: center;
 }
@@ -35,6 +33,7 @@ h2 {
   grid-column: 1/4;
   -ms-grid-row: 1;
   grid-row: 1/1;
+  padding: 10px;
 }
 
 .centerContent {
@@ -47,9 +46,6 @@ h2 {
   -ms-grid-column: 1;
   grid-area: gHeader;
   background: teal;
-  width: 80%;
-  /* place-self: center;
-    text-align: center; */
 }
 
 .intro {
@@ -64,7 +60,7 @@ h2 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: gAboutMe;
-  background: gray;
+  background: #555555;
   height: auto;
 }
 
@@ -79,21 +75,21 @@ h2 {
       grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   -ms-grid-rows: (minmax(200px, auto))[auto-fit];
       grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+      grid-template-areas: "aboutTxt aboutTxt aboutAvt" "aboutTxt aboutTxt aboutDetails";
   gap: 10px;
-      grid-template-areas: "aboutTxt aboutTxt aboutAvt" "aboutTxt aboutTxt aboutDtls";
   /* For Tablet */
   /* For Mobile */
 }
 
 .about-me .about-me-grid .aboutText {
-  max-width: 2fr;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: aboutTxt;
   place-self: center;
-  padding: 10px;
+  padding: 30px;
+  font-size: 1.5em;
 }
 
 .about-me .about-me-grid .aboutAvatar {
@@ -104,6 +100,7 @@ h2 {
   padding: 10px;
   -ms-flex-line-pack: center;
       align-content: center;
+  width: minmax(150px, 250px);
 }
 
 .about-me .about-me-grid .aboutAvatar img {
@@ -113,8 +110,14 @@ h2 {
 .about-me .about-me-grid .details {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
-  grid-area: aboutDtls;
-  place-self: center;
+  grid-area: aboutDetails;
+  padding: 10px;
+  text-align: start;
+}
+
+.about-me .about-me-grid .details span {
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
 }
 
 .about-me .about-me-grid .details .email {
@@ -131,7 +134,7 @@ h2 {
         grid-template-columns: repeat(2, auto);
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: "aboutTxt aboutTxt" "aboutAvt aboutDtls";
+        grid-template-areas: "aboutTxt aboutTxt" "aboutAvt aboutDetails";
     width: 100%;
     color: yellow;
   }
@@ -146,9 +149,12 @@ h2 {
         grid-template-columns: 1fr;
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: "aboutTxt" "aboutAvt" "aboutDtls";
+        grid-template-areas: "aboutAvt" "aboutTxt" "aboutDetails";
     color: green;
     width: 100%;
+  }
+  .about-me .about-me-grid .aboutAvatar img {
+    width: 80%;
   }
 }
 

@@ -1,6 +1,49 @@
+// CSS Variables
+
+// Color Variables
+$ksBlack : rgb(17, 17, 17);
+$ksDarkBlack : rgb(0, 0, 0);
+$ksLightBlack : rgb(36, 36, 36);
+$ksGray : rgb(85, 85, 85);
+$ksDarkGray : rgb(65, 65, 65);
+$ksLightGray : rgb(119, 119, 119);
+$ksLightWhite : rgb(175, 175, 175);
+$ksWhite : rgb(235, 235, 235);
+
+// Media Queries Pixels Size
+$widthMobile : 400px;
+$widthTablet : 600px;
+$widthNormalDesktop : 1200px;
+$widthQuadDesktop : 1440px;
+$widthUltraWideDesktop : 2000px;
+
+// Pixel Constants
+$pixelSmall : 5px;
+$pixelMedium : 10px;
+$pixelLarge : 15px;
+$pixelExtraLarge : 20px;
+
+// Font Size
+$fontExtraSmaller : 0.25em;
+$fontSmall : 0.5em;
+$fontSmallerMedium : 0.75em;
+$fontMedium : 1.0em;
+$fontBiggerMedium : 1.25em;
+$fontSmallerLarge : 1.5em;
+$fontLarge : 2.0em;
+$fontBiggerLarge : 2.5em;
+
+// Padding
+$paddingSmall : 5px;
+$paddingMedium : 10px;
+$paddingLarge : 20px;
+$paddingExtraLarge : 30px;
+
+
+
 head,
 body {
-    background: lightgrey;
+    background: $ksLightGray;
 }
 
 * {
@@ -27,10 +70,8 @@ main {
         "gContactUs"
         "gFooter";
 
-    gap: 10px;
+    gap: $pixelMedium;
     margin: 0.5vh;
-    /* justify-content: center; */
-    /* place-content: center; */
     place-self: center;
     text-align: center;
 
@@ -39,9 +80,9 @@ main {
 h2 {
     text-align: center;
     justify-items: center;
-    // color: red;
     grid-column: 1/4;
     grid-row: 1/1;
+    padding: $paddingMedium;
 }
 
 .centerContent {
@@ -51,23 +92,23 @@ h2 {
 
 
 .header {
+
     grid-area: gHeader;
     background: teal;
-    width: 80%;
-    /* place-self: center;
-    text-align: center; */
 
 }
 
 .intro {
+
     grid-area: gIntro;
     background: teal;
 
 }
 
 .about-me {
+
     grid-area: gAboutMe;
-    background: gray;
+    background: $ksGray;
     height: auto;
 
     h2 {
@@ -75,40 +116,34 @@ h2 {
     }
 
     .about-me-grid {
+        // Grid Nested Layout
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
         grid-template-rows: repeat(auto-fit, minmax(200px, auto));
-
-        gap: 10px;
-        // grid-template-columns: repeat(3, 1fr);
-        // grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
             "aboutTxt aboutTxt aboutAvt"
-            "aboutTxt aboutTxt aboutDtls";
+            "aboutTxt aboutTxt aboutDetails";
+        gap: $pixelMedium;
 
-
-
+        // Old layout
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
 
         .aboutText {
-            // width: minmax();
-            max-width: 2fr;
             grid-area: aboutTxt;
             place-self: center;
-            padding: 10px;
-            // grid-column: 1/3;
-            // grid-row: 1/4
+            padding: $paddingExtraLarge;
+            font-size: $fontSmallerLarge;
         }
 
 
         .aboutAvatar {
+
             display: block;
             grid-area: aboutAvt;
-            // place-self: center;
-
-            // height: 150px;
-            // width: 150px;
-            padding: 10px;
+            padding: $paddingMedium;
             align-content: center;
+            width: minmax(150px, 250px);
 
             img {
                 width: 100%;
@@ -118,12 +153,15 @@ h2 {
 
         .details {
 
-            grid-area: aboutDtls;
-            place-self: center;
-            // width: 50%;
-            // margin: 0 auto;
-            // height: 1vh;
+            grid-area: aboutDetails;
+            // place-self: center;
+            padding: $paddingMedium;
+            text-align: start;
 
+            span {
+                display: inline-block;
+                padding: $pixelMedium 0px $pixelMedium 0px;
+            }
 
             .email {
                 place-self: center;
@@ -132,43 +170,43 @@ h2 {
             .phone {
                 place-self: center;
             }
-
         }
 
         /* For Tablet */
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: $widthTablet) {
             grid-template-columns: repeat(2, auto);
             grid-template-rows: repeat(2, auto);
             grid-template-areas:
                 "aboutTxt aboutTxt"
-                "aboutAvt aboutDtls";
+                "aboutAvt aboutDetails";
             width: 100%;
             color: yellow;
 
             .aboutAvatar {
                 place-self: start;
             }
-
         }
 
         /* For Mobile */
-        @media only screen and (max-width: 400px) {
+        @media only screen and (max-width: $widthMobile) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, auto);
             grid-template-areas:
-                "aboutTxt"
                 "aboutAvt"
-                "aboutDtls";
+                "aboutTxt"
+                "aboutDetails";
 
             color: green;
             width: 100%;
 
-            // .aboutAvatar {
-            //     // place-self: start;
-            // }
+            .aboutAvatar {
 
+                img {
+                    width: 80%;
+                }
+
+            }
         }
-
 
     }
 
