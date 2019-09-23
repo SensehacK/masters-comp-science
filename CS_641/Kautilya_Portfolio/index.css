@@ -1,0 +1,110 @@
+head,
+body {
+  background: lightgrey;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (12)[1fr];
+      grid-template-rows: repeat(1fr, 12);
+      grid-template-areas: "gHeader" "gIntro" "gIntro" "gAboutMe" "gWork" "gSkills" "gEdu" "gProjects" "gHobbies" "gContactUs" "gFooter";
+  gap: 10px;
+  margin: 0.5vh;
+  /* justify-content: center; */
+  /* place-content: center; */
+  place-self: center;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  justify-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+}
+
+.centerContent {
+  place-self: center;
+  text-align: center;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: gHeader;
+  background: teal;
+  width: 80%;
+  /* place-self: center;
+    text-align: center; */
+}
+
+.intro {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: gIntro;
+  background: teal;
+}
+.work {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: gWork;
+  background: orangered;
+}
+
+.skills {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: gSkills;
+  background: orange;
+}
+
+.edu {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: gEdu;
+  background: brown;
+}
+
+.projects {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: gProjects;
+  background: yellow;
+}
+
+.hobbies {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: gHobbies;
+  background: wheat;
+}
+
+.contact-us {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  grid-area: gContactUs;
+  background: yellowgreen;
+}
+
+.footer {
+  -ms-grid-row: 11;
+  -ms-grid-column: 1;
+  grid-area: gFooter;
+  background: rebeccapurple;
+}
+/*# sourceMappingURL=index.css.map */
