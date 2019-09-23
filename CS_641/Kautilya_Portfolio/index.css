@@ -89,7 +89,7 @@ h2 {
   grid-area: aboutTxt;
   place-self: center;
   padding: 30px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .about-me .about-me-grid .aboutAvatar {
@@ -105,14 +105,18 @@ h2 {
 
 .about-me .about-me-grid .aboutAvatar img {
   width: 100%;
+  border-radius: 40px;
 }
 
 .about-me .about-me-grid .details {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: aboutDetails;
-  padding: 10px;
-  text-align: start;
+  display: -ms-grid;
+  display: grid;
+  padding: 10px 0px 10px 0px;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .about-me .about-me-grid .details span {
@@ -141,6 +145,12 @@ h2 {
   .about-me .about-me-grid .aboutAvatar {
     place-self: start;
   }
+  .about-me .about-me-grid .details .email {
+    place-self: start;
+  }
+  .about-me .about-me-grid .details .phone {
+    place-self: start;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -155,6 +165,12 @@ h2 {
   }
   .about-me .about-me-grid .aboutAvatar img {
     width: 80%;
+  }
+  .about-me .about-me-grid .details .email {
+    place-self: center;
+  }
+  .about-me .about-me-grid .details .phone {
+    place-self: center;
   }
 }
 

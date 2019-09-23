@@ -24,14 +24,14 @@ $pixelLarge : 15px;
 $pixelExtraLarge : 20px;
 
 // Font Size
-$fontExtraSmaller : 0.25em;
-$fontSmall : 0.5em;
-$fontSmallerMedium : 0.75em;
-$fontMedium : 1.0em;
-$fontBiggerMedium : 1.25em;
-$fontSmallerLarge : 1.5em;
-$fontLarge : 2.0em;
-$fontBiggerLarge : 2.5em;
+$fontExtraSmaller : 0.25rem;
+$fontSmall : 0.5rem;
+$fontSmallerMedium : 0.75rem;
+$fontMedium : 1.0rem;
+$fontBiggerMedium : 1.25rem;
+$fontSmallerLarge : 1.5rem;
+$fontLarge : 2.0rem;
+$fontBiggerLarge : 2.5rem;
 
 // Padding
 $paddingSmall : 5px;
@@ -147,6 +147,7 @@ h2 {
 
             img {
                 width: 100%;
+                border-radius: $pixelExtraLarge * 2;
             }
 
         }
@@ -154,9 +155,11 @@ h2 {
         .details {
 
             grid-area: aboutDetails;
-            // place-self: center;
-            padding: $paddingMedium;
-            text-align: start;
+            display: grid;
+            padding: $paddingMedium 0px $paddingMedium 0px;
+            // text-align: start;
+            align-content: center;
+
 
             span {
                 display: inline-block;
@@ -185,6 +188,19 @@ h2 {
             .aboutAvatar {
                 place-self: start;
             }
+
+            .details {
+
+                .email {
+                    place-self: start;
+                }
+
+                .phone {
+                    place-self: start;
+                }
+
+            }
+
         }
 
         /* For Mobile */
@@ -203,6 +219,18 @@ h2 {
 
                 img {
                     width: 80%;
+                }
+
+            }
+
+            .details {
+
+                .email {
+                    place-self: center;
+                }
+
+                .phone {
+                    place-self: center;
                 }
 
             }
