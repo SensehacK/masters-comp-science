@@ -1,0 +1,111 @@
+head,
+body {
+    background: lightgrey;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, 12);
+    grid-template-areas:
+        "gHeader"
+        "gIntro"
+        "gIntro"
+        "gAboutMe"
+        "gWork"
+        "gSkills"
+        "gEdu"
+        "gProjects"
+        "gHobbies"
+        "gContactUs"
+        "gFooter";
+
+    gap: 10px;
+    margin: 0.5vh;
+    /* justify-content: center; */
+    /* place-content: center; */
+    place-self: center;
+    text-align: center;
+
+}
+
+h2 {
+    text-align: center;
+    justify-items: center;
+    // color: red;
+    grid-column: 1/4;
+    grid-row: 1/1;
+}
+
+.centerContent {
+    place-self: center;
+    text-align: center;
+}
+
+
+.header {
+    grid-area: gHeader;
+    background: teal;
+    width: 80%;
+    /* place-self: center;
+    text-align: center; */
+
+}
+
+.intro {
+    grid-area: gIntro;
+    background: teal;
+
+}
+
+.about-me {
+}
+
+.work {
+    grid-area: gWork;
+    background: orangered;
+
+}
+
+.skills {
+    grid-area: gSkills;
+    background: orange;
+
+}
+
+.edu {
+    grid-area: gEdu;
+    background: brown;
+
+}
+
+.projects {
+    grid-area: gProjects;
+    background: yellow;
+
+}
+
+.hobbies {
+    grid-area: gHobbies;
+    background: wheat;
+
+}
+
+.contact-us {
+    grid-area: gContactUs;
+    background: yellowgreen;
+
+}
+
+.footer {
+    grid-area: gFooter;
+    background: rebeccapurple;
+
+}
