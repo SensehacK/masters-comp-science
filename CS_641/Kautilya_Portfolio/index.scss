@@ -66,6 +66,112 @@ h2 {
 }
 
 .about-me {
+    grid-area: gAboutMe;
+    background: gray;
+    height: auto;
+
+    h2 {
+        color: red;
+    }
+
+    .about-me-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+
+        gap: 10px;
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "aboutTxt aboutTxt aboutAvt"
+            "aboutTxt aboutTxt aboutDtls";
+
+
+
+
+        .aboutText {
+            // width: minmax();
+            max-width: 2fr;
+            grid-area: aboutTxt;
+            place-self: center;
+            padding: 10px;
+            // grid-column: 1/3;
+            // grid-row: 1/4
+        }
+
+
+        .aboutAvatar {
+            display: block;
+            grid-area: aboutAvt;
+            // place-self: center;
+
+            // height: 150px;
+            // width: 150px;
+            padding: 10px;
+            align-content: center;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        .details {
+
+            grid-area: aboutDtls;
+            place-self: center;
+            // width: 50%;
+            // margin: 0 auto;
+            // height: 1vh;
+
+
+            .email {
+                place-self: center;
+            }
+
+            .phone {
+                place-self: center;
+            }
+
+        }
+
+        /* For Tablet */
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+                "aboutTxt aboutTxt"
+                "aboutAvt aboutDtls";
+            width: 100%;
+            color: yellow;
+
+            .aboutAvatar {
+                place-self: start;
+            }
+
+        }
+
+        /* For Mobile */
+        @media only screen and (max-width: 400px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:
+                "aboutTxt"
+                "aboutAvt"
+                "aboutDtls";
+
+            color: green;
+            width: 100%;
+
+            // .aboutAvatar {
+            //     // place-self: start;
+            // }
+
+        }
+
+
+    }
+
 }
 
 .work {

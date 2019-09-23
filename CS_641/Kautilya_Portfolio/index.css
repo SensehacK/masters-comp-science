@@ -59,6 +59,99 @@ h2 {
   grid-area: gIntro;
   background: teal;
 }
+
+.about-me {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: gAboutMe;
+  background: gray;
+  height: auto;
+}
+
+.about-me h2 {
+  color: red;
+}
+
+.about-me .about-me-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  -ms-grid-rows: (minmax(200px, auto))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+  gap: 10px;
+      grid-template-areas: "aboutTxt aboutTxt aboutAvt" "aboutTxt aboutTxt aboutDtls";
+  /* For Tablet */
+  /* For Mobile */
+}
+
+.about-me .about-me-grid .aboutText {
+  max-width: 2fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: aboutTxt;
+  place-self: center;
+  padding: 10px;
+}
+
+.about-me .about-me-grid .aboutAvatar {
+  display: block;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: aboutAvt;
+  padding: 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.about-me .about-me-grid .aboutAvatar img {
+  width: 100%;
+}
+
+.about-me .about-me-grid .details {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: aboutDtls;
+  place-self: center;
+}
+
+.about-me .about-me-grid .details .email {
+  place-self: center;
+}
+
+.about-me .about-me-grid .details .phone {
+  place-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me .about-me-grid {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "aboutTxt aboutTxt" "aboutAvt aboutDtls";
+    width: 100%;
+    color: yellow;
+  }
+  .about-me .about-me-grid .aboutAvatar {
+    place-self: start;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about-me .about-me-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "aboutTxt" "aboutAvt" "aboutDtls";
+    color: green;
+    width: 100%;
+  }
+}
+
 .work {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
