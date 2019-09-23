@@ -1,0 +1,46 @@
+head,
+body {
+    background: burlywood;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    /* No need for template columns and rows, as areas are suffice to visualize */
+
+    /* grid-template-areas:
+        "box1 box2"
+        "box3 box3"; */
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+img {
+    width: 100%;
+}
+
+.box1 {
+    /* grid-area: box1; */
+    background: teal;
+    align-self: center;
+}
+
+.box2 {
+    /* grid-area: box2; */
+    background: red;
+    align-self: center;
+}
+
+.box3 {
+    /* grid-area: box3; */
+    background: greenyellow;
+    align-self: center;
+}
