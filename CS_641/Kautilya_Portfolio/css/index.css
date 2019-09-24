@@ -1,6 +1,6 @@
 head,
 body {
-  background: #777777;
+  background: #81A035;
 }
 
 * {
@@ -98,7 +98,7 @@ h2 {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: gIntro;
-  background: teal;
+  background: #3F8E2F;
 }
 
 #intro .introH1 {
@@ -134,7 +134,7 @@ h2 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: gAboutMe;
-  background: #555555;
+  background: #A43641;
   height: auto;
 }
 
@@ -252,7 +252,7 @@ h2 {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: gWork;
-  background: orangered;
+  background: #832B64;
 }
 
 #work .workGrid {
@@ -278,14 +278,14 @@ h2 {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: gSkills;
-  background: orange;
+  background: #D9F09F;
 }
 
 #edu {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: gEdu;
-  background: brown;
+  background: #3F8E2F;
 }
 
 #edu .eduGrid {
@@ -310,7 +310,7 @@ h2 {
 }
 
 #edu .eduGrid .eduDescription {
-  padding: 30px;
+  padding: 15px;
 }
 
 #edu .eduGrid3 {
@@ -318,24 +318,24 @@ h2 {
 }
 
 #edu .eduGrid3 .eduDescription {
-  padding: 0% 40%;
+  padding: 0% 10%;
 }
 
 #projects {
   grid-area: gProjects;
-  background: yellow;
+  background: #F6A3AB;
   display: none;
 }
 
 #hobbies {
   grid-area: gHobbies;
-  background: wheat;
+  background: #C583AE;
   display: none;
 }
 
 #contact-us {
   grid-area: gContactUs;
-  background: yellowgreen;
+  background: #0C4700;
   display: none;
 }
 
@@ -343,6 +343,6 @@ h2 {
   -ms-grid-row: 8;
   -ms-grid-column: 1;
   grid-area: gFooter;
-  background: rebeccapurple;
+  background: #520008;
 }
 /*# sourceMappingURL=index.css.map */
