@@ -1,6 +1,6 @@
 // CSS Variables
 
-// Color Variables
+// Custom Color Variables
 $ksBlack : rgb(17, 17, 17);
 $ksDarkBlack : rgb(0, 0, 0);
 $ksLightBlack : rgb(36, 36, 36);
@@ -10,12 +10,53 @@ $ksLightGray : rgb(119, 119, 119);
 $ksLightWhite : rgb(175, 175, 175);
 $ksWhite : rgb(235, 235, 235);
 
+// Primary Colors
+
+$primaryColor1 : rgb(25, 106, 25);
+$primaryColor2 : rgb(32, 0, 128);
+$primaryColor3 : rgb(126, 128, 0);
+$primaryColor4 : rgb(128, 55, 0);
+$primaryColor5 : rgb(128, 0, 23);
+
 // Media Queries Pixels Size
 $widthMobile : 400px;
 $widthTablet : 600px;
 $widthNormalDesktop : 1200px;
 $widthQuadDesktop : 1440px;
 $widthUltraWideDesktop : 2000px;
+
+// Responsive Grid Sizes
+$responsiveSmallColumn : 15rem;
+$responsiveMediumColumn : 18rem;
+$responsiveLargeColumn : 22rem;
+
+
+
+// Custom Sensehack Variables
+$isSectionHidden : none;
+
+
+// Constant Variables Mobile & Desktop
+$responsiveMQImgWidth : 50%;
+$responsiveMQColWidth : 50%;
+$responsiveMQHeadingWidth : 40%;
+$responsiveMQTextWidth : 40%;
+$responsiveMQPaddingWidthY : 0%;
+$responsiveMQPaddingWidthX : 40%;
+$responsiveMQMarginWidth : 40%;
+$responsiveMQGapWidth : 40%;
+
+
+
+
+
+
+// Responsive Percents
+$percentNone: 0%;
+$percentSmall : 5%;
+$percentMedium : 10%;
+$percentLarge : 15%;
+$percentExtraLarge : 20%;
 
 // Pixel Constants
 $pixelNone : 0px;
@@ -64,11 +105,12 @@ main {
         "gIntro"
         "gAboutMe"
         "gWork"
-        "gSkills"
         "gEdu"
-        "gProjects"
-        "gHobbies"
-        "gContactUs"
+        "gSkills"
+        // Uncomment these areas when ready for production.
+        // "gProjects"
+        // "gHobbies"
+        // "gContactUs"
         "gFooter";
 
     gap: $pixelMedium;
@@ -110,6 +152,21 @@ h2 {
 }
 
 
+/* Global For Mobile */
+@media only screen and (max-width: $widthMobile) {
+    // $responsiveMQPaddingWidthY: 5% !global;
+    // $responsiveMQPaddingWidthX: 10% !global;
+
+    // $isSectionHidden: inline-block !global;
+}
+
+/* Global For Tablet */
+@media only screen and (max-width: $widthTablet) {
+    // $responsiveMQPaddingWidthY: 10% !global;
+    // $responsiveMQPaddingWidthX: 20% !global;
+}
+
+
 .header {
 
     grid-area: gHeader;
@@ -141,7 +198,7 @@ h2 {
 
 }
 
-.intro {
+#intro {
 
     grid-area: gIntro;
     background: teal;
@@ -182,7 +239,7 @@ h2 {
 
 }
 
-.about-me {
+#about-me {
 
     grid-area: gAboutMe;
     background: $ksGray;
@@ -317,12 +374,13 @@ h2 {
 
 }
 
-.work {
+#work {
     grid-area: gWork;
     background: orangered;
 
     .workGrid {
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax($responsiveMediumColumn, 1fr));
 
         .workHeader {
             padding: $pixelNone $pixelExtraLarge;
@@ -340,18 +398,24 @@ h2 {
 
 }
 
-.skills {
+#skills {
     grid-area: gSkills;
     background: orange;
 
 }
 
-.edu {
+#edu {
     grid-area: gEdu;
     background: brown;
 
     .eduGrid {
         display: grid;
+        place-content: center;
+        grid-template-columns: repeat(auto-fit, minmax($responsiveMediumColumn, 5fr));
+        // grid-template-rows: repeat(auto-fit, auto);
+        gap: $pixelMedium;
+
+
 
         h2 {
             padding-bottom: $pixelLarge;
@@ -368,29 +432,48 @@ h2 {
         .eduDescription {
             padding: $pixelLarge * 2;
         }
+
+
+
+
+    }
+
+    .eduGrid3 {
+        padding: $percentNone $percentLarge;
+
+        .eduDescription {
+            padding: $responsiveMQPaddingWidthY $responsiveMQPaddingWidthX;
+        }
+
+
+
     }
 
 }
 
-.projects {
+#projects {
     grid-area: gProjects;
     background: yellow;
+    display: $isSectionHidden;
 
 }
 
-.hobbies {
+#hobbies {
     grid-area: gHobbies;
     background: wheat;
+    display: $isSectionHidden;
+
 
 }
 
-.contact-us {
+#contact-us {
     grid-area: gContactUs;
     background: yellowgreen;
+    display: $isSectionHidden;
 
 }
 
-.footer {
+#footer {
     grid-area: gFooter;
     background: rebeccapurple;
 

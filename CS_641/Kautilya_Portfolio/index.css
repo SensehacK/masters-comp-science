@@ -18,7 +18,7 @@ main {
       grid-template-columns: 1fr;
   -ms-grid-rows: (12)[1fr];
       grid-template-rows: repeat(1fr, 12);
-      grid-template-areas: "gHeader" "gIntro" "gIntro" "gAboutMe" "gWork" "gSkills" "gEdu" "gProjects" "gHobbies" "gContactUs" "gFooter";
+      grid-template-areas: "gHeader" "gIntro" "gIntro" "gAboutMe" "gWork" "gEdu" "gSkills" "gFooter";
   gap: 10px;
   margin: 0.5vh;
   place-self: center;
@@ -66,6 +66,8 @@ h2 {
   }
 }
 
+/* Global For Mobile */
+/* Global For Tablet */
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -91,7 +93,7 @@ h2 {
   color: #414141;
 }
 
-.intro {
+#intro {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -99,36 +101,36 @@ h2 {
   background: teal;
 }
 
-.intro .introH1 {
+#intro .introH1 {
   padding: 10px;
   font-size: 2rem;
 }
 
-.intro .introText {
+#intro .introText {
   padding: 10px;
   font-size: 1.25rem;
 }
 
-.intro .social .ulSocial {
+#intro .social .ulSocial {
   margin: 15px;
   padding: 0px;
 }
 
-.intro .social .ulSocial li {
+#intro .social .ulSocial li {
   display: inline-block;
   margin: 0px;
   padding: 5px;
 }
 
-.intro .social .ulSocial li a {
+#intro .social .ulSocial li a {
   color: #ebebeb;
 }
 
-.intro .social .ulSocial li a:hover {
+#intro .social .ulSocial li a:hover {
   color: #414141;
 }
 
-.about-me {
+#about-me {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: gAboutMe;
@@ -136,11 +138,11 @@ h2 {
   height: auto;
 }
 
-.about-me h2 {
+#about-me h2 {
   color: red;
 }
 
-.about-me .about-me-grid {
+#about-me .about-me-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(200px, auto))[auto-fit];
@@ -153,7 +155,7 @@ h2 {
   /* For Mobile */
 }
 
-.about-me .about-me-grid .aboutText {
+#about-me .about-me-grid .aboutText {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -164,7 +166,7 @@ h2 {
   font-size: 1.25rem;
 }
 
-.about-me .about-me-grid .aboutAvatar {
+#about-me .about-me-grid .aboutAvatar {
   display: block;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -175,12 +177,12 @@ h2 {
   width: minmax(150px, 250px);
 }
 
-.about-me .about-me-grid .aboutAvatar img {
+#about-me .about-me-grid .aboutAvatar img {
   width: 100%;
   border-radius: 40px;
 }
 
-.about-me .about-me-grid .details {
+#about-me .about-me-grid .details {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: aboutDetails;
@@ -191,21 +193,21 @@ h2 {
       align-content: center;
 }
 
-.about-me .about-me-grid .details span {
+#about-me .about-me-grid .details span {
   display: inline-block;
   padding: 10px 0px 10px 0px;
 }
 
-.about-me .about-me-grid .details .email {
+#about-me .about-me-grid .details .email {
   place-self: center;
 }
 
-.about-me .about-me-grid .details .phone {
+#about-me .about-me-grid .details .phone {
   place-self: center;
 }
 
 @media only screen and (max-width: 600px) {
-  .about-me .about-me-grid {
+  #about-me .about-me-grid {
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
     -ms-grid-rows: (auto)[2];
@@ -214,19 +216,19 @@ h2 {
     width: 100%;
     color: yellow;
   }
-  .about-me .about-me-grid .aboutAvatar {
+  #about-me .about-me-grid .aboutAvatar {
     place-self: start;
   }
-  .about-me .about-me-grid .details .email {
+  #about-me .about-me-grid .details .email {
     place-self: start;
   }
-  .about-me .about-me-grid .details .phone {
+  #about-me .about-me-grid .details .phone {
     place-self: start;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .about-me .about-me-grid {
+  #about-me .about-me-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: (auto)[3];
@@ -235,99 +237,110 @@ h2 {
     color: greenyellow;
     width: 100%;
   }
-  .about-me .about-me-grid .aboutAvatar img {
+  #about-me .about-me-grid .aboutAvatar img {
     width: 80%;
   }
-  .about-me .about-me-grid .details .email {
+  #about-me .about-me-grid .details .email {
     place-self: center;
   }
-  .about-me .about-me-grid .details .phone {
+  #about-me .about-me-grid .details .phone {
     place-self: center;
   }
 }
 
-.work {
+#work {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: gWork;
   background: orangered;
 }
 
-.work .workGrid {
+#work .workGrid {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
-.work .workGrid .workHeader {
+#work .workGrid .workHeader {
   padding: 0px 20px;
 }
 
-.work .workGrid .workPosition {
+#work .workGrid .workPosition {
   padding: 5px 20px;
 }
 
-.work .workGrid .workDescription {
+#work .workGrid .workDescription {
   padding: 30px;
 }
 
-.skills {
-  -ms-grid-row: 6;
+#skills {
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: gSkills;
   background: orange;
 }
 
-.edu {
-  -ms-grid-row: 7;
+#edu {
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: gEdu;
   background: brown;
 }
 
-.edu .eduGrid {
+#edu .eduGrid {
   display: -ms-grid;
   display: grid;
+  place-content: center;
+  -ms-grid-columns: (minmax(18rem, 5fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 5fr));
+  gap: 10px;
 }
 
-.edu .eduGrid h2 {
+#edu .eduGrid h2 {
   padding-bottom: 15px;
 }
 
-.edu .eduGrid .eduHeader {
+#edu .eduGrid .eduHeader {
   padding: 0px 20px;
 }
 
-.edu .eduGrid .eduQualification {
+#edu .eduGrid .eduQualification {
   padding: 5px 20px;
 }
 
-.edu .eduGrid .eduDescription {
+#edu .eduGrid .eduDescription {
   padding: 30px;
 }
 
-.projects {
-  -ms-grid-row: 8;
-  -ms-grid-column: 1;
+#edu .eduGrid3 {
+  padding: 0% 15%;
+}
+
+#edu .eduGrid3 .eduDescription {
+  padding: 0% 40%;
+}
+
+#projects {
   grid-area: gProjects;
   background: yellow;
+  display: none;
 }
 
-.hobbies {
-  -ms-grid-row: 9;
-  -ms-grid-column: 1;
+#hobbies {
   grid-area: gHobbies;
   background: wheat;
+  display: none;
 }
 
-.contact-us {
-  -ms-grid-row: 10;
-  -ms-grid-column: 1;
+#contact-us {
   grid-area: gContactUs;
   background: yellowgreen;
+  display: none;
 }
 
-.footer {
-  -ms-grid-row: 11;
+#footer {
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   grid-area: gFooter;
   background: rebeccapurple;
