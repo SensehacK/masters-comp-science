@@ -41,11 +41,54 @@ h2 {
   text-align: center;
 }
 
+#hideMe {
+  -webkit-animation: hideAnimation 0s ease-in 3s forwards;
+          animation: hideAnimation 0s ease-in 3s forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hideAnimation {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+}
+
+@keyframes hideAnimation {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+}
+
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: gHeader;
   background: teal;
+  padding: 0px;
+  width: 100%;
+  z-index: 150;
+}
+
+.header ul li {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+}
+
+.header ul li a {
+  color: #ebebeb;
+}
+
+.header ul li a:hover {
+  color: #414141;
 }
 
 .intro {
@@ -54,6 +97,25 @@ h2 {
   -ms-grid-column: 1;
   grid-area: gIntro;
   background: teal;
+}
+
+.intro .social {
+  margin: 15px;
+  padding: 0px;
+}
+
+.intro .social li {
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+}
+
+.intro .social li a {
+  color: #ebebeb;
+}
+
+.intro .social li a:hover {
+  color: #414141;
 }
 
 .about-me {
@@ -160,7 +222,7 @@ h2 {
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
         grid-template-areas: "aboutAvt" "aboutTxt" "aboutDetails";
-    color: green;
+    color: greenyellow;
     width: 100%;
   }
   .about-me .about-me-grid .aboutAvatar img {

@@ -18,6 +18,7 @@ $widthQuadDesktop : 1440px;
 $widthUltraWideDesktop : 2000px;
 
 // Pixel Constants
+$pixelNone : 0px;
 $pixelSmall : 5px;
 $pixelMedium : 10px;
 $pixelLarge : 15px;
@@ -90,11 +91,53 @@ h2 {
     text-align: center;
 }
 
+#hideMe {
+
+    animation: hideAnimation 0s ease-in 3s forwards;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes hideAnimation {
+    to {
+
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        opacity: 0.5;
+
+    }
+}
+
 
 .header {
 
     grid-area: gHeader;
     background: teal;
+
+    // margin: 0 $pixelLarge 0 $pixelLarge;
+    padding: $pixelNone;
+    // position: fixed;
+    width: 100%;
+    z-index: 150;
+
+    ul {
+
+        li {
+            position: relative;
+            display: inline-block;
+            margin: $pixelNone;
+            padding: $pixelSmall;
+
+            a {
+                color: $ksWhite;
+
+                &:hover {
+                    color: $ksDarkGray;
+                }
+            }
+        }
+    }
 
 }
 
@@ -102,6 +145,25 @@ h2 {
 
     grid-area: gIntro;
     background: teal;
+
+    .social {
+        margin: $pixelLarge;
+        padding: $pixelNone;
+
+        li {
+            display: inline-block;
+            margin: $pixelNone;
+            padding: $pixelSmall;
+
+            a {
+                color: $ksWhite;
+
+                &:hover {
+                    color: $ksDarkGray;
+                }
+            }
+        }
+    }
 
 }
 
@@ -212,7 +274,7 @@ h2 {
                 "aboutTxt"
                 "aboutDetails";
 
-            color: green;
+            color: greenyellow;
             width: 100%;
 
             .aboutAvatar {
