@@ -70,7 +70,7 @@ h2 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: gHeader;
-  background: teal;
+  background: #777777;
   padding: 0px;
   width: 100%;
   z-index: 150;
@@ -99,22 +99,32 @@ h2 {
   background: teal;
 }
 
-.intro .social {
+.intro .introH1 {
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.intro .introText {
+  padding: 10px;
+  font-size: 1.25rem;
+}
+
+.intro .social .ulSocial {
   margin: 15px;
   padding: 0px;
 }
 
-.intro .social li {
+.intro .social .ulSocial li {
   display: inline-block;
   margin: 0px;
   padding: 5px;
 }
 
-.intro .social li a {
+.intro .social .ulSocial li a {
   color: #ebebeb;
 }
 
-.intro .social li a:hover {
+.intro .social .ulSocial li a:hover {
   color: #414141;
 }
 
@@ -151,7 +161,7 @@ h2 {
   grid-area: aboutTxt;
   place-self: center;
   padding: 30px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .about-me .about-me-grid .aboutAvatar {
@@ -243,6 +253,23 @@ h2 {
   background: orangered;
 }
 
+.work .workGrid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.work .workGrid .workHeader {
+  padding: 0px 20px;
+}
+
+.work .workGrid .workPosition {
+  padding: 5px 20px;
+}
+
+.work .workGrid .workDescription {
+  padding: 30px;
+}
+
 .skills {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
@@ -255,6 +282,27 @@ h2 {
   -ms-grid-column: 1;
   grid-area: gEdu;
   background: brown;
+}
+
+.edu .eduGrid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.edu .eduGrid h2 {
+  padding-bottom: 15px;
+}
+
+.edu .eduGrid .eduHeader {
+  padding: 0px 20px;
+}
+
+.edu .eduGrid .eduQualification {
+  padding: 5px 20px;
+}
+
+.edu .eduGrid .eduDescription {
+  padding: 30px;
 }
 
 .projects {

@@ -113,7 +113,7 @@ h2 {
 .header {
 
     grid-area: gHeader;
-    background: teal;
+    background: $ksLightGray;
 
     // margin: 0 $pixelLarge 0 $pixelLarge;
     padding: $pixelNone;
@@ -146,20 +146,35 @@ h2 {
     grid-area: gIntro;
     background: teal;
 
+    .introH1 {
+        padding: $pixelMedium;
+        font-size: $fontLarge;
+    }
+
+    .introText {
+        padding: $pixelMedium;
+        font-size: $fontBiggerMedium;
+    }
+
     .social {
-        margin: $pixelLarge;
-        padding: $pixelNone;
 
-        li {
-            display: inline-block;
-            margin: $pixelNone;
-            padding: $pixelSmall;
+        .ulSocial {
 
-            a {
-                color: $ksWhite;
 
-                &:hover {
-                    color: $ksDarkGray;
+            margin: $pixelLarge;
+            padding: $pixelNone;
+
+            li {
+                display: inline-block;
+                margin: $pixelNone;
+                padding: $pixelSmall;
+
+                a {
+                    color: $ksWhite;
+
+                    &:hover {
+                        color: $ksDarkGray;
+                    }
                 }
             }
         }
@@ -195,7 +210,7 @@ h2 {
             grid-area: aboutTxt;
             place-self: center;
             padding: $paddingExtraLarge;
-            font-size: $fontSmallerLarge;
+            font-size: $fontBiggerMedium;
         }
 
 
@@ -306,6 +321,23 @@ h2 {
     grid-area: gWork;
     background: orangered;
 
+    .workGrid {
+        display: grid;
+
+        .workHeader {
+            padding: $pixelNone $pixelExtraLarge;
+        }
+
+        .workPosition {
+            padding: $pixelSmall $pixelExtraLarge;
+        }
+
+        .workDescription {
+            padding: $pixelLarge * 2;
+        }
+
+    }
+
 }
 
 .skills {
@@ -317,6 +349,26 @@ h2 {
 .edu {
     grid-area: gEdu;
     background: brown;
+
+    .eduGrid {
+        display: grid;
+
+        h2 {
+            padding-bottom: $pixelLarge;
+        }
+
+        .eduHeader {
+            padding: $pixelNone $pixelExtraLarge;
+        }
+
+        .eduQualification {
+            padding: $pixelSmall $pixelExtraLarge;
+        }
+
+        .eduDescription {
+            padding: $pixelLarge * 2;
+        }
+    }
 
 }
 
