@@ -1,6 +1,6 @@
 head,
 body {
-  background: #81A035;
+  background: #81a035;
 }
 
 * {
@@ -99,7 +99,7 @@ h2 {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: gIntro;
-  background: #3F8E2F;
+  background: #3f8e2f;
 }
 
 #intro .introH1 {
@@ -130,7 +130,7 @@ h2 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: gAboutMe;
-  background: #A43641;
+  background: #a43641;
   height: auto;
 }
 
@@ -161,6 +161,15 @@ h2 {
   place-self: center;
   padding: 30px;
   font-size: 1.25rem;
+}
+
+#about-me .about-me-grid .aboutText .download {
+  width: 58.33333%;
+}
+
+#about-me .about-me-grid .aboutText .download .button {
+  margin-top: 6px;
+  background: #444;
 }
 
 #about-me .about-me-grid .aboutAvatar {
@@ -249,7 +258,7 @@ h2 {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: gWork;
-  background: #832B64;
+  background: #832b64;
 }
 
 #work .workGrid {
@@ -275,7 +284,7 @@ h2 {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: gEdu;
-  background: #3F8E2F;
+  background: #3f8e2f;
 }
 
 #edu .eduGrid {
@@ -315,7 +324,7 @@ h2 {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: gSkills;
-  background: #D9F09F;
+  background: #d9f09f;
 }
 
 #skills .skillsGrid {
@@ -367,6 +376,22 @@ h2 {
           animation: tWriter 2s ease;
 }
 
+#skills .skillsGrid .skillsSoft .photography {
+  width: 80%;
+}
+
+#skills .skillsGrid .skillsSoft .gaming {
+  width: 70%;
+}
+
+#skills .skillsGrid .skillsSoft .automation {
+  width: 50%;
+}
+
+#skills .skillsGrid .skillsSoft .design {
+  width: 50%;
+}
+
 @-webkit-keyframes tWriter {
   0% {
     width: 0px;
@@ -387,19 +412,19 @@ h2 {
 
 #projects {
   grid-area: gProjects;
-  background: #F6A3AB;
+  background: #f6a3ab;
   display: none;
 }
 
 #hobbies {
   grid-area: gHobbies;
-  background: #C583AE;
+  background: #c583ae;
   display: none;
 }
 
 #contact-us {
   grid-area: gContactUs;
-  background: #0C4700;
+  background: #0c4700;
   display: none;
 }
 
@@ -408,6 +433,25 @@ h2 {
   -ms-grid-column: 1;
   grid-area: gFooter;
   background: #520008;
+}
+
+#footer h2 {
+  font-size: 2em;
+}
+
+#footer ul li {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+}
+
+#footer ul li a {
+  color: #ebebeb;
+}
+
+#footer ul li a:hover {
+  color: #414141;
 }
 
 ul {
