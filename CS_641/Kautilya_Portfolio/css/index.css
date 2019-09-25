@@ -34,6 +34,7 @@ h2 {
   -ms-grid-row: 1;
   grid-row: 1/1;
   padding: 10px;
+  font-size: 3em;
 }
 
 .centerContent {
@@ -103,7 +104,7 @@ h2 {
 
 #intro .introH1 {
   padding: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #intro .introText {
@@ -111,22 +112,17 @@ h2 {
   font-size: 1.25rem;
 }
 
-#intro .social .ulSocial {
-  margin: 15px;
-  padding: 0px;
-}
-
-#intro .social .ulSocial li {
+#intro .social li {
   display: inline-block;
   margin: 0px;
   padding: 5px;
 }
 
-#intro .social .ulSocial li a {
+#intro .social li a {
   color: #ebebeb;
 }
 
-#intro .social .ulSocial li a:hover {
+#intro .social li a:hover {
   color: #414141;
 }
 
@@ -140,6 +136,7 @@ h2 {
 
 #about-me h2 {
   color: red;
+  font-size: 4em;
 }
 
 #about-me .about-me-grid {
@@ -274,13 +271,6 @@ h2 {
   padding: 30px;
 }
 
-#skills {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  grid-area: gSkills;
-  background: #D9F09F;
-}
-
 #edu {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
@@ -321,6 +311,80 @@ h2 {
   padding: 0% 10%;
 }
 
+#skills {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: gSkills;
+  background: #D9F09F;
+}
+
+#skills .skillsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(18rem, 5fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 5fr));
+}
+
+#skills .skillsGrid .skillsTech {
+  padding: 10px;
+}
+
+#skills .skillsGrid .skillsTech .swift {
+  width: 80%;
+}
+
+#skills .skillsGrid .skillsTech .html5 {
+  width: 70%;
+}
+
+#skills .skillsGrid .skillsTech .java {
+  width: 50%;
+}
+
+#skills .skillsGrid .skillsTech .python {
+  width: 50%;
+}
+
+#skills .skillsGrid .skillsTech .ux {
+  width: 60%;
+}
+
+#skills .skillsGrid .skillsTech .objectiveC {
+  width: 50%;
+}
+
+#skills .skillsGrid .skillsSoft {
+  padding: 10px;
+}
+
+#skills .skillsGrid .skillsSoft .documentation {
+  width: 70%;
+}
+
+#skills .skillsGrid .skillsSoft .tWriter {
+  width: 70%;
+  -webkit-animation: tWriter 2s ease;
+          animation: tWriter 2s ease;
+}
+
+@-webkit-keyframes tWriter {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes tWriter {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
 #projects {
   grid-area: gProjects;
   background: #F6A3AB;
@@ -344,5 +408,35 @@ h2 {
   -ms-grid-column: 1;
   grid-area: gFooter;
   background: #520008;
+}
+
+ul {
+  list-style: none;
+}
+
+.bar-back-grey {
+  background-color: #5b1d1d !important;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.bar-center {
+  text-align: center !important;
+  display: inline-block;
+  width: auto;
+  display: block;
+  width: 100%;
+}
+
+.bar-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6vh;
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+  background: #ccc;
 }
 /*# sourceMappingURL=index.css.map */
