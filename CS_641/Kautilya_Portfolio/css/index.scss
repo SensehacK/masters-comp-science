@@ -1,4 +1,9 @@
 @import "variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap");
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Source+Sans+Pro|Palanquin+Dark|Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700|Source+Sans+Pro&display=swap');
 
 // SASS style sheet */
 // Palette color codes */
@@ -102,6 +107,7 @@ main {
 }
 
 h2 {
+    font-family: "Palanquin Dark", sans-serif;
     text-align: center;
     justify-items: center;
     grid-column: 1/4;
@@ -178,11 +184,29 @@ h2 {
     .introH1 {
         padding: $pixelMedium;
         font-size: $fontSmallerLarge * 2;
+
+        h1 {
+            font-weight: 900;
+        }
+
+        font-family: 'Source Sans Pro',
+        sans-serif;
+
+        // font-family: 'Roboto', sans-serif;
+
+        // font-family: 'PT Sans', sans-serif;
+
+
     }
 
     .introText {
         padding: $pixelMedium;
         font-size: $fontBiggerMedium;
+
+        .nakama {
+            color: $color-primary-1;
+        }
+
     }
 
     .social {
@@ -192,7 +216,7 @@ h2 {
             padding: $pixelSmall;
 
             a {
-                color: $ksWhite;
+                color: $color-primary-2;
                 // font-size: 2em;
 
                 &:hover {
@@ -217,7 +241,7 @@ h2 {
     height: auto;
 
     h2 {
-        color: red;
+        color: $color-secondary-2-2;
         font-size: 4em;
     }
 
@@ -240,6 +264,8 @@ h2 {
             place-self: center;
             padding: $paddingExtraLarge;
             font-size: $fontBiggerMedium;
+
+            color: $color-secondary-2-4;
 
             .download {
                 width: 58.33333%;
@@ -353,13 +379,17 @@ h2 {
 
         .workHeader {
             padding: $pixelNone $pixelExtraLarge;
+            color: $color-complement-1;
         }
 
         .workPosition {
             padding: $pixelSmall $pixelExtraLarge;
+            color: $color-complement-2;
+
         }
 
         .workDescription {
+            color: $color-complement-4;
             padding: $pixelLarge * 2;
         }
     }
@@ -368,6 +398,8 @@ h2 {
 #edu {
     grid-area: gEdu;
     background: $color-secondary-1-0;
+
+    color: $color-secondary-1-1;
 
     .eduGrid {
         display: grid;
@@ -383,23 +415,34 @@ h2 {
 
         .eduHeader {
             padding: $pixelNone $pixelExtraLarge;
+            color: $color-secondary-1-1;
             // font-size:
         }
 
         .eduQualification {
             padding: $pixelSmall $pixelExtraLarge;
+            color: $color-secondary-1-2;
         }
 
         .eduDescription {
             padding: $pixelLarge;
+            color: $color-secondary-1-3;
         }
     }
 
     .eduGrid3 {
         padding: $percentNone $percentLarge;
+        color: $color-secondary-1-1;
+
+        .eduQualification {
+            color: $color-secondary-1-2;
+
+        }
 
         .eduDescription {
-            padding: $responsiveMQPaddingWidthY $percentMedium;
+            padding: $percentSmall $percentMedium;
+            // padding: $responsiveMQPaddingWidthY $percentMedium;
+            color: $color-secondary-1-3;
         }
     }
 }
@@ -413,14 +456,21 @@ h2 {
         grid-template-columns: repeat(auto-fit,
                 minmax($responsiveMediumColumn, 5fr));
 
+        h3 {
+            color: $color-primary-2;
+            padding: $percentSmall;
+        }
+
         .skillsTech {
             padding: $paddingMedium;
+
+
 
             .swift {
                 width: 80%;
             }
 
-            .html5 {
+            .html {
                 width: 70%;
             }
 
@@ -541,13 +591,15 @@ ul {
 
 
 .bar-back-grey {
-    background-color: rgb(91, 29, 29) !important;
+    background-color: $color-primary-2;
+    // background-color: rgb(91, 29, 29) !important;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .bar-center {
-    text-align: center !important;
+    // But due to depending % of the Horizontal bar, Left aligned would be great design choice.
+    text-align: start;
     display: inline-block;
     width: auto;
     display: block;
@@ -555,10 +607,35 @@ ul {
 }
 
 .bar-container {
-    display: grid;
-    align-items: center;
+    // If you need it to appear in middle
+    // display: grid;
+    // align-items: center;
+    // But due to depending % of the Horizontal bar, Left aligned would be great design choice.
+    text-align: start;
     height: 6vh;
     padding: $paddingMedium;
     border-radius: 5px 0px 0px 5px;
-    background: #ccc;
+    background: $color-primary-3;
 }
+
+
+a:link {
+    color: #13122f;
+}
+
+/* normal link */
+a:visited {
+    color: #50afe5;
+}
+
+/* visited link */
+a:hover {
+    color: #da7070;
+}
+
+/* mouse over link */
+a:active {
+    color: #fe0000
+}
+
+/* selected link */

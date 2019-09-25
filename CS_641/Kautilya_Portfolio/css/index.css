@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Source+Sans+Pro|Palanquin+Dark|Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700|Source+Sans+Pro&display=swap");
 head,
 body {
   background: #81a035;
@@ -26,6 +31,7 @@ main {
 }
 
 h2 {
+  font-family: "Palanquin Dark", sans-serif;
   text-align: center;
   justify-items: center;
   -ms-grid-column: 1;
@@ -105,11 +111,20 @@ h2 {
 #intro .introH1 {
   padding: 10px;
   font-size: 3rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#intro .introH1 h1 {
+  font-weight: 900;
 }
 
 #intro .introText {
   padding: 10px;
   font-size: 1.25rem;
+}
+
+#intro .introText .nakama {
+  color: #d9f09f;
 }
 
 #intro .social li {
@@ -119,7 +134,7 @@ h2 {
 }
 
 #intro .social li a {
-  color: #ebebeb;
+  color: #abc863;
 }
 
 #intro .social li a:hover {
@@ -135,7 +150,7 @@ h2 {
 }
 
 #about-me h2 {
-  color: red;
+  color: #cd6670;
   font-size: 4em;
 }
 
@@ -161,6 +176,7 @@ h2 {
   place-self: center;
   padding: 30px;
   font-size: 1.25rem;
+  color: #520008;
 }
 
 #about-me .about-me-grid .aboutText .download {
@@ -270,13 +286,16 @@ h2 {
 
 #work .workGrid .workHeader {
   padding: 0px 20px;
+  color: #c583ae;
 }
 
 #work .workGrid .workPosition {
   padding: 5px 20px;
+  color: #a45187;
 }
 
 #work .workGrid .workDescription {
+  color: #42002b;
   padding: 30px;
 }
 
@@ -285,6 +304,7 @@ h2 {
   -ms-grid-column: 1;
   grid-area: gEdu;
   background: #3f8e2f;
+  color: #99d58d;
 }
 
 #edu .eduGrid {
@@ -302,22 +322,31 @@ h2 {
 
 #edu .eduGrid .eduHeader {
   padding: 0px 20px;
+  color: #99d58d;
 }
 
 #edu .eduGrid .eduQualification {
   padding: 5px 20px;
+  color: #67b158;
 }
 
 #edu .eduGrid .eduDescription {
   padding: 15px;
+  color: #216a12;
 }
 
 #edu .eduGrid3 {
   padding: 0% 15%;
+  color: #99d58d;
+}
+
+#edu .eduGrid3 .eduQualification {
+  color: #67b158;
 }
 
 #edu .eduGrid3 .eduDescription {
-  padding: 0% 10%;
+  padding: 5% 10%;
+  color: #216a12;
 }
 
 #skills {
@@ -334,6 +363,11 @@ h2 {
       grid-template-columns: repeat(auto-fit, minmax(18rem, 5fr));
 }
 
+#skills .skillsGrid h3 {
+  color: #abc863;
+  padding: 5%;
+}
+
 #skills .skillsGrid .skillsTech {
   padding: 10px;
 }
@@ -342,7 +376,7 @@ h2 {
   width: 80%;
 }
 
-#skills .skillsGrid .skillsTech .html5 {
+#skills .skillsGrid .skillsTech .html {
   width: 70%;
 }
 
@@ -459,13 +493,13 @@ ul {
 }
 
 .bar-back-grey {
-  background-color: #5b1d1d !important;
+  background-color: #abc863;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
 .bar-center {
-  text-align: center !important;
+  text-align: start;
   display: inline-block;
   width: auto;
   display: block;
@@ -473,14 +507,31 @@ ul {
 }
 
 .bar-container {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: start;
   height: 6vh;
   padding: 10px;
   border-radius: 5px 0px 0px 5px;
-  background: #ccc;
+  background: #5b7814;
 }
+
+a:link {
+  color: #13122f;
+}
+
+/* normal link */
+a:visited {
+  color: #50afe5;
+}
+
+/* visited link */
+a:hover {
+  color: #da7070;
+}
+
+/* mouse over link */
+a:active {
+  color: #fe0000;
+}
+
+/* selected link */
 /*# sourceMappingURL=index.css.map */
