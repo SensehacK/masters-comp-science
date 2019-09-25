@@ -79,7 +79,7 @@ h2 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: gHeader;
-  background: #777777;
+  background: #d9f09f;
   padding: 0px;
   width: 100%;
   z-index: 150;
@@ -97,6 +97,32 @@ h2 {
 }
 
 .header ul li a:hover {
+  color: #414141;
+}
+
+#home .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: gHeader;
+  background: #81a035;
+  padding: 0px;
+  width: 100%;
+  z-index: 150;
+  font-size: 20px;
+}
+
+#home .header ul li {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+}
+
+#home .header ul li a {
+  color: #ebebeb;
+}
+
+#home .header ul li a:hover {
   color: #414141;
 }
 
@@ -466,7 +492,7 @@ h2 {
   -ms-grid-row: 8;
   -ms-grid-column: 1;
   grid-area: gFooter;
-  background: #520008;
+  background: #81a035;
 }
 
 #footer h2 {

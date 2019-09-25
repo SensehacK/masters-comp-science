@@ -151,7 +151,7 @@ h2 {
 
 .header {
     grid-area: gHeader;
-    background: $ksLightGray;
+    background: $color-primary-1;
 
     // margin: 0 $pixelLarge 0 $pixelLarge;
     padding: $pixelNone;
@@ -175,6 +175,40 @@ h2 {
             }
         }
     }
+}
+
+#home {
+
+    .header {
+        grid-area: gHeader;
+        background: $color-primary-0;
+
+        // margin: 0 $pixelLarge 0 $pixelLarge;
+        padding: $pixelNone;
+        // position: fixed;
+        width: 100%;
+        z-index: 150;
+        font-size: 20px;
+
+        ul {
+            li {
+                position: relative;
+                display: inline-block;
+                margin: $pixelNone;
+                padding: $pixelSmall;
+
+                a {
+                    color: $ksWhite;
+
+                    &:hover {
+                        color: $ksDarkGray;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 #intro {
@@ -552,7 +586,7 @@ h2 {
 
 #footer {
     grid-area: gFooter;
-    background: $color-secondary-2-4;
+    background: $color-primary-0;
 
 
     h2 {
