@@ -1,0 +1,31 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- <link rel="stylesheet" href="day_4.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let myCanvas = document.getElementById("myCanvas");
+      myCanvas.width = window.innerWidth;
+      myCanvas.height = window.innerHeight;
+      let myCanvasContext = myCanvas.getContext("2d");
+
+      myCanvas.addEventListener("mousemove", youMovedMouse);
+
+      function youMovedMouse(event) {
+        console.log("You moved mouse ", event.clientX, event.clientY);
+        myCanvasContext.fillRect(event.clientX, event.clientY, 10, 10);
+      }
+    </script>
+    <!-- <div id="myDiv"></div> -->
+    <div id="movePara">
+      <!-- <p>Hello There!</p> -->
+    </div>
+  </body>
+</html>
