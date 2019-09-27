@@ -412,8 +412,14 @@ h2 {
                 minmax($responsiveMediumColumn, 1fr));
 
         .workHeader {
+
+
             padding: $pixelNone $pixelExtraLarge;
             color: $color-complement-1;
+
+            a:link {
+                color: $color-complement-1;
+            }
         }
 
         .workPosition {

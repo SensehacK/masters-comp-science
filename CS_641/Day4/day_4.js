@@ -1,15 +1,14 @@
-let myDiv = document.getElementById('myDiv');
-let mySecDiv = document.getElementById("movePara")
-// document.addEventListener("mousemove", custMovedMouse);
-
-// function custMovedMouse() {
-//     console.log("In youMoved Custom Mouse.");
-
-// }
-
-document.addEventListener("mousemove", custMoveDivPara);
-
 function custMoveDivPara(event) {
+    let myDiv = document.getElementById('myDiv');
+    let mySecDiv = document.getElementById("movePara")
+    // document.addEventListener("mousemove", custMovedMouse);
+
+    // function custMovedMouse() {
+    //     console.log("In youMoved Custom Mouse.");
+
+    // }
+
+    document.addEventListener("mousemove", custMoveDivPara);
 
     // mySecDiv.addEventListener()
     console.log('Hello', event.clientX, event.clientY);

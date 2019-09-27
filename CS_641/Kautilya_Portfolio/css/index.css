@@ -315,6 +315,10 @@ h2 {
   color: #c583ae;
 }
 
+#work .workGrid .workHeader a:link {
+  color: #c583ae;
+}
+
 #work .workGrid .workPosition {
   padding: 5px 20px;
   color: #a45187;

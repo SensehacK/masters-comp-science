@@ -20,7 +20,15 @@
 
       function youMovedMouse(event) {
         console.log("You moved mouse ", event.clientX, event.clientY);
-        myCanvasContext.fillRect(event.clientX, event.clientY, 10, 10);
+        myCanvasContext.fillStyle = "green";
+        for (let index = 0; index < 10; index++) {
+          myCanvasContext.fillRect(
+            event.clientX,
+            event.clientY,
+            10 - index,
+            10
+          );
+        }
       }
     </script>
     <!-- <div id="myDiv"></div> -->
