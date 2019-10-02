@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="day_4.css" /> -->
     <title>Document</title>
   </head>
-  <body onload="startup()">
+  <body>
     <canvas id="myCanvas"></canvas>
     <script>
       let myCanvas = document.getElementById("myCanvas");
@@ -16,36 +16,9 @@
       myCanvas.height = window.innerHeight;
       let myCanvasContext = myCanvas.getContext("2d");
 
-      // myCanvas.addEventListener("mousemove", youMovedMouse);
-      // myCanvas.addEventListener("touchmove", youMovedMouse);
-      // myCanvas.addEventListener("touchmove", youMovedMouse);
-
-      function startup() {
-        // let el = document.getElementById("myCanvas");
-        // var el = document.getElementsByTagName("myCanvas");
-        myCanvas.addEventListener("touchstart", youMovedTouch, false);
-        myCanvas.addEventListener("touchend", youMovedTouch, false);
-        myCanvas.addEventListener("touchcancel", youMovedTouch, false);
-        myCanvas.addEventListener("touchmove", youMovedTouch, false);
-        myCanvasContext = myCanvas.getContext("2d");
-        console.log("initialized.");
-      }
-
-      function youMovedTouch(event) {
-        myCanvas.preventDefault();
-        console.log("Hi you Moved Touch");
-        for (let index = 0; index < event.touches.length; index++) {
-          myCanvasContext.fillRect(
-            event.touches[index].pageX,
-            event.touches[index].pageY,
-            10 - index,
-            10
-          );
-        }
-      }
+      myCanvas.addEventListener("mousemove", youMovedMouse);
 
       function youMovedMouse(event) {
-        event.preventDefault();
         console.log("You moved mouse ", event.clientX, event.clientY);
         myCanvasContext.fillStyle = "green";
         for (let index = 0; index < 10; index++) {
