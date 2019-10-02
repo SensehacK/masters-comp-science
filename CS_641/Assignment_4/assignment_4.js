@@ -1,39 +1,34 @@
+// Defining Variables
+let myCanvasContext = myCanvas.getContext("2d");
 let myCanvas = document.getElementById('myCanvas');
 myCanvas.width = window.innerWidth;
 myCanvas.height = window.innerHeight;
 
-let myCanvasContext = myCanvas.getContext("2d");
-color = [022, 123, 045];
-colorArr = ['red', 'blue', 'green', 'gray', 'orange', 'royalblue', 'teal', 'purple', 'red', 'blue', 'green', 'gray', 'orange', 'royalblue', 'teal', 'purple'];
+// Setting up constants
 const canvasWidth = 15;
-xAxis = 0;
-repeatPattern = (window.innerWidth) / canvasWidth;
+const repeatPattern = (window.innerWidth) / canvasWidth;
 
-// Drawing the Rectangle
-function canvasDraw(color, x) {
-    console.log("Hi in func Canvas Draw");
-    // myCanvasContext.fillStyle = "green";
+// Setting Variables.
+let colorArr = ['red', 'blue', 'green', 'gray', 'orange', 'black', 'teal', 'purple'];
+var xAxis = 0;
+var yAxis = 0;
+
+
+
+
+// Function for drawing the rectangle
+function canvasDraw(color) {
     myCanvasContext.fillStyle = color;
-    y = 20;
-    // x = x + 20;
-    myCanvasContext.fillRect(x, y, 15, window.innerHeight);
-    // myCanvasContext.fillStyle = "white";
-
-    // myCanvasContext.fillRect(x + 30, y, 20, window.innerHeight);
+    // Using Global Variables
+    myCanvasContext.fillRect(xAxis, yAxis, canvasWidth, window.innerHeight);
+    // Adding X - axis with respect to width between each rectangle
     xAxis = xAxis + canvasWidth;
 }
 
-
-console.log("calling the for Loop");
-
-console.log((window.innerWidth) / 50);
-
+// For loop for the whole screen dynamically generated
 for (let i = 0; i < repeatPattern; i++) {
-    // const element = array[index];
-
-    canvasDraw(colorArr[i], xAxis);
-
-    // xAxis = xAxis + canvasWidth;
-
+    // Main Color
+    canvasDraw(colorArr[i % 8], xAxis);
+    // Background Color
     canvasDraw("aqua", xAxis);
 }
