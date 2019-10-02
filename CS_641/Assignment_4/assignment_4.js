@@ -1,5 +1,5 @@
 let myCanvas = document.getElementById('myCanvas');
-// myCanvas.width = window.innerWidth;
+myCanvas.width = window.innerWidth;
 myCanvas.height = window.innerHeight;
 
 let myCanvasContext = myCanvas.getContext("2d");
