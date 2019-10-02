@@ -1,6 +1,6 @@
 // Defining Variables
-let myCanvasContext = myCanvas.getContext("2d");
 let myCanvas = document.getElementById('myCanvas');
+let myCanvasContext = myCanvas.getContext("2d");
 myCanvas.width = window.innerWidth;
 myCanvas.height = window.innerHeight;
 
