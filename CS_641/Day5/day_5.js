@@ -7,9 +7,7 @@ function getLocation() {
 
         function (pos) {
             console.log("Position is (" + pos.coords.latitude + ", " + pos.coords.longitude + ")");
-            // locText = pos.coords.latitude + ", " + pos.coords.longitude;
-            // console.log(locText);
-            // locText2 = locText;
+
 
             document.getElementById('location').innerHTML = locText + "( " + pos.coords.latitude + ", " + pos.coords.longitude + ")";
         },

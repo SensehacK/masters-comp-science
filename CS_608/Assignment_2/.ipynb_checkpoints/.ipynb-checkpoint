@@ -1,0 +1,298 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Hello Sensehack!\n",
+    "Importing Random as Rd variable\n",
+    "\n",
+    "Class ShuffleDecks\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 of Diamond\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random as rd\n",
+    "\n",
+    "\n",
+    "class ShuffleDecks():\n",
+    "    \"Class for defining shuffleDecks\"\n",
+    "    cardRanks = [\"Jack\", \"Queen\", \"King\",\n",
+    "                 \"Ace\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"]\n",
+    "    cardType = ['Spade', 'Diamond', 'Hearts', 'Club']\n",
+    "    shuffleList = []\n",
+    "\n",
+    "    def __init__(self):\n",
+    "        \"Constructor initialized // Calling function\"\n",
+    "        self.properShuffle()\n",
+    "\n",
+    "    def retShuffle(self):\n",
+    "        \"Created a function for Returning Shuffle\"\n",
+    "        return (str(self.cardRanks[rd.randint(0, len(self.cardRanks)-1)]) + \" of \" + str(self.cardType[rd.randint(0, len(self.cardType)-1)]))\n",
+    "\n",
+    "    def callShuffleN(self, numberT):\n",
+    "        \"function called depending on n number of times.\"\n",
+    "        for _ in range(numberT):\n",
+    "            print(self.retShuffle())\n",
+    "\n",
+    "    def properShuffle(self):\n",
+    "        \"Shuffle for real\"\n",
+    "        for x in self.cardRanks:\n",
+    "            for y in self.cardType:\n",
+    "                self.shuffleList.append(x+\" of \" + y)\n",
+    "        rd.shuffle(self.shuffleList)\n",
+    "\n",
+    "\n",
+    "# ShuffleDecks()\n",
+    "\n",
+    "# Printing whole list\n",
+    "for card in ShuffleDecks.shuffleList:\n",
+    "    print(card)\n",
+    "\n",
+    "\n",
+    "# Different types of invocations\n",
+    "# Calling Shuffle n times\n",
+    "ShuffleDecks().callShuffleN(1)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Calling ShuffleDecks class will invoke the constructor calling the properShuffle() method."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<__main__.ShuffleDecks at 0x105f9fc50>"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ShuffleDecks()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Calling Shuffle n times"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6 of Hearts\n",
+      "Ace of Hearts\n",
+      "King of Diamond\n",
+      "Jack of Diamond\n",
+      "Queen of Hearts\n",
+      "6 of Hearts\n",
+      "9 of Hearts\n",
+      "King of Club\n",
+      "6 of Club\n",
+      "8 of Hearts\n",
+      "8 of Spade\n",
+      "Queen of Hearts\n"
+     ]
+    }
+   ],
+   "source": [
+    "ShuffleDecks().callShuffleN(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Printing whole list\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7 of Club\n",
+      "Ace of Spade\n",
+      "5 of Club\n",
+      "Jack of Spade\n",
+      "10 of Club\n",
+      "King of Club\n",
+      "Jack of Club\n",
+      "8 of Spade\n",
+      "9 of Diamond\n",
+      "5 of Spade\n",
+      "Jack of Spade\n",
+      "3 of Hearts\n",
+      "6 of Diamond\n",
+      "8 of Hearts\n",
+      "King of Hearts\n",
+      "9 of Spade\n",
+      "6 of Spade\n",
+      "9 of Club\n",
+      "7 of Diamond\n",
+      "5 of Club\n",
+      "3 of Club\n",
+      "5 of Diamond\n",
+      "7 of Diamond\n",
+      "6 of Hearts\n",
+      "4 of Club\n",
+      "3 of Club\n",
+      "3 of Spade\n",
+      "Ace of Club\n",
+      "8 of Diamond\n",
+      "10 of Club\n",
+      "7 of Club\n",
+      "7 of Hearts\n",
+      "Ace of Club\n",
+      "Ace of Diamond\n",
+      "10 of Spade\n",
+      "2 of Diamond\n",
+      "Queen of Diamond\n",
+      "King of Spade\n",
+      "10 of Spade\n",
+      "5 of Hearts\n",
+      "Ace of Hearts\n",
+      "2 of Club\n",
+      "King of Club\n",
+      "4 of Diamond\n",
+      "Queen of Hearts\n",
+      "10 of Hearts\n",
+      "2 of Hearts\n",
+      "9 of Diamond\n",
+      "7 of Spade\n",
+      "4 of Spade\n",
+      "4 of Hearts\n",
+      "2 of Diamond\n",
+      "9 of Spade\n",
+      "Queen of Spade\n",
+      "9 of Club\n",
+      "8 of Spade\n",
+      "2 of Club\n",
+      "4 of Diamond\n",
+      "10 of Hearts\n",
+      "King of Hearts\n",
+      "Ace of Diamond\n",
+      "5 of Diamond\n",
+      "King of Diamond\n",
+      "3 of Hearts\n",
+      "Jack of Club\n",
+      "6 of Hearts\n",
+      "9 of Hearts\n",
+      "9 of Hearts\n",
+      "7 of Spade\n",
+      "6 of Diamond\n",
+      "Jack of Hearts\n",
+      "7 of Hearts\n",
+      "6 of Spade\n",
+      "Queen of Club\n",
+      "2 of Spade\n",
+      "6 of Club\n",
+      "Queen of Diamond\n",
+      "2 of Hearts\n",
+      "Jack of Diamond\n",
+      "3 of Diamond\n",
+      "Ace of Hearts\n",
+      "Jack of Diamond\n",
+      "Ace of Spade\n",
+      "4 of Hearts\n",
+      "3 of Diamond\n",
+      "Queen of Hearts\n",
+      "8 of Diamond\n",
+      "2 of Spade\n",
+      "Queen of Spade\n",
+      "5 of Hearts\n",
+      "4 of Spade\n",
+      "10 of Diamond\n",
+      "8 of Hearts\n",
+      "Queen of Club\n",
+      "10 of Diamond\n",
+      "4 of Club\n",
+      "8 of Club\n",
+      "King of Spade\n",
+      "3 of Spade\n",
+      "Jack of Hearts\n",
+      "King of Diamond\n",
+      "6 of Club\n",
+      "5 of Spade\n",
+      "8 of Club\n"
+     ]
+    }
+   ],
+   "source": [
+    "for card in ShuffleDecks.shuffleList:\n",
+    "    print(card)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "celltoolbar": "Edit Metadata",
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
