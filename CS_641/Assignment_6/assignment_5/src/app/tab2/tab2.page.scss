@@ -1,0 +1,29 @@
+.centerKS {
+	align-content: center;
+	display: grid;
+
+	border: 1px solid black;
+	grid-template-columns: repeat(3, 1fr);
+
+	.button1 {
+		border: 1px solid red;
+	}
+
+	.button2 {
+		border: 1px solid green;
+		grid-column-start: 2;
+		grid-column-end: 4;
+		align-content: center;
+		display: flex;
+
+		ion-button {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.button3 {
+		border: 1px solid yellow;
+	}
+}
