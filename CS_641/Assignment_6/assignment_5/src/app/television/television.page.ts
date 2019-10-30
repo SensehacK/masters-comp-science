@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-television',
@@ -6,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./television.page.scss'],
 })
 export class TelevisionPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   public televisionShowsWatched = [
     { val: 'Breaking Bad ', isChecked: true },
@@ -28,5 +24,20 @@ export class TelevisionPage implements OnInit {
     { val: 'Dragon Ball Z ', isChecked: false },
     { val: 'Chernobyl', isChecked: false },
   ];
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+  }
+
+  onClick(parameter) {
+    console.log('Hi in onClick func');
+    this.router.navigate(['television', parameter]);
+
+    // Trying to send data via queryParams
+    // this.router.navigate(['/television/shows'], {
+    //   queryParams: parameter,
+    // });
+  }
 
 }
