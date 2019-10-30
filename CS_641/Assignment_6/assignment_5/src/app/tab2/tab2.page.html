@@ -1,7 +1,7 @@
 <ion-header>
 	<ion-toolbar>
 		<ion-title>
-			Tab Two
+			Kautilya
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -15,7 +15,17 @@
 			<ion-button color="dark" (click)="buttonPress()">Dark</ion-button>
 		</div>
 		<div class="button3">
-			<p>Yo yo yo!</p>
+			<p>Happy Diwali!</p>
 		</div>
 	</div>
+
+	<ion-button color="light" (click)="goToTelevision()">Television</ion-button>
+
+	<!-- Checkboxes in a List -->
+	<ion-list>
+		<ion-item *ngFor="let entry of moviesWatched">
+			<ion-label>{{ entry.val }}</ion-label>
+			<ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+		</ion-item>
+	</ion-list>
 </ion-content>

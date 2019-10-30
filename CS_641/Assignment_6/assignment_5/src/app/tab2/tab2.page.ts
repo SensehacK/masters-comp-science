@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -9,7 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab2Page {
 
-  constructor(public alertC: AlertController) { }
+  constructor(public alertC: AlertController, public router: Router) { }
 
 
 
@@ -19,6 +19,12 @@ export class Tab2Page {
     //Calling func
     this.displayAlert();
 
+  }
+
+  goToTelevision(){
+    console.log('Hi in func Television');
+
+    this.router.navigate(['television']);
   }
 
   async displayAlert() {
@@ -31,5 +37,15 @@ export class Tab2Page {
 
     await alert.present();
   }
+
+  public moviesWatched = [
+    { val: 'Godfather I', isChecked: true },
+    { val: 'Matrix', isChecked: true },
+    { val: 'Shawshank redemption', isChecked: true },
+    { val: 'The dark knight', isChecked: true },
+    { val: 'Joker', isChecked: false },
+    { val: 'John wick', isChecked: false },
+    { val: 'Lord of the rings ', isChecked: false }
+  ];
 
 }
