@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  @ViewChild(IonSlides) slides: IonSlides;
+
+  isEnabled = true;
+  constructor() { }
+
+  goToSlide() {
+    this.slides.slideNext();
+    this.slides.isEnd().then(
+      (e) => {
+        console.log('At the end', e);
+        this.isEnabled = !e;
+      });
+
+  }
 
 }
