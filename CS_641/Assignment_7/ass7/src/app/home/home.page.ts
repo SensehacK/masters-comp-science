@@ -24,6 +24,11 @@ export class HomePage {
   onClick() {
     console.log('Hello Sensehack!');
 
+    const el = document.querySelector('ion-button');
+    // el.ele
+    el.style.setProperty('--background', '#79454f');
+
+
   }
 
   async onModal() {
@@ -99,6 +104,15 @@ export class HomePage {
 
 
 
+  }
+
+
+  onDarkMode() {
+    const el = document.querySelector('ion-button');
+    // el.ele
+    el.style.setProperty('--background', '#36454f');
+
+    // 
   }
 
 

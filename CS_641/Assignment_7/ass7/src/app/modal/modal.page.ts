@@ -15,8 +15,13 @@ export class ModalPage implements OnInit {
     }
 
     ngOnInit() {
-        this.data = this.data.toLowerCase;
-        if (!this.data) {
+        // Error handling for usage of toLowerCase
+        // Can't directly apply lowercase to object need to apply it to String
+        if (typeof this.data !== 'undefined') {
+            this.data = this.data.toLowerCase();
+        }
+        console.log(typeof (this.data));
+        if (!this.data || typeof this.data !== 'string') {
             this.data = 'Kautilya';
         }
         else if (this.data === 'haik' || this.data === 'prakash') {

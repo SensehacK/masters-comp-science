@@ -1,44 +1,56 @@
 <ion-header>
-	<ion-toolbar>
-		<ion-buttons slot="start">
-			<ion-menu-button></ion-menu-button>
-		</ion-buttons>
-		<ion-title>
-			Kautilya
-		</ion-title>
-	</ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Kautilya
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-	<ion-button (click)="onClick()">
-		Click me
-	</ion-button>
+<ion-content class="ion-padding">
+  <div class="transition1">
+    <ion-button (click)="onClick()">
+      Click me
+    </ion-button>
+  </div>
 
-	<!-- Input with placeholder -->
-	<ion-input
-		placeholder="Enter your Alias"
-		[(ngModel)]="name"
-		id="name"
-	></ion-input>
+  <!-- Input with placeholder -->
+  <ion-input
+    placeholder="Enter your Alias"
+    [(ngModel)]="name"
+    id="name"
+  ></ion-input>
 
-	<ion-button (click)="onModal()">
-		Greetings!
-	</ion-button>
+  <ion-button (click)="onModal()">
+    Greetings!
+  </ion-button>
 
-	<ion-icon name="airplane"></ion-icon>
-	<div>
-		<ion-button (click)="onClickNav()">
-			<ion-icon name="tv">Television</ion-icon>
-		</ion-button>
-	</div>
-	<ion-card>
-		<img src="../../assets/test.jpg" (click)="actionSheet()" />
-		<ion-card-header>
-			<ion-card-subtitle>Internet</ion-card-subtitle>
-			<ion-card-title>Hydra, Swiss</ion-card-title>
-		</ion-card-header>
-		<ion-card-content>
-			Cut off one head, two more will grow in its place.
-		</ion-card-content>
-	</ion-card>
+  <ion-icon name="airplane"></ion-icon>
+
+  <div class="gradient2">
+    <ion-button (click)="onModal()">
+      Greetings!
+    </ion-button>
+  </div>
+
+  <div>
+    <ion-button (click)="onClickNav()">
+      <ion-icon name="tv">Television</ion-icon>
+    </ion-button>
+  </div>
+  <ion-card>
+    <img src="../../assets/test.jpg" (click)="actionSheet()" />
+    <ion-card-header>
+      <ion-card-subtitle>Internet</ion-card-subtitle>
+      <ion-card-title class="ion-text-uppercase">Hydra, Swiss</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Cut off one head, two more will grow in its place.
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="onDarkMode()">
+    Dark Mode
+  </ion-button>
 </ion-content>

@@ -2,3 +2,24 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+app-home {
+  .ion-button {
+    --transition: 3s width;
+  }
+
+  .ios,
+  .md {
+    .transition1 {
+      --background: yellow;
+      padding: 10px;
+      width: 150px;
+      transition: 5s width !important;
+      width: 250px;
+    }
+
+    .transition1 :hover {
+      width: 250px;
+    }
+  }
+}
