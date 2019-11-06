@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ModalController, ActionSheetController } from '@ionic/angular';
+import { ModalController, ActionSheetController, LoadingController } from '@ionic/angular';
 import { ModalPage } from '../modal/modal.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,13 @@ export class HomePage {
 
   name: string;
 
+  // Debug stack - adding console.log statements even though I could have used the debugger.
+  // Its just I prefer Firefox over Safari or Chrome debugging and don't like debugging unless I'm in a spaghetti code
+
   constructor(private modal: ModalController,
-    private actionSheetController: ActionSheetController) { }
+    private actionSheetController: ActionSheetController,
+    private router: Router,
+    private loadingController: LoadingController) { }
 
 
   onClick() {
@@ -68,6 +74,31 @@ export class HomePage {
     });
 
     (await actionSheet).present();
+  }
+
+
+  async onClickNav() {
+
+    // Trying out loading icon
+    console.log('loading start');
+
+    const loading = await this.loadingController.create({
+      message: 'Hellooo',
+      duration: 2000
+    });
+    await loading.present();
+    console.log('loading ended');
+    const didDismiss = await loading.onDidDismiss();
+    // if (didDismiss) {
+    // Router navigation
+    await this.router.navigateByUrl('/movie-list');
+    // }
+
+
+
+
+
+
   }
 
 
