@@ -2,7 +2,7 @@
 	<ion-toolbar>
 		<ion-title>Modal Header</ion-title>
 		<ion-buttons slot="primary">
-			<ion-button onClick="dismissModal()">
+			<ion-button (click)="dismissModal()">
 				<ion-icon slot="icon-only" name="close"></ion-icon>
 			</ion-button>
 		</ion-buttons>
@@ -10,5 +10,5 @@
 </ion-header>
 <ion-content class="ion-padding">
 	Modal Content
-	<p>Hi Test!</p>
+	<p>Hi {{ data }}!</p>
 </ion-content>

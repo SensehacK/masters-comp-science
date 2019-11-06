@@ -15,9 +15,26 @@
 	</ion-button>
 
 	<!-- Input with placeholder -->
-	<ion-input placeholder="Enter your Alias" id="name"></ion-input>
+	<ion-input
+		placeholder="Enter your Alias"
+		[(ngModel)]="name"
+		id="name"
+	></ion-input>
 
 	<ion-button (click)="onModal()">
 		Greetings!
 	</ion-button>
+
+	<ion-icon name="airplane"></ion-icon>
+
+	<ion-card>
+		<img src="../../assets/test.jpg" (click)="actionSheet()" />
+		<ion-card-header>
+			<ion-card-subtitle>Internet</ion-card-subtitle>
+			<ion-card-title>Hydra, Swiss</ion-card-title>
+		</ion-card-header>
+		<ion-card-content>
+			Cut off one head, two more will grow in its place.
+		</ion-card-content>
+	</ion-card>
 </ion-content>
