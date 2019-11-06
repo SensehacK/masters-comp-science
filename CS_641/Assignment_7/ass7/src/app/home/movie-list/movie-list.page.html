@@ -1,21 +1,21 @@
 <ion-header>
-	<ion-toolbar>
-		<ion-buttons slot="start">
-			<ion-back-button></ion-back-button>
-		</ion-buttons>
-		<ion-title>Television</ion-title>
-	</ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Television</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-	<ion-text class="ion-text-justify">
-		Which movies do you like to watch ? You can check off your Watch list!
-	</ion-text>
+  <ion-text class="ion-text-justify">
+    Which TV shows do you like to watch ? You can check off your Watch list!
+  </ion-text>
 
-	<ion-list>
-		<ion-item *ngFor="let entry of televisionShowsWatched">
-			<ion-label>{{ entry.val }}</ion-label>
-			<ion-button>{{ entry.val }}</ion-button>
-		</ion-item>
-	</ion-list>
+  <ion-list>
+    <ion-item *ngFor="let entry of televisionShowsWatched">
+      <ion-label>{{ entry.val }}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
 </ion-content>

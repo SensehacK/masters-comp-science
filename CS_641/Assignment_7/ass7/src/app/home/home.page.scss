@@ -4,22 +4,43 @@
 }
 
 app-home {
-  .ion-button {
-    --transition: 3s width;
+}
+
+.ion-button {
+  --transition: 3s width;
+}
+
+.ios,
+.md {
+  .transition1 {
+    // --background: yellow;
+    padding: 10px;
+    width: 150px;
+    transition: width 4s height 4s;
+    width: 250px;
+    height: 200px;
+    animation: slideInSmooth ease-in 3;
   }
 
-  .ios,
-  .md {
-    .transition1 {
-      --background: yellow;
-      padding: 10px;
-      width: 150px;
-      transition: 5s width !important;
-      width: 250px;
-    }
-
-    .transition1 :hover {
-      width: 250px;
-    }
+  .transition1 :hover {
+    width: 250px;
+    height: 200px;
   }
+}
+
+.gradient2 {
+  ion-button {
+    // background-image doesn't work for button
+    //  as the button would need to be colored via background attribute see gradient3 class
+    background-image: linear-gradient(rgb(0, 255, 16), black) !important;
+  }
+}
+
+.gradient3 {
+  ion-button {
+    --background: linear-gradient(rgb(0, 255, 16), black) !important;
+  }
+}
+.gradient4 {
+  background-image: linear-gradient(rgb(0, 255, 16), black) !important;
 }
