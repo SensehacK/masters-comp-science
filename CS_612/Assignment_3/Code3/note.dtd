@@ -1,0 +1,21 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT note (to,from,heading,body)>
+<!ATTLIST note
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT to (#PCDATA)>
+<!ATTLIST to
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT from (#PCDATA)>
+<!ATTLIST from
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT heading (#PCDATA)>
+<!ATTLIST heading
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT body (#PCDATA)>
+<!ATTLIST body
+  xmlns CDATA #FIXED ''>
