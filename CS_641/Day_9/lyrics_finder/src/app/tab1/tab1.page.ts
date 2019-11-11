@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { LyricsService } from '../services/lyrics.service';
+import { AudioDBService } from '../services/audio-db.service';
+import { Artists, Artist } from '../../data/audioDB/audioDB_Struct';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab1',
@@ -12,7 +15,10 @@ export class Tab1Page {
   artistSongName = '';
   songLyrics = "NA";
 
-  constructor(private lyricsService: LyricsService) {
+  artistArr: Artist[];
+
+  constructor(private lyricsService: LyricsService,
+    private audioService: AudioDBService) {
     // this.artistName = 'Kautilya';
     // this.artistSongName = 'Hustle Free';
 
@@ -30,6 +36,7 @@ export class Tab1Page {
 
     this.lyricsService.getLyricsForSongID()
       .subscribe((response) => {
+        console.log(response);
         this.songLyrics = JSON.parse(JSON.stringify(response['lyrics']));
       });
 
@@ -43,6 +50,13 @@ export class Tab1Page {
     this.lyricsService.getLyricsForSongIDWithParam(this.artistName, this.artistSongName)
       .subscribe((response) => {
         this.songLyrics = JSON.parse(JSON.stringify(response['lyrics']));
+      });
+
+    this.audioService.getInfoForArtist(this.artistName)
+      .subscribe((response) => {
+        console.log(response);
+        console.log(JSON.stringify(response));
+
       });
 
   }
