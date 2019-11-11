@@ -13,7 +13,7 @@ export class Tab1Page {
 
   // Property Binding for easy communication with View
   artistName = '';
-  artistSongName = '';
+  artistTitle = '';
   songLyrics = 'NA';
   artistD = []; // Array of Artist Object
   artistData: Artist; // Data Model of Artist
@@ -28,13 +28,13 @@ export class Tab1Page {
 
   init() {
     // Dummy data
-    this.artistName = 'Kautilya';
-    this.artistSongName = 'Role Model';
-
+    // this.artistName = 'Kautilya';
+    this.artistTitle = 'Kautilya';
   }
 
   onClick() {
     console.log('Hi Sensehack Dev env');
+    this.artistName = this.artistName ? this.artistName : 'Kautilya';
 
     this.audioService.getArtistInfo(this.artistName)
       .subscribe((data) => {
@@ -43,7 +43,7 @@ export class Tab1Page {
           console.log('in For each array');
           this.artistData = artist;
           this.artistD.push(this.artistData);
-          this.artistName = this.artistData.strArtist ? this.artistData.strArtist : this.artistName;
+          this.artistTitle = this.artistData.strArtist ? this.artistData.strArtist : this.artistName;
           console.log(artist.strArtist);
           console.log(artist.intBornYear);
           console.log(this.artistData.strBiographyEN);

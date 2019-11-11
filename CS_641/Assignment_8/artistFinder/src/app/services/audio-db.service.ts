@@ -8,15 +8,18 @@ import { Observable } from 'rxjs';
 })
 export class AudioDBService {
 
-  baseURL = 'https://sensehack.github.io';
-  artistTrialURL = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole';
+  baseURL = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=';
+
   constructor(private http: HttpClient) { }
 
-
+  // Method for getting data over API JSON
   getArtistInfo(artistName: string): Observable<ArtistDB> {
-    console.log('Yo yo the base url + artistName', this.artistTrialURL + artistName);
-
-    return this.http.get<ArtistDB>(this.artistTrialURL);
-
+    // Return Dynamic string
+    return this.http.get<ArtistDB>(this.baseURL + encodeURI(artistName));
   }
+
 }
+/* Dev instance URL for J Cole
+    artistDevURL = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole';
+   return this.http.get<ArtistDB>(this.artistDevURL);
+  */
