@@ -7,35 +7,63 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <h1>Sensehack</h1>
+
+  <ion-card>
+    <ion-input type="text" placeholder="Awesome Artist"></ion-input>
+
+    <ion-button (click)="onClick()">
+      Search
+    </ion-button>
+  </ion-card>
+
+  <ion-card>
+    <div class="inputField">
+      <!-- Input with placeholder -->
+      <ion-input
+        placeholder="Enter your Artist"
+        [(ngModel)]="artistName"
+      ></ion-input>
+    </div>
+    <div class="inputField">
+      <!-- Input with placeholder -->
+      <ion-input
+        placeholder="Enter your Song Name"
+        [(ngModel)]="artistSongName"
+      ></ion-input>
+    </div>
+    <!-- <div class="inputButton"> -->
+    <!-- <ion-grid> -->
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="onClick()">
+          Search
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="onClick()">
+          Reset
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- </ion-grid> -->
+    <!-- </div> -->
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        Artist:
+        {{ artistName }}
+      </ion-card-subtitle>
+      <ion-card-title> Song: {{ artistSongName }} </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-text color="primary">
+    <h1>Song Lyrics</h1>
+    <pre margin="5px">
+    {{ songLyrics }} 
+    </pre>
+  </ion-text>
 </ion-content>

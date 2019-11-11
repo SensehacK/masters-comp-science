@@ -13,11 +13,12 @@ export class Tab1Page {
 
   artistName = '';
   artistSongName = '';
-  songLyrics = "NA";
+  songLyrics = 'NA';
 
   artistArr: Artist[];
 
   constructor(private lyricsService: LyricsService,
+    // tslint:disable-next-line: align
     private audioService: AudioDBService) {
     // this.artistName = 'Kautilya';
     // this.artistSongName = 'Hustle Free';
@@ -29,7 +30,7 @@ export class Tab1Page {
 
   loadFunc() {
 
-    //Loading
+    // Loading
     console.log('Yo Sensehack!');
 
     // this.lyricsService.getLyricsForSongIDWithParam(this.artistName, this.artistSongName);

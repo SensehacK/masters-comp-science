@@ -9,8 +9,8 @@ export class AudioDBService {
 
   artistArr: Artist[];
 
-  artistTrialURL = "https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole"
-  artistBaseURL = "https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole"
+  artistTrialURL = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole';
+  artistBaseURL = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole';
   constructor(private http: HttpClient) { }
 
 

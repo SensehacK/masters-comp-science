@@ -5,6 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "ionic Edge",
+      "type": "edge",
+      "version": "dev",
+      "request": "launch",
+      "url": "http://localhost:8100/tabs/tab1",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
       "type": "chrome",
       "request": "launch",
       "name": "Launch ionic Chrome",
