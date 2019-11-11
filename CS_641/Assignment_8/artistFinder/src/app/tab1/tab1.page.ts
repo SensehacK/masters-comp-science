@@ -11,21 +11,24 @@ import { Artist } from 'src/model/audioDB/artistDB';
 export class Tab1Page {
 
 
+  // Property Binding for easy communication with View
   artistName = '';
   artistSongName = '';
   songLyrics = 'NA';
-  artistD = [];
-  artistData: Artist;
+  artistD = []; // Array of Artist Object
+  artistData: Artist; // Data Model of Artist
 
   constructor(private audioService: AudioDBService) {
 
     // Calling Init
     this.init();
+
   }
 
 
   init() {
-    this.artistName = 'Eminem';
+    // Dummy data
+    this.artistName = 'Kautilya';
     this.artistSongName = 'Role Model';
 
   }
@@ -36,35 +39,17 @@ export class Tab1Page {
     this.audioService.getArtistInfo(this.artistName)
       .subscribe((data) => {
         console.log(data);
-        console.log(typeof (data));
-
-        console.log(data.artists);
-        console.log(typeof (data.artists));
-        // this.artistD = data.artists;
-
-        console.log(this.artistD);
-        console.log(typeof (this.artistD));
-
         data.artists.forEach(artist => {
           console.log('in For each array');
           this.artistData = artist;
           this.artistD.push(this.artistData);
-
+          this.artistName = this.artistData.strArtist ? this.artistData.strArtist : this.artistName;
           console.log(artist.strArtist);
           console.log(artist.intBornYear);
           console.log(this.artistData.strBiographyEN);
         });
-        console.log(this.artistD[0].strArtist);
-        console.log(typeof (data.artists)); this.artistD
 
-
-        console.log(data.artists);
-
-        // this.artistD = (data.artists);
-        console.log(data['artists']);
-        console.log(data.artists);
       });
-    // console.log(data);
 
   }
 

@@ -1,21 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      {{ this.artistName }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h1>Sensehack</h1>
-
-  <ion-card>
-    <ion-input type="text" placeholder="Awesome Artist"></ion-input>
-
-    <ion-button (click)="onClick()">
-      Search
-    </ion-button>
-  </ion-card>
+<ion-content class="padding">
+  <h1 center>Sensehack</h1>
 
   <ion-card>
     <div class="inputField">
@@ -25,45 +17,53 @@
         [(ngModel)]="artistName"
       ></ion-input>
     </div>
-    <div class="inputField">
-      <!-- Input with placeholder -->
-      <ion-input
-        placeholder="Enter your Song Name"
-        [(ngModel)]="artistSongName"
-      ></ion-input>
-    </div>
-    <!-- <div class="inputButton"> -->
-    <!-- <ion-grid> -->
     <ion-row>
-      <ion-col size="6">
+      <ion-col size="12">
         <ion-button (click)="onClick()">
           Search
         </ion-button>
       </ion-col>
-      <ion-col size="6">
-        <ion-button (click)="onClick()">
-          Reset
-        </ion-button>
-      </ion-col>
     </ion-row>
-    <!-- </ion-grid> -->
-    <!-- </div> -->
   </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>
-        Artist:
-        {{ artistName }}
-      </ion-card-subtitle>
-      <ion-card-title> Song: {{ artistSongName }} </ion-card-title>
-    </ion-card-header>
-  </ion-card>
+  <div *ngIf="this.artistData">
+    <ion-card>
+      <img [src]="this.artistData.strArtistFanart" />
+      <!-- <ion-img [src]="this.artistData.strArtistFanart"></ion-img> -->
+      <ion-card-header>
+        <ion-card-subtitle>
+          Artist:
+          {{ this.artistData.strArtist }}
+        </ion-card-subtitle>
 
-  <ion-text color="primary">
-    <h1>Song Lyrics</h1>
-    <pre margin="5px">
-    {{ songLyrics }} 
-    </pre>
-  </ion-text>
+        <ion-card-title> Style: {{ this.artistData.strStyle }} </ion-card-title>
+      </ion-card-header>
+
+      <ion-text color="primary">
+        <h1>Biography</h1>
+        {{ this.artistData.strBiographyEN }}
+      </ion-text>
+
+      <ion-img [src]="this.artistData.strArtistFanart2"></ion-img>
+      <ion-img [src]="this.artistData.strArtistFanart3"></ion-img>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Genre: {{ this.artistData.strGenre }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Website: {{ this.artistData.strWebsite }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Born Year: {{ this.artistData.intBornYear }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>FanArt {{ this.artistData.strArtistFanart }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Label {{ this.artistData.idLabel }} </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
 </ion-content>
