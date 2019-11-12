@@ -6,6 +6,7 @@ import { AudioDBService } from '../services/audio-db.service';
 import { Artist } from 'src/model/audioDB/artistDB';
 import { Album } from 'src/model/audioDB/albumDB';
 import { IonSlides } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -28,7 +29,8 @@ export class Tab1Page {
   albumData: Album; // Data Model of Album
   isIonSlideEnabled = false; // Ion slide Enabled
 
-  constructor(private audioService: AudioDBService) {
+  constructor(private audioService: AudioDBService,
+    private router: Router) {
 
     // Calling Init
     this.init();
@@ -85,13 +87,15 @@ export class Tab1Page {
 
   }
 
-  goToSlide() {
+  goToSlide(idAlbum: string) {
 
     // this.slides.update();
     // Used to work for previous versions of Ionic -> Dependency library : HammerJS
     console.log('Gesture doesnt work & it is well documented for ionic 4');
     console.log('https://github.com/ionic-team/ionic/issues/19183');
 
+    console.log('Which album pressed currently', idAlbum);
+    this.router.navigate(['album-details', idAlbum]);
     this.slides.slideNext();
     this.slides.isEnd().then(
       (e) => {
@@ -99,6 +103,10 @@ export class Tab1Page {
         this.isIonSlideEnabled = !e;
       });
 
+  }
+
+  showAlbum() {
+    // this.audioService.retrieveData();
   }
 
 }

@@ -40,8 +40,7 @@
       <!-- Ion Img doesn't wrap in ion card -->
       <ion-card-header>
         <ion-card-subtitle>
-          Artist:
-          {{ this.artistData.strArtist }}
+          Artist: {{ this.artistData.strArtist }}
         </ion-card-subtitle>
 
         <ion-card-title> Style: {{ this.artistData.strStyle }} </ion-card-title>
@@ -90,7 +89,7 @@
         <ng-container *ngFor="let album of this.albumD">
           <ion-slide
             *ngIf="album.strAlbumThumb && album.strAlbum"
-            (click)="goToSlide()"
+            (click)="goToSlide(album.idAlbum )"
           >
             <div>
               <h1>Album: {{ album.strAlbum }}</h1>
