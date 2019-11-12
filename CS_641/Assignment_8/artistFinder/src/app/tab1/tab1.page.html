@@ -7,7 +7,15 @@
 </ion-header>
 
 <ion-content class="padding">
-  <h1 center>Sensehack</h1>
+  <ion-row center>
+    <ion-col text-center>
+      <h1>Sensehack</h1>
+
+      <ion-label>Search your favorite artist</ion-label>
+      <!-- <button ion-button>Search</button> -->
+    </ion-col>
+  </ion-row>
+  <div class="centerMob"></div>
 
   <ion-card>
     <div class="inputField">
@@ -30,7 +38,6 @@
     <ion-card>
       <img [src]="this.artistData.strArtistFanart" />
       <!-- Ion Img doesn't wrap in ion card -->
-
       <ion-card-header>
         <ion-card-subtitle>
           Artist:
@@ -40,6 +47,31 @@
         <ion-card-title> Style: {{ this.artistData.strStyle }} </ion-card-title>
       </ion-card-header>
 
+      <ion-button (click)="loadAlbums()">
+        Albums
+      </ion-button>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Genre: {{ this.artistData.strGenre }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <span>Website: &nbsp;</span>
+          <a [href]="this.artistData.strWebsite">
+            {{ this.artistData.strWebsite }}
+          </a>
+        </ion-item>
+        <ion-item>
+          <ion-label>Born Year: {{ this.artistData.intBornYear }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Country: {{ this.artistData.strCountry }} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Billboard: {{ this.artistData.intCharted }} </ion-label>
+        </ion-item>
+      </ion-list>
+
       <ion-text color="primary">
         <h1>Biography</h1>
         {{ this.artistData.strBiographyEN }}
@@ -47,54 +79,35 @@
 
       <ion-img [src]="this.artistData.strArtistFanart2"></ion-img>
       <ion-img [src]="this.artistData.strArtistFanart3"></ion-img>
-
-      <ion-list>
-        <ion-item>
-          <ion-label>Genre: {{ this.artistData.strGenre }} </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Website: {{ this.artistData.strWebsite }} </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Born Year: {{ this.artistData.intBornYear }} </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Country {{ this.artistData.strCountry }} </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Label {{ this.artistData.idLabel }} </ion-label>
-        </ion-item>
-      </ion-list>
     </ion-card>
 
-    <ion-button (click)="loadAlbums()">
-      Albums
-    </ion-button>
-
-    <!-- <div *ngIf="this.albumD">
-      <ion-list *ngFor="let album of this.albumD">
-        <div *ngIf="album.strAlbumThumb && album.strAlbum">
-          <img [src]="album.strAlbumThumb" alt="" />
-          <ion-label>Album: {{ album.strAlbum }} </ion-label>
-        </div>
-      </ion-list>
-    </div> -->
-
     <!-- Album Ion Slides -->
-    <!-- <div *ngIf="this.albumD"> -->
-    <ion-slides>
-      <ion-slide *ngFor="let album of this.albumD">
-        <div *ngIf="album.strAlbumThumb && album.strAlbum">
-          <h1>Album: {{ album.strAlbum }}</h1>
-          <img [src]="album.strAlbumThumb" alt="" />
-        </div>
-      </ion-slide>
-    </ion-slides>
-    <!-- </div> -->
-    <!-- End Ion Slides -->
+    <!-- Can't use ngFor and ngIf, so ng-container -->
+    <!-- Link: https://stackoverflow.com/questions/43605168/ngfor-and-ngif-together-angular2-ionic2 -->
 
-    <!-- <ion-button (click)="goToSlide()" [disabled]="!isEnabled">
-      Next
-    </ion-button> -->
+    <div *ngIf="this.albumD">
+      <ion-slides>
+        <ng-container *ngFor="let album of this.albumD">
+          <ion-slide
+            *ngIf="album.strAlbumThumb && album.strAlbum"
+            (click)="goToSlide()"
+          >
+            <div>
+              <h1>Album: {{ album.strAlbum }}</h1>
+              <img [src]="album.strAlbumThumb" alt="" />
+            </div>
+          </ion-slide>
+        </ng-container>
+      </ion-slides>
+      <!-- End Ion Slides -->
+
+      <ion-button
+        (click)="goToSlide()"
+        [hidden]="!isIonSlideEnabled"
+        [disabled]="!isIonSlideEnabled"
+      >
+        Next
+      </ion-button>
+    </div>
   </div>
 </ion-content>

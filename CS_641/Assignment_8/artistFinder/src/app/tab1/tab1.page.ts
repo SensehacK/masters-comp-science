@@ -26,6 +26,7 @@ export class Tab1Page {
   artistData: Artist; // Data Model of Artist
   albumD = []; // Array of Album Object
   albumData: Album; // Data Model of Album
+  isIonSlideEnabled = false; // Ion slide Enabled
 
   constructor(private audioService: AudioDBService) {
 
@@ -77,9 +78,27 @@ export class Tab1Page {
           this.albumData = element;
           this.albumD.push(this.albumData);
         });
+        // Enabling the Next Button
+        this.isIonSlideEnabled = true;
       });
 
-    this.slides.update();
+
+  }
+
+  goToSlide() {
+
+    // this.slides.update();
+    // Used to work for previous versions of Ionic -> Dependency library : HammerJS
+    console.log('Gesture doesnt work & it is well documented for ionic 4');
+    console.log('https://github.com/ionic-team/ionic/issues/19183');
+
+    this.slides.slideNext();
+    this.slides.isEnd().then(
+      (e) => {
+        console.log('At the end', e);
+        this.isIonSlideEnabled = !e;
+      });
+
   }
 
 }
