@@ -29,7 +29,8 @@
   <div *ngIf="this.artistData">
     <ion-card>
       <img [src]="this.artistData.strArtistFanart" />
-      <!-- <ion-img [src]="this.artistData.strArtistFanart"></ion-img> -->
+      <!-- Ion Img doesn't wrap in ion card -->
+
       <ion-card-header>
         <ion-card-subtitle>
           Artist:
@@ -58,12 +59,30 @@
           <ion-label>Born Year: {{ this.artistData.intBornYear }} </ion-label>
         </ion-item>
         <ion-item>
-          <ion-label>FanArt {{ this.artistData.strArtistFanart }} </ion-label>
+          <ion-label>Country {{ this.artistData.strCountry }} </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>Label {{ this.artistData.idLabel }} </ion-label>
         </ion-item>
       </ion-list>
     </ion-card>
+
+    <ion-button (click)="loadAlbums()">
+      Albums
+    </ion-button>
+
+    <div *ngIf="this.albumD">
+      <ion-list>
+        <ion-item>
+          <ion-label>Label {{ this.artistData.idLabel }} </ion-label>
+        </ion-item>
+
+        <div *ngFor="let album of this.albumD">
+          <ion-item>
+            <ion-label>Album Name: {{ album.strAlbum }} </ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+    </div>
   </div>
 </ion-content>
