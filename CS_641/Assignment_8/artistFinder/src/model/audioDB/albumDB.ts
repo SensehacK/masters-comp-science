@@ -2,8 +2,6 @@ export interface AlbumsDB {
     albums: Album[];
 }
 
-
-
 export interface Album {
     idAlbum: string;
     idArtist: string;

@@ -71,18 +71,30 @@
       Albums
     </ion-button>
 
-    <div *ngIf="this.albumD">
-      <ion-list>
-        <ion-item>
-          <ion-label>Label {{ this.artistData.idLabel }} </ion-label>
-        </ion-item>
-
-        <div *ngFor="let album of this.albumD">
-          <ion-item>
-            <ion-label>Album Name: {{ album.strAlbum }} </ion-label>
-          </ion-item>
+    <!-- <div *ngIf="this.albumD">
+      <ion-list *ngFor="let album of this.albumD">
+        <div *ngIf="album.strAlbumThumb && album.strAlbum">
+          <img [src]="album.strAlbumThumb" alt="" />
+          <ion-label>Album: {{ album.strAlbum }} </ion-label>
         </div>
       </ion-list>
-    </div>
+    </div> -->
+
+    <!-- Album Ion Slides -->
+    <!-- <div *ngIf="this.albumD"> -->
+    <ion-slides>
+      <ion-slide *ngFor="let album of this.albumD">
+        <div *ngIf="album.strAlbumThumb && album.strAlbum">
+          <h1>Album: {{ album.strAlbum }}</h1>
+          <img [src]="album.strAlbumThumb" alt="" />
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <!-- </div> -->
+    <!-- End Ion Slides -->
+
+    <!-- <ion-button (click)="goToSlide()" [disabled]="!isEnabled">
+      Next
+    </ion-button> -->
   </div>
 </ion-content>

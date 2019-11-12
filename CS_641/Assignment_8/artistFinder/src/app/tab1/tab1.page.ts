@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 // DB Service
 import { AudioDBService } from '../services/audio-db.service';
 
 // Model Import
 import { Artist } from 'src/model/audioDB/artistDB';
 import { Album } from 'src/model/audioDB/albumDB';
+import { IonSlides } from '@ionic/angular';
 
 
 @Component({
@@ -14,6 +15,8 @@ import { Album } from 'src/model/audioDB/albumDB';
 })
 export class Tab1Page {
 
+
+  @ViewChild(IonSlides) slides: IonSlides;
 
   // Property Binding for easy communication with View
   artistName = '';
@@ -67,19 +70,16 @@ export class Tab1Page {
     this.audioService.getArtistAlbums(this.artistName)
       .subscribe((data) => {
         console.log('DAta printing', data);
-        console.log(typeof (data));
 
-        // data["album"][0].strAlbum
-        // this.albumData = data[0].albums;
-        console.log(data[0]);
-        console.log(data['album'][0].strAlbum);
-
+        // Accessing Data for each array element
         data['album'].forEach(element => {
           console.log(element);
           this.albumData = element;
           this.albumD.push(this.albumData);
         });
       });
+
+    this.slides.update();
   }
 
 }
