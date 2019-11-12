@@ -39,7 +39,7 @@ export class AudioDBService {
     return this.http.get<AlbumsDB>(this.urlArtistAlbum + encodeURI(artistName));
   }
 
-  storeData() {
+  storeData(): Promise<void> {
     this.getArtistAlbums(this.artistName)
       .subscribe((response) => {
         // Accessing Data for each array element
@@ -48,18 +48,57 @@ export class AudioDBService {
           this.albumData = element;
           this.albumD.push(this.albumData);
         });
+        return;
       });
   }
 
   retrieveData(albumID: number): Album {
-    this.albumD.forEach(albumObj => {
-      console.log('Data in albumArray', albumObj.idAlbum);
-      if (albumObj.idAlbum === albumID) {
-        return albumObj as Album;
-      } else {
-        return 0;
-      }
-    });
+    console.log('Data in retrieveData');
+    // calling function for debugging manually
+    this.artistName = 'Eminem';
+    // this.storeData().then(() => {
+    //   this.albumD.forEach(albumObj => {
+    //     console.log('Data in albumArray', albumObj.idAlbum);
+    //     if (albumObj.idAlbum === albumID) {
+    //       return albumObj as Album;
+    //     } else {
+    //       return 0;
+    //     }
+    //   });
+    // });
+
+    this.getArtistAlbums(this.artistName)
+      .subscribe((response) => {
+        // Accessing Data for each array element
+        response['album'].forEach(element => {
+          console.log(element);
+          this.albumData = element;
+          this.albumD.push(this.albumData);
+        });
+
+        console.log('The artist ID ', albumID);
+
+        this.albumD.forEach(albumObj => {
+          console.log('Data in albumArray', albumObj.idAlbum);
+          console.log(typeof (albumObj.idAlbum));
+          console.log(typeof (albumID));
+
+
+          if (parseInt(albumObj.idAlbum) === albumID) {
+            console.log('Found the album', albumObj.idAlbum);
+            console.log('Found the album', albumObj.strAlbum);
+            console.log('Full object ', albumObj);
+
+            return albumObj as Album;
+          } else {
+            return 0;
+          }
+        });
+
+
+      });
+
+
   }
 
 }

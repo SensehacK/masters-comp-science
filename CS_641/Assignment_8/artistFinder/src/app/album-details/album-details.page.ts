@@ -16,7 +16,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class AlbumDetailsPage implements OnInit {
   id;
-  idAlbum = 0;
+  idAlbum = 2110668;
   albumObject: Album;
 
   queryParamRes: Params;
@@ -26,20 +26,25 @@ export class AlbumDetailsPage implements OnInit {
 
   ngOnInit() {
 
-    this.id = this.route.snapshot.paramMap.get('id');
-    console.log('printing id of the parameter', this.id);
+    // this.id = this.route.snapshot.paramMap.get('id');
+    // console.log('printing id of the parameter', this.id);
 
-    this.route.queryParams.subscribe(res => {
-      this.queryParamRes = res;
-      console.log(res.keys());
-    });
+    // this.route.queryParams.subscribe(res => {
+    //   this.queryParamRes = res;
+    //   console.log(res.keys());
+    // });
 
     this.getAlbumDetails(this.idAlbum);
 
   }
 
   getAlbumDetails(idAlbum: number) {
+    console.log('Hi calling function');
+
     this.albumObject = this.audioService.retrieveData(idAlbum);
+
+    // Getting called fast , need to work for promise or observable to make synchronous call
+    console.log('Returned object', this.albumObject);
 
   }
 
