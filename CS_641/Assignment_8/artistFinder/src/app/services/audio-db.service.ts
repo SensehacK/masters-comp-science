@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
 import { Observable } from 'rxjs';
 
 // Importing Models for Typecasting
@@ -14,14 +12,13 @@ import { AlbumsDB, Album } from '../../model/audioDB/albumDB';
 })
 export class AudioDBService {
 
+  // Variables
   urlArtistInfo = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=';
   urlArtistAlbum = 'https://theaudiodb.com/api/v1/json/195233/searchalbum.php?s=';
 
-  artistName = '';
-
+  artistName: string;
   albumD = []; // Array of Album Object
   albumData: Album; // Data Model of Album
-  isDataValid: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -32,20 +29,19 @@ export class AudioDBService {
     return this.http.get<ArtistDB>(this.urlArtistInfo + encodeURI(artistName));
   }
 
+  // Method for retrieving Artist Albums over API JSON
   getArtistAlbums(artistName: string): Observable<AlbumsDB> {
     this.artistName = artistName;
     // Return Dynamic string
-    console.log(this.urlArtistAlbum + encodeURI(artistName));
-
     return this.http.get<AlbumsDB>(this.urlArtistAlbum + encodeURI(artistName));
   }
 
+  // Storing JSON response data using Interface so that it could be easily accessible everywhere.
   storeData() {
     this.getArtistAlbums(this.artistName)
       .subscribe((response) => {
         // Accessing Data for each array element
         response['album'].forEach(element => {
-          console.log(element);
           this.albumData = element;
           this.albumD.push(this.albumData);
         });
@@ -53,67 +49,41 @@ export class AudioDBService {
       });
   }
 
+  /* Abstract Public exposed function
+  Retrieve ZGF0YQ== which would only be used by other classes
+  for clean code flow and not exposing more core functions of a service class
+  */
   retrieveData(albumID: number) {
-    console.log('Data in retrieveData');
-    // calling function for debugging manually
-    this.artistName = 'Eminem';
+    /* Null error handling or Direct Route accessing handling
+    Calling function for debugging manually
+    and setting artist value as we assume it would be already set before.
+    */
+    this.artistName = this.artistName ? this.artistName : 'Eminem';
 
     return new Promise((resolve, reject) => {
-
-      // if (this.isDataValid) {
-      //   resolve(this.albumData);
-      // } else {
-      //   reject('error');
-      // }
-
-      // calling one more func
+      // Calling yet another func ( Always love Callback Hell, Deadlock and  Race Conditions.)
       this.getArtistAlbums(this.artistName)
         .subscribe((response) => {
           // Accessing Data for each array element
           response['album'].forEach(element => {
-            console.log(element);
             this.albumData = element;
             this.albumD.push(this.albumData);
           });
-
-          console.log('The artist ID ', albumID);
-
           this.albumD.forEach(albumObj => {
-            console.log('Data in albumArray', albumObj.idAlbum);
-            console.log(typeof (albumObj.idAlbum));
-            console.log(typeof (albumID));
-
-
             if (parseInt(albumObj.idAlbum) === albumID) {
               this.albumData = albumObj;
               resolve(this.albumData);
-              // return albumObj as Album;
-            } else {
-              return 0;
+              // return albumObj as Album; // Didn't worked for keeping return promise.
             }
           });
-
           reject('Album not found');
         });
-
     });
   }
-
-  promiseDataAlbum(albumID: number) {
-    return new Promise((resolve, reject) => {
-      // Calling func
-      this.retrieveData(albumID);
-
-      if (this.isDataValid) {
-        resolve(this.albumData);
-      } else {
-        reject('error');
-      }
-    });
-  }
-
 }
-/* Dev instance URL for J Cole
+
+/* Dev Debug instance URL for J Cole
     artistDevURL = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=J%20cole';
+    urlArtistAlbum = 'https://theaudiodb.com/api/v1/json/195233/searchalbum.php?s=J%20cole';
    return this.http.get<ArtistDB>(this.artistDevURL);
-  */
+*/

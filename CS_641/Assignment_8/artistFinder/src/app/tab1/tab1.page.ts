@@ -45,20 +45,15 @@ export class Tab1Page {
   }
 
   onClick() {
-    console.log('Hi Sensehack Dev env');
-    this.artistName = this.artistName ? this.artistName : 'Kautilya';
+    console.log('SensehacK Dev Env');
+    this.artistName = this.artistName ? this.artistName : 'Eminem';
 
     this.audioService.getArtistInfo(this.artistName)
       .subscribe((data) => {
-        console.log(data);
         data.artists.forEach(artist => {
-          console.log('in For each array');
           this.artistData = artist;
           this.artistD.push(this.artistData);
           this.artistTitle = this.artistData.strArtist ? this.artistData.strArtist : this.artistName;
-          console.log(artist.strArtist);
-          console.log(artist.intBornYear);
-          console.log(this.artistData.strBiographyEN);
         });
 
       });
@@ -72,18 +67,14 @@ export class Tab1Page {
 
     this.audioService.getArtistAlbums(this.artistName)
       .subscribe((data) => {
-        console.log('DAta printing', data);
-
         // Accessing Data for each array element
         data['album'].forEach(element => {
-          console.log(element);
           this.albumData = element;
           this.albumD.push(this.albumData);
         });
         // Enabling the Next Button
         this.isIonSlideEnabled = true;
       });
-
 
   }
 

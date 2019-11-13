@@ -50,6 +50,35 @@
         Albums
       </ion-button>
 
+      <!-- Album Ion Slides -->
+      <!-- Can't use ngFor and ngIf, so ng-container -->
+      <!-- Link: https://stackoverflow.com/questions/43605168/ngfor-and-ngif-together-angular2-ionic2 -->
+
+      <div *ngIf="this.albumD">
+        <ion-slides>
+          <ng-container *ngFor="let album of this.albumD">
+            <ion-slide
+              *ngIf="album.strAlbumThumb && album.strAlbum"
+              (click)="goToSlide(album.idAlbum )"
+            >
+              <div>
+                <h1>Album: {{ album.strAlbum }}</h1>
+                <img [src]="album.strAlbumThumb" alt="" />
+              </div>
+            </ion-slide>
+          </ng-container>
+        </ion-slides>
+        <!-- End Ion Slides -->
+
+        <ion-button
+          (click)="nextSlide()"
+          [hidden]="!isIonSlideEnabled"
+          [disabled]="!isIonSlideEnabled"
+        >
+          Next
+        </ion-button>
+      </div>
+
       <ion-list>
         <ion-item>
           <ion-label>Genre: {{ this.artistData.strGenre }} </ion-label>
@@ -76,37 +105,14 @@
         {{ this.artistData.strBiographyEN }}
       </ion-text>
 
-      <ion-img [src]="this.artistData.strArtistFanart2"></ion-img>
-      <ion-img [src]="this.artistData.strArtistFanart3"></ion-img>
+      <ion-img
+        *ngIf="this.artistData.strArtistFanart2"
+        [src]="this.artistData.strArtistFanart2"
+      ></ion-img>
+      <ion-img
+        *ngIf="this.artistData.strArtistFanart3"
+        [src]="this.artistData.strArtistFanart3"
+      ></ion-img>
     </ion-card>
-
-    <!-- Album Ion Slides -->
-    <!-- Can't use ngFor and ngIf, so ng-container -->
-    <!-- Link: https://stackoverflow.com/questions/43605168/ngfor-and-ngif-together-angular2-ionic2 -->
-
-    <div *ngIf="this.albumD">
-      <ion-slides>
-        <ng-container *ngFor="let album of this.albumD">
-          <ion-slide
-            *ngIf="album.strAlbumThumb && album.strAlbum"
-            (click)="goToSlide(album.idAlbum )"
-          >
-            <div>
-              <h1>Album: {{ album.strAlbum }}</h1>
-              <img [src]="album.strAlbumThumb" alt="" />
-            </div>
-          </ion-slide>
-        </ng-container>
-      </ion-slides>
-      <!-- End Ion Slides -->
-
-      <ion-button
-        (click)="nextSlide()"
-        [hidden]="!isIonSlideEnabled"
-        [disabled]="!isIonSlideEnabled"
-      >
-        Next
-      </ion-button>
-    </div>
   </div>
 </ion-content>
