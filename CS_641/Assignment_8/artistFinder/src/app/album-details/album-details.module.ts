@@ -11,7 +11,12 @@ const routes: Routes = [
   {
     path: '',
     component: AlbumDetailsPage
-  }
+  },
+  {
+    path: ':id',
+    component: AlbumDetailsPage
+  },
+
 ];
 
 @NgModule({
@@ -23,4 +28,4 @@ const routes: Routes = [
   ],
   declarations: [AlbumDetailsPage]
 })
-export class AlbumDetailsPageModule {}
+export class AlbumDetailsPageModule { }

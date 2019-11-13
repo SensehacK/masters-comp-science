@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Album Details</ion-title>
+    <ion-title>{{ this.artistName }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,8 +9,9 @@
 
   <!-- Only execute it when data is present or else empty -->
   <div *ngIf="this.albumObject">
-    <ion-label>Cover Art</ion-label>
-    <img [src]="this.albumObject.strAlbumThumb" alt="" srcset="" />
+    <div *ngIf="this.albumObject.strAlbumThumb">
+      <img [src]="this.albumObject.strAlbumThumb" alt="" srcset="" />
+    </div>
 
     <ion-list>
       <ion-item>
@@ -29,7 +30,7 @@
         <ion-label>Music Label: {{ this.albumObject.strLabel }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Sales: {{ this.albumObject.intSales }}units</ion-label>
+        <ion-label>Sales: {{ this.albumObject.intSales }} units</ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
@@ -47,7 +48,9 @@
       </ion-item>
     </ion-list>
 
-    <ion-label>CD Art</ion-label>
-    <ion-img [src]="this.albumObject.strAlbumCDart"></ion-img>
+    <div *ngIf="this.albumObject.strAlbumCDart">
+      <ion-label>CD Art</ion-label>
+      <ion-img [src]="this.albumObject.strAlbumCDart"></ion-img>
+    </div>
   </div>
 </ion-content>
