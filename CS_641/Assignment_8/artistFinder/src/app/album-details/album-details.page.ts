@@ -17,7 +17,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class AlbumDetailsPage implements OnInit {
   id;
   idAlbum = 2110668;
-  albumObject: Album;
+  albumObject;
+
 
   queryParamRes: Params;
 
@@ -38,13 +39,16 @@ export class AlbumDetailsPage implements OnInit {
 
   }
 
-  getAlbumDetails(idAlbum: number) {
-    console.log('Hi calling function');
+  async getAlbumDetails(idAlbum: number) {
+    console.log('Hi calling function2');
 
-    this.albumObject = this.audioService.retrieveData(idAlbum);
+    this.audioService.retrieveData(idAlbum)
+      .then(data => {
+        this.albumObject = data;
+        this.albumObject.strWikipediaID = 'https://en.wikipedia.org/wiki/' + this.albumObject.strWikipediaID;
+      });
 
-    // Getting called fast , need to work for promise or observable to make synchronous call
-    console.log('Returned object', this.albumObject);
+
 
   }
 

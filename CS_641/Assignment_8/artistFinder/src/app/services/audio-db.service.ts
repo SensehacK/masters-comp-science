@@ -21,6 +21,7 @@ export class AudioDBService {
 
   albumD = []; // Array of Album Object
   albumData: Album; // Data Model of Album
+  isDataValid: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -39,7 +40,7 @@ export class AudioDBService {
     return this.http.get<AlbumsDB>(this.urlArtistAlbum + encodeURI(artistName));
   }
 
-  storeData(): Promise<void> {
+  storeData() {
     this.getArtistAlbums(this.artistName)
       .subscribe((response) => {
         // Accessing Data for each array element
@@ -52,53 +53,63 @@ export class AudioDBService {
       });
   }
 
-  retrieveData(albumID: number): Album {
+  retrieveData(albumID: number) {
     console.log('Data in retrieveData');
     // calling function for debugging manually
     this.artistName = 'Eminem';
-    // this.storeData().then(() => {
-    //   this.albumD.forEach(albumObj => {
-    //     console.log('Data in albumArray', albumObj.idAlbum);
-    //     if (albumObj.idAlbum === albumID) {
-    //       return albumObj as Album;
-    //     } else {
-    //       return 0;
-    //     }
-    //   });
-    // });
 
-    this.getArtistAlbums(this.artistName)
-      .subscribe((response) => {
-        // Accessing Data for each array element
-        response['album'].forEach(element => {
-          console.log(element);
-          this.albumData = element;
-          this.albumD.push(this.albumData);
+    return new Promise((resolve, reject) => {
+
+      // if (this.isDataValid) {
+      //   resolve(this.albumData);
+      // } else {
+      //   reject('error');
+      // }
+
+      // calling one more func
+      this.getArtistAlbums(this.artistName)
+        .subscribe((response) => {
+          // Accessing Data for each array element
+          response['album'].forEach(element => {
+            console.log(element);
+            this.albumData = element;
+            this.albumD.push(this.albumData);
+          });
+
+          console.log('The artist ID ', albumID);
+
+          this.albumD.forEach(albumObj => {
+            console.log('Data in albumArray', albumObj.idAlbum);
+            console.log(typeof (albumObj.idAlbum));
+            console.log(typeof (albumID));
+
+
+            if (parseInt(albumObj.idAlbum) === albumID) {
+              this.albumData = albumObj;
+              resolve(this.albumData);
+              // return albumObj as Album;
+            } else {
+              return 0;
+            }
+          });
+
+          reject('Album not found');
         });
 
-        console.log('The artist ID ', albumID);
+    });
+  }
 
-        this.albumD.forEach(albumObj => {
-          console.log('Data in albumArray', albumObj.idAlbum);
-          console.log(typeof (albumObj.idAlbum));
-          console.log(typeof (albumID));
+  promiseDataAlbum(albumID: number) {
+    return new Promise((resolve, reject) => {
+      // Calling func
+      this.retrieveData(albumID);
 
-
-          if (parseInt(albumObj.idAlbum) === albumID) {
-            console.log('Found the album', albumObj.idAlbum);
-            console.log('Found the album', albumObj.strAlbum);
-            console.log('Full object ', albumObj);
-
-            return albumObj as Album;
-          } else {
-            return 0;
-          }
-        });
-
-
-      });
-
-
+      if (this.isDataValid) {
+        resolve(this.albumData);
+      } else {
+        reject('error');
+      }
+    });
   }
 
 }

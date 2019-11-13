@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 export class Tab1Page {
 
 
-  @ViewChild(IonSlides) slides: IonSlides;
+  // @ViewChild(IonSlides) slides: IonSlides;
 
   // Property Binding for easy communication with View
   artistName = '';
@@ -96,13 +96,17 @@ export class Tab1Page {
 
     console.log('Which album pressed currently', idAlbum);
     this.router.navigate(['album-details', idAlbum]);
-    this.slides.slideNext();
-    this.slides.isEnd().then(
-      (e) => {
-        console.log('At the end', e);
-        this.isIonSlideEnabled = !e;
-      });
 
+
+  }
+
+  nextSlide() {
+    // this.slides.slideNext();
+    // this.slides.isEnd().then(
+    //   (e) => {
+    //     console.log('At the end', e);
+    //     this.isIonSlideEnabled = !e;
+    //   });
   }
 
   showAlbum() {

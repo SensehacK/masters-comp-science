@@ -18,6 +18,7 @@ export interface Album {
     intSales: string;
     strAlbumSpine: null;
     strAlbum3DThumb: null;
+    strDescriptionEN: null;
     strDescriptionDE: null;
     strDescriptionFR: null;
     strDescriptionCN: null;
