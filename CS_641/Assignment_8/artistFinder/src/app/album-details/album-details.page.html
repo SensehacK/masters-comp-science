@@ -32,11 +32,7 @@
       <ion-item>
         <ion-label>Sales: {{ this.albumObject.intSales }} units</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label>
-          Description: {{ this.albumObject.strDescriptionEN }}
-        </ion-label>
-      </ion-item>
+
       <ion-item>
         <ion-label>
           Release Year: {{ this.albumObject.intYearReleased }}
@@ -52,5 +48,9 @@
       <ion-label>CD Art</ion-label>
       <ion-img [src]="this.albumObject.strAlbumCDart"></ion-img>
     </div>
+    <ion-text color="primary">
+      <h3>Description:</h3>
+      {{ this.albumObject.strDescriptionEN }}
+    </ion-text>
   </div>
 </ion-content>
