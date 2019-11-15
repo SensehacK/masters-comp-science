@@ -1,0 +1,4 @@
+Age,Workclass,Fnlwgt,Education,Education-num,Marital-status,Occupation,Relationship,Race,Sex,Capital-gain,Capital-loss,Hours-per-week,Native_country
+45,Self-emp-not-inc,256630, Bachelors,13, Divorced, Sales, Not-in-family, White, Male,0,0,60, Canada
+65,Private,125000, Some-college,10, Married-civ-spouse, Craft-repair, Husband, White, Male,0,0,40, United-States
+32,Private,341368, HS-grad,9, Divorced, Craft-repair, Not-in-family, White, Male,0,0,20, United-States
