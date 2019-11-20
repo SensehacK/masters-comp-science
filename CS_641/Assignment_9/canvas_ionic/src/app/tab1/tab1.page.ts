@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor() {
+
+    console.log('Video link of the app working https://photos.app.goo.gl/hgiPDJdFspaytUNw7')
+
+  }
 
 }
