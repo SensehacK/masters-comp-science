@@ -1,32 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-canvas-cc',
   templateUrl: './canvas-cc.component.html',
   styleUrls: ['./canvas-cc.component.scss'],
 })
-export class CanvasCCComponent implements OnInit {
+export class CanvasCCComponent implements AfterViewInit {
 
-  constructor() { }
+  @ViewChild('myCanvas', { static: false }) myCanvas: any;
 
-  ngOnInit() {
-    this.canvasCode();
+  // Variables
+  myCanvasContext: any;
+  customWelcomeGreetingRant: boolean;
+
+  constructor() {
+
+
   }
 
-  ionViewWillEnter() {
-    console.log('In ion view will enter');
+  ngAfterViewInit() {
+
+    // Setting HTML elements properties in ngViewInit Method as before they are undefined
+    this.myCanvas.width = window.innerWidth;
+    this.myCanvas.height = window.innerHeight;
+    this.myCanvasContext = this.myCanvas.nativeElement.getContext('2d');
+
+    // Calling Canvas Code function
     this.canvasCode();
+
   }
+
 
   canvasCode() {
     // Defining Variables
-    const myCanvas = document.getElementById('myCanvas');
-    const myCanvasContext = myCanvas.getContext('2d');
-    myCanvas.width = window.innerWidth;
-    myCanvas.height = window.innerHeight;
-
-    console.log(myCanvas);
-
+    const myCanvasContext = this.myCanvas.nativeElement.getContext('2d');
 
     // Setting up constants
     const canvasWidth = 15;
@@ -42,8 +49,6 @@ export class CanvasCCComponent implements OnInit {
 
     function init() {
 
-      console.log('In init func');
-
       // For loop for the whole screen dynamically generated
       for (let i = 0; i < repeatPattern; i++) {
         // Main Color
@@ -58,21 +63,16 @@ export class CanvasCCComponent implements OnInit {
 
     }
 
-
     // Function for drawing the rectangle
     function canvasDraw(color, direction) {
-      console.log('In canvas Draw');
 
       if (xAxis > innerWidth) {
         xAxis = 0;
       }
 
-      // myCanvasContext.clearRect(xAxis, yAxis, canvasWidth - 10, innerHeight);
-      myCanvasContext.fillStyle = color;
-
       // Using Global Variables
+      myCanvasContext.fillStyle = color;
       myCanvasContext.fillRect(xAxis, yAxis, canvasWidth, window.innerHeight);
-
       xAxis = xAxis + canvasWidth;
 
     }
@@ -91,8 +91,6 @@ export class CanvasCCComponent implements OnInit {
 
       if ((x > 1 && x < 3) || (x < -1 && x > -3)) {
 
-        console.log('printing x greater or smaller than 1 ', x);
-
         xAxis = (x > 1) ? xAxis + (x * 0.05) : xAxis - (x * 0.05);
         // Y- axis could be utilized but it doesn't translate well with the animation.
         // yAxis = (y > 1) ? yAxis + (y * 0.05) : yAxis - (y * 0.05);
@@ -108,8 +106,6 @@ export class CanvasCCComponent implements OnInit {
 
       if (x > 3 || x < -3) {
 
-        console.log('printing x greater or smaller than 3 ', x);
-
         xAxis = (x > 3) ? xAxis + (x * 0.3) : xAxis - (x * 0.3);
 
         for (let i = 0; i < repeatPattern; i++) {
@@ -118,6 +114,7 @@ export class CanvasCCComponent implements OnInit {
           // Background Color
           canvasDraw('aqua', xAxis);
         }
+
       }
 
     }
