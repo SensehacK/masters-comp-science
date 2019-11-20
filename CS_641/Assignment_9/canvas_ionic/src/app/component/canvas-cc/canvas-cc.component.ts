@@ -10,7 +10,6 @@ export class CanvasCCComponent implements AfterViewInit {
   @ViewChild('myCanvas', { static: false }) myCanvas: any;
 
   // Variables
-  myCanvasContext: any;
   customWelcomeGreetingRant: boolean;
 
   constructor() {
@@ -25,7 +24,6 @@ export class CanvasCCComponent implements AfterViewInit {
     // Setting HTML elements properties in ngViewInit Method as before they are undefined
     this.myCanvas.width = window.innerWidth;
     this.myCanvas.height = window.innerHeight;
-    this.myCanvasContext = this.myCanvas.nativeElement.getContext('2d');
 
     // Calling Canvas Code function
     this.canvasCode();
