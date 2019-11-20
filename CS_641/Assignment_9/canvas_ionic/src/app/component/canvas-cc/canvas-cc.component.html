@@ -1,6 +1,25 @@
 <div>
   <h1>Sensehack Canvas</h1>
 
+  <div *ngIf="this.customWelcomeGreetingRant">
+    <p>
+      Welcome Mac OS user !
+    </p>
+
+    <p>Exclusive extra tags for Mac OS user</p>
+
+    <p>
+      I hate web development sometimes! Have to rely on browser spec, syntax
+      variance, ECMAScript changes, web standards, new OS breaking changes,
+      legacy support, fallback error handling for unsupported specs.
+    </p>
+    <p>
+      But when the script runs and finally all the research effort of breaking
+      changes over past versions of dependencies and obsolete tutorials and
+      documentations comes to fruition
+    </p>
+  </div>
+
   <!-- // Turns out id="" doesn't work for referencing in Angular and Ionic. -->
   <!-- <canvas id="myCanvas"></canvas> -->
   <canvas #myCanvas></canvas>

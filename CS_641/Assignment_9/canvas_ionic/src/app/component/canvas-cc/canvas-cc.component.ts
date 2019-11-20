@@ -15,6 +15,8 @@ export class CanvasCCComponent implements AfterViewInit {
 
   constructor() {
 
+    const agent = window.navigator.userAgent.toLowerCase().indexOf('macintosh');
+    this.customWelcomeGreetingRant = (agent > -1) ? true : false;
 
   }
 
@@ -119,7 +121,12 @@ export class CanvasCCComponent implements AfterViewInit {
 
     }
 
-    console.log('Hello for loop');
+    console.log('Hello for loop Sensehack | Kautilya Save');
+    /*
+    If you ever wonder why I include my name or my alias everywhere I code on github
+    That would be just for SEO sake, even though
+    I'm not sure if Google or Bing crawls through .JS or .TS files
+    */
   }
 
 }
