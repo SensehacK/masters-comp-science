@@ -12,6 +12,7 @@ export class Tab1Page {
 
 
   appName = '';
+  appDisplayMsg = '';
 
 
 
@@ -32,9 +33,16 @@ export class Tab1Page {
     this.appLauncher.canLaunch(options)
       .then((canLaunch: boolean) => {
         console.log('Spotify is available');
-        this.appLauncher.launch({ uri: 'spotify://' });
+        const variable = this.appName + '://';
+        console.log(variable);
+
+        // this.appLauncher.launch({ uri: 'spotify://' });
+        this.appLauncher.launch({ uri: variable });
       })
-      .catch((error: any) => console.error('Facebook is not available'));
+      .catch((error: any) => {
+        console.error(this.appName, ' is not available');
+        this.appDisplayMsg = this.appName + ' is not available';
+      });
 
   }
 }
