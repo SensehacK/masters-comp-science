@@ -13,6 +13,8 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
+import { AppLauncher, AppLauncherOptions } from '@ionic-native/app-launcher/ngx';
+import { Platform } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +26,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
     Camera,
     Vibration,
     TextToSpeech,
+    AppLauncher,
+    Platform,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

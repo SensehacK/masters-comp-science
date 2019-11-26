@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
+    "@ionic-native/app-launcher": "^5.17.1",
     "@ionic-native/camera": "^5.17.1",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -27,6 +28,7 @@
     "@ionic-native/vibration": "^5.17.1",
     "@ionic/angular": "^4.7.1",
     "cordova-ios": "5.1.0",
+    "cordova-plugin-app-launcher": "0.4.0",
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-tts": "0.2.3",
     "cordova-plugin-vibration": "3.1.1",
@@ -78,7 +80,8 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-vibration": {},
-      "cordova-plugin-tts": {}
+      "cordova-plugin-tts": {},
+      "cordova-plugin-app-launcher": {}
     },
     "platforms": [
       "ios"
