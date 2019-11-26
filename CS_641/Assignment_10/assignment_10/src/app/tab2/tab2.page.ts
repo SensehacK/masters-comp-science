@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
-import { log } from 'util';
+
 
 @Component({
   selector: 'app-tab2',
@@ -11,7 +11,7 @@ export class Tab2Page {
 
   imageData: any;
 
-  constructor(private camera: Camera) { }
+  constructor(private camera: Camera, ) { }
 
 
 
@@ -39,7 +39,6 @@ export class Tab2Page {
       // Handle error
     });
   }
-
 
 
 }

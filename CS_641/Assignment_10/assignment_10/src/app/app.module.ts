@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { Camera } from '@ionic-native/camera/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +22,8 @@ import { Camera } from '@ionic-native/camera/ngx';
     StatusBar,
     SplashScreen,
     Camera,
+    Vibration,
+    TextToSpeech,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
