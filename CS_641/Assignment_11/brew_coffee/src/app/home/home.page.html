@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Brew Coffee
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="coffee_card">
+    <h3>Coffee Intensity</h3>
+
+    <h4>{{this.coffeeIntensity[coffeeSliderValue]}}</h4>
+    <ion-range
+      name="coffee_intensity"
+      min="0"
+      max="18"
+      step="1"
+      pin="true"
+      ionChange="handleCoffeeIntensityRange($event)"
+      value="0"
+      [(ngModel)]="coffeeSliderValue"
+    >
+      <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+      <ion-icon slot="end" name="sunny"></ion-icon>
+    </ion-range>
+  </ion-card>
+
+  <ion-card class="people_card">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size="12">
+          <h3>Select total Brew</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button (click)="subtract()" class="counter_button">
+            <ion-icon class="counter_icon" slot="icon-only" name="remove"
+              >Subtraction
+            </ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <span class="peopleCountLabel"> {{ this.peopleCount }}</span>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button (click)="add()" class="counter_button">
+            <ion-icon class="counter_icon" slot="icon-only" name="add"
+              >Addition</ion-icon
+            >
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+</ion-content>

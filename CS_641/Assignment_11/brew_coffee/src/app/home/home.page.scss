@@ -1,0 +1,54 @@
+.brewC {
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+
+ion-card {
+}
+
+ion-grid {
+  display: grid;
+}
+
+.coffee_card {
+  color: rgb(235, 235, 53);
+  background-color: #ee4a52;
+  box-shadow: 3px 4px 8px 5px #ce7c5c;
+}
+
+.people_card {
+  color: cyan;
+  background-color: #3880ff;
+  box-shadow: 3px 4px 8px 5px #5a88da;
+}
+
+.peopleCountLabel {
+  display: block;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.counter_button {
+  display: contents;
+  color: aqua;
+}
+
+.calculate_button {
+  --background: green;
+  display: block;
+  color: red;
+}
+
+ion-icon {
+  font-size: 24px;
+}
+
+.counter_icon {
+  font-size: 64px;
+}
