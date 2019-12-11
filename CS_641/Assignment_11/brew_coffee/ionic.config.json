@@ -1,5 +1,7 @@
 {
   "name": "brew_coffee",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -20,6 +20,7 @@
       ionChange="handleCoffeeIntensityRange($event)"
       value="0"
       [(ngModel)]="coffeeSliderValue"
+      color="kautilya"
     >
       <ion-icon size="small" slot="start" name="sunny"></ion-icon>
       <ion-icon slot="end" name="sunny"></ion-icon>
@@ -55,4 +56,18 @@
     </ion-grid>
   </ion-card>
 
+  <div>
+    <ion-button (click)="calculate()" class="coffee-btn">Calculate </ion-button>
+  </div>
+
+  <div *ngIf="totalCoffee > 0">
+    <ion-label
+      >Coffee Units: Coffee : {{ coffeeNative }}tbsp
+      <br />
+      Water : {{ waterPeople }}ml
+      <br />
+      <hr />
+      Total Brewed Coffee : {{ totalCoffee }}ml
+    </ion-label>
+  </div>
 </ion-content>
