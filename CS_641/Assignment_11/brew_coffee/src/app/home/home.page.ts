@@ -42,7 +42,9 @@ export class HomePage {
     // if (this.brewSettings.getFirstLaunch())
     // this.brewSettings.setFirstLaunch();
 
+    // Calling Initialize function
     this.brewSettings.initialize();
+
   }
 
   subtract() {

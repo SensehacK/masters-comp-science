@@ -57,17 +57,22 @@
   </ion-card>
 
   <div>
-    <ion-button (click)="calculate()" class="coffee-btn">Calculate </ion-button>
+    <ion-button (click)="calculate()" class="coffee-btn ion-text-uppercase"
+      >Calculate
+    </ion-button>
   </div>
 
-  <div *ngIf="totalCoffee > 0">
-    <ion-label
-      >Coffee Units: Coffee : {{ coffeeNative }}tbsp
-      <br />
-      Water : {{ waterPeople }}ml
-      <br />
-      <hr />
-      Total Brewed Coffee : {{ totalCoffee }}ml
-    </ion-label>
+  <div *ngIf="totalCoffee > 0" class="ion-text-center">
+    <h3>
+      Coffee Units:
+    </h3>
+    <!-- <hr /> -->
+    <ion-label> Coffee : {{ coffeeNative | number:'.2' }}tbsp </ion-label>
+    <!-- <hr /> -->
+    <br />
+    <ion-label> Water : {{ waterPeople }}ml</ion-label>
+    <!-- <br /> -->
+    <hr />
+    <ion-label>Total Brewed Coffee : {{ totalCoffee | number }}ml </ion-label>
   </div>
 </ion-content>

@@ -10,18 +10,17 @@ export class BrewSettingsService {
 
   private firstLaunch = true;
   private trackAppLaunches: number;
-  private initLaunch = true;
 
   constructor(private storage: Storage) {
     console.log('Hello Sensehack');
-    this.firstLaunch = true;
+    console.log('Managing states are tricky when the software product grows exponentially. Design Architecture Matters ~ Kautilya.');
 
-    // set a key/value
-    this.storage.set('age', '24');
+    // // set a key/value
+    // this.storage.set('age', '24');
 
-    storage.get('age').then((val) => {
-      console.log('Your age is', val);
-    });
+    // storage.get('age').then((val) => {
+    //   console.log('Your age is', val);
+    // });
 
     this.storage.get('isDefaultLaunch')
       .then((val) => {
@@ -29,53 +28,72 @@ export class BrewSettingsService {
 
         if (val !== null) {
           console.log('Default launch all the way');
+          this.setDefaultLaunch();
           // No need to setup new parameters as this is just restoring the old settings.
-
         } else {
           console.log('Not Present value ? ');
-          console.log('This is your first Launch');
-          this.storage.set('isDefaultLaunch', 'true');
+          this.setFirstLaunch();
         }
-
       });
-
-
 
   }
 
+  // Returns a boolean state to easy reference to avoid promises
+  // | Maybe I'll keep consistent UX for data service to return promises as standard.
   getFirstLaunch() {
-
-
     return this.firstLaunch;
   }
 
-  setFirstLaunch() {
+  setDefaultLaunch() {
+    // TODO:
+    // Restore last variables like Number of people and coffee settings.
+
     this.firstLaunch = false;
+    console.log('Default Launch code setup.');
+    console.log('Coffee with Work - Synergy');
+    console.log('https://tinyurl.com/sensk | https://sensehack.github.io');
+
+
+  }
+
+  setFirstLaunch() {
+
+    // TODO:
+    // Show welcome help screen code or parameter to invoke the view controller for first launch settings.
+    console.log('This is your first Launch');
+    this.firstLaunch = true;
+    this.storage.set('isDefaultLaunch', 'true');
+    this.storage.set('trackAppLaunches', 0);
+
   }
 
   initialize() {
+
     console.log('Hi in initialize brew settings');
+    // TODO:
+    //  Manage states efficiently & refactor as much as possible.
 
-    this.trackAppLaunches += 1;
+    this.storage.get('trackAppLaunches').then((val) => {
+      console.log('Your App Launch is', val);
+      this.trackAppLaunches = val + 1;
+      this.storage.set('trackAppLaunches', this.trackAppLaunches);
+    });
 
-    // console.log('First Launch present value: ', this.storage.get('firstLaunch'));
-    // Or to get a key/value pair
-    // this.storage.get('isDefaultLaunch')
-    //   .then((val) => {
-    //     console.log('Value is : ', val);
+  }
 
-    //     if (val !== null) {
-    //       console.log('Default launch all the way');
-    //       // No need to setup new parameters as this is just restoring the old settings.
+  // Returns promise.
+  getTrackAppLaunch() {
+    return this.storage.get('trackAppLaunches');
+  }
 
-    //     } else {
-    //       console.log('Not Present value ? ');
-    //       console.log('This is your first Launch');
-    //       this.storage.set('isDefaultLaunch', 'true');
-    //     }
 
-    //   });
+  reset() {
 
+    // TODO:
+    // Add Modal controller for asking "Are you Sure ?!" || Currently working on just Alert.
+
+    this.storage.clear();
+    alert('Settings Cleared');
 
   }
 
