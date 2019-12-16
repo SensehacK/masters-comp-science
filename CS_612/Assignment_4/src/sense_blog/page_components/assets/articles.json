@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "title": "Save your Eyes in Digital Life!",
+    "date": "28/10/2019",
+    "summary": " This article would help you to reduce some symptoms related to headache & eye strains.",
+    "body": "In 21st century we have been surrounded by screens everywhere & excessive dependency on digital lifestyle could lead to weak eye sight or eye strain. Use apps who support Dark Mode extensively if you’re using your phone or laptop at night before bed in poor light conditions.AMOLED Screens are more beneficial for Dark Mode apps as they would turn only the pixels which needs to be lighten up & others would be off.",
+    "imgURL": "https://miro.medium.com/max/548/1*WoKfCxI-5cgAsEwoafDFcg.png",
+    "ogUrl": "https://medium.com/@kautilyasave/save-your-eyes-in-digital-life-d1269f50c06e"
+  },
+
+  {
+    "id": 2,
+    "title": "Top Ten Apple Watch Apps.",
+    "date": "28/11/2019",
+    "summary": "When Apple released its new product as smartwatch developers & users began to wonder about its use case scenarios in daily life. ",
+    "body": "Over the past few years, Apple has truly worked towards a common goal of making Apple Watch a great accessory or even a necessity. With the inclusion of Cellular in Series 3 opened up enormous potential of the truly wireless device. Watch OS 5 also opens up new possibilities & various API for audio streaming apps which overall has also driven more apps released specifically for the Watch.These are my daily must-have apps which encourage me to use Apple Watch more & not unlock my iPhone for small tasks. Also, health features coupled with ease of use are also selling point of Apple Watch but I would argue its developer supported Apps is one of the killer features of Apple Watch’s hefty price tag compared to its competition.",
+    "imgURL": "https://miro.medium.com/max/1494/1*2GoRm0Z9wOopZLgrOcsIRA.png",
+    "ogUrl": "https://medium.com/@kautilyasave/top-ten-apple-watch-apps-4ac3af1eab1f"
+  },
+
+  {
+    "id": 3,
+    "title": "Apple Watch — Apple iOS Developer’s Perspective.",
+    "date": "28/12/2019",
+    "summary": " A powerful device at your wrist available 24 x 7 at your disposal could benefit powerful apps to accelerate your lifestyle.",
+    "body": "When Apple released its new product as smartwatch developers & users began to wonder about its use case scenarios in daily life. Over the past few years, Apple has truly worked towards a common goal of making Apple Watch a great accessory or even a necessity.With the inclusion of Cellular in Series 3 opened up enormous potential of the truly wireless device.Watch OS 5 also opens up new possibilities & various API for audio streaming apps which overall has also driven more apps released specifically for the Watch.    A powerful device at your wrist available 24 x 7 at your disposal could benefit powerful apps to accelerate your lifestyle.",
+    "imgURL": "https://miro.medium.com/max/736/1*ih9jm8-dyASuI41BF1PvCQ.png",
+    "ogUrl": "https://medium.com/@kautilyasave/a-powerful-device-at-your-wrist-apple-ios-developers-perspective-a9237c51528a"
+  }
+]
