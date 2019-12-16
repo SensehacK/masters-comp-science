@@ -1,0 +1,145 @@
+// Currently working docker images.
+
+test-mysql7         latest              ae9e0cca30ff        26 minutes ago      437MB
+
+
+
+To get the address
+docker inspect test-mysql-micro | grep IPAddress
+
+
+
+docker run  -d \
+--publish 3000:3000 \
+-e MYSQL_USER='root' \
+-e MYSQL_PASSWORD='kautilya' \
+-e MYSQL_DATABASE='node_js' \
+-e MYSQL_HOST='172.17.0.2' \
+--link test-mysql-micro:db \
+--name=test-nodejs-micro-user user-nodejs
+
+
+
+docker run  -d --publish 6603:3306 --volume=/Users/SensehacK/Documents/GitHub/nodes/mysql/data:/var/lib/mysql --name=test-mysql-micro test-mysql
+
+
+/Users/SensehacK/Downloads/getting-started-docker-mysql-nodejs-master/mysql-microservice
+
+
+## Docker Hub publish
+
+
+### MYSQL Image
+docker build -t kautilyasave/sensehack-mysql .
+
+// Push the image to docker Hub
+docker push kautilyasave/sensehack-mysql
+
+// Run command with port and environment variables
+docker run  -d \
+--publish 3306:3306 \
+--volume=/Users/SensehacK/Documents/GitHub/nodejs/mysql/data:/var/lib/mysql \
+--name=sensehack-mysql-img kautilyasave/sensehack-mysql
+
+
+### Node JS Image
+docker build -t kautilyasave/sensehack-nodejs .
+
+// Push the image to docker Hub
+docker push kautilyasave/sensehack-nodejs
+
+
+// Run command
+docker run  -d \
+--publish 3000:3000 \
+-e MYSQL_USER='root' \
+-e MYSQL_PASSWORD='kautilya' \
+-e MYSQL_DATABASE='node_js' \
+-e MYSQL_HOST='172.17.0.2' \
+--link sensehack-mysql-img:db \
+--name=sensehack-nodejs-img kautilyasave/sensehack-nodejs
+
+// GREP IP address of MYSQL docker image running container
+MYSQL_HOST=  docker inspect sensehack-mysql-img | grep IPAddress
+
+
+
+docker build -t user-mysql-666 .
+
+docker run  -d \
+--publish 3306:3306 \
+--volume=/Users/SensehacK/Documents/GitHub/nodejs/mysql/data:/var/lib/mysql \
+--name=user-mysql-img-666 user-mysql-666
+
+
+docker build -t user-nodejs-666 .
+
+docker run  -d \
+--publish 3000:3000 \
+-e MYSQL_USER='root' \
+-e MYSQL_PASSWORD='kautilya' \
+-e MYSQL_DATABASE='node_js' \
+-e MYSQL_HOST='172.17.0.2' \
+--link user-mysql-img-666:db \
+--name=user-nodejs-img-666 user-nodejs-666
+
+
+
+
+
+
+
+docker run  -d \
+--publish 3000:3000 \
+-e MYSQL_USER='root' \
+-e MYSQL_PASSWORD='kautilya' \
+-e MYSQL_DATABASE='node_js' \
+-e MYSQL_HOST='172.17.0.2' \
+--link user-mysql-img-666:db \
+--name=user-nodejs-img-888 user-nodejs-777
+
+
+docker run  -d \
+--publish 6603:3306 \
+--volume=/Users/SensehacK/Documents/GitHub/nodes/mysql:/var/lib/mysql \
+--name=test-mysql-micro test-mysql7
+
+
+mysql -h 10.163.22.91 -u root -p
+
+mysql -u root -p -h 10.163.22.91 -P 6603 
+
+
+// Demo version 
+
+/Users/SensehacK/Downloads/getting-started-docker-mysql-nodejs-master/mysql-microservice
+
+docker run  -d \
+--publish 6606:3306 \
+--volume=/Users/SensehacK/Downloads/getting-started-docker-mysql-nodejs-master/mysql-microservice/data:/var/lib/mysql \
+--name=test-mysql-microservice2 test-mysql5
+
+
+
+
+
+
+// History of CLI
+
+
+docker ps
+  252  docker images
+  253  clear
+  254  docker build -t test-mysql4 .
+  255  docker run  -d --publish 6606:3306 --volume=/Users/SensehacK/Downloads/getting-started-docker-mysql-nodejs-master/mysql-microservice/data:/var/lib/mysql --name=test-mysql-microservice2 test-mysql4
+  256  docker ps
+  257  docker rm /test-mysql-microservice2
+  258  docker stop /test-mysql-microservice2
+  259  docker rm /test-mysql-microservice2
+  260  docker build -t test-mysql5 .
+  261  docker run  -d --publish 6606:3306 --volume=/Users/SensehacK/Downloads/getting-started-docker-mysql-nodejs-master/mysql-microservice/data:/var/lib/mysql --name=test-mysql-microservice2 test-mysql5
+  262  docker ps
+  263  history
+
+
+docker images | grep 1e80aae70ddc | awk '{print $1 ":" $2}' | xargs docker rmi

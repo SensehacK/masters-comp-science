@@ -1,0 +1,234 @@
+[
+    {
+      "id": 1,
+      "first_name": "Kautilya",
+      "last_name": "Save",
+      "location": "mumbai",
+      "profession": "programming",
+      "country": "india"
+    },
+    {
+      "id": 2,
+      "first_name": "Stephen",
+      "last_name": "Curry",
+      "location": "california",
+      "profession": "basketball",
+      "country": "usa"
+    },
+    {
+      "id": 3,
+      "first_name": "Lebron",
+      "last_name": "James",
+      "location": "california",
+      "profession": "basketball",
+      "country": "usa"
+    },
+    {
+      "id": 4,
+      "first_name": "Sensehack",
+      "last_name": "L",
+      "location": "mumbai",
+      "profession": "programming",
+      "country": "india"
+    },
+    {
+      "id": 5,
+      "first_name": "Sachin",
+      "last_name": "Tendulkar",
+      "location": "mumbai",
+      "profession": "cricket",
+      "country": "india"
+    },
+    {
+      "id": 6,
+      "first_name": "AAA",
+      "last_name": "BBB",
+      "location": "delhi",
+      "profession": "photography",
+      "country": "india"
+    },
+    {
+      "id": 7,
+      "first_name": "Endri",
+      "last_name": "Pace",
+      "location": "albania",
+      "profession": "programming",
+      "country": "albania"
+    },
+    {
+      "id": 8,
+      "first_name": "Soham",
+      "last_name": "Save",
+      "location": "mumbai",
+      "profession": "food",
+      "country": "india"
+    },
+    {
+      "id": 9,
+      "first_name": "iPhone",
+      "last_name": "Android",
+      "location": "new york",
+      "profession": "technology",
+      "country": "usa"
+    },
+    {
+      "id": 10,
+      "first_name": "Abbas",
+      "last_name": "Samshi",
+      "location": "pune",
+      "profession": "programming",
+      "country": "india"
+    },
+    {
+      "id": 11,
+      "first_name": "Test",
+      "last_name": "Etest",
+      "location": "chicago",
+      "profession": "food",
+      "country": "usa"
+    },
+    {
+      "id": 12,
+      "first_name": "se",
+      "last_name": "ew",
+      "location": "mumbai",
+      "profession": "programming",
+      "country": "india"
+    },
+    {
+      "id": 13,
+      "first_name": "afa",
+      "last_name": "afa",
+      "location": "mumbai",
+      "profession": "programming",
+      "country": "india"
+    },
+    {
+      "id": 14,
+      "first_name": "Prayag",
+      "last_name": "Patil",
+      "location": "mumbai",
+      "profession": "tourism",
+      "country": "india"
+    },
+    {
+      "id": 15,
+      "first_name": "Kevin",
+      "last_name": "Durant",
+      "location": "philadelpia",
+      "profession": "basketball",
+      "country": "usa"
+    },
+    {
+      "id": 16,
+      "first_name": "Nrupal",
+      "last_name": "Patil",
+      "location": "mumbai",
+      "profession": "tourism",
+      "country": "india"
+    },
+    {
+      "id": 17,
+      "first_name": "Prachiti",
+      "last_name": "Patil",
+      "location": "mumbai",
+      "profession": "finance",
+      "country": "india"
+    },
+    {
+      "id": 18,
+      "first_name": "Yuvraj",
+      "last_name": "Bhosle",
+      "location": "pune",
+      "profession": "finance",
+      "country": "india"
+    },
+    {
+      "id": 19,
+      "first_name": "Marshall",
+      "last_name": "Mathers",
+      "location": "detroit",
+      "profession": "artist",
+      "country": "usa"
+    },
+    {
+      "id": 20,
+      "first_name": "Jermaine",
+      "last_name": "Cole",
+      "location": "fayetteville",
+      "profession": "artist",
+      "country": "usa"
+    },
+    {
+      "id": 21,
+      "first_name": "Kendrick",
+      "last_name": "Lamar",
+      "location": "compton",
+      "profession": "artist",
+      "country": "usa"
+    },
+    {
+      "id": 22,
+      "first_name": "Bill",
+      "last_name": "Gates",
+      "location": "seattle",
+      "profession": "billionaire",
+      "country": "usa"
+    },
+    {
+      "id": 23,
+      "first_name": "Warren",
+      "last_name": "Buffet",
+      "location": "boston",
+      "profession": "billionaire",
+      "country": "usa"
+    },
+    {
+      "id": 24,
+      "first_name": "Jeff",
+      "last_name": "Bezos",
+      "location": "seattle",
+      "profession": "billionaire",
+      "country": "usa"
+    },
+    {
+      "id": 25,
+      "first_name": "Elon",
+      "last_name": "Musk",
+      "location": "cape town",
+      "profession": "billionaire",
+      "country": "SouthAfrica"
+    },
+    {
+      "id": 26,
+      "first_name": "Linus",
+      "last_name": "Torvalds",
+      "location": "san jose",
+      "profession": "god",
+      "country": "usa"
+    },
+    {
+      "id": 27,
+      "first_name": "Steve",
+      "last_name": "Woznaik",
+      "location": "san francisco",
+      "profession": "god",
+      "country": "usa"
+    },
+    {
+      "id": 28,
+      "first_name": "Steve",
+      "last_name": "Jobs",
+      "location": "san francisco",
+      "profession": "billionaire",
+      "country": "usa"
+    },
+    {
+      "id": 29,
+      "first_name": "Dr. Dre",
+      "last_name": "Interscope",
+      "location": "compton",
+      "profession": "artist",
+      "country": "usa"
+    }
+   ]
