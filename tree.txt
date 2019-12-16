@@ -1,0 +1,47 @@
+.
+├── CS_608
+│   ├── Algorithms
+│   ├── Assignment_2
+│   ├── Project_1
+│   ├── hackerRank
+│   └── py_hello
+├── CS_612
+│   ├── Assignment_1
+│   ├── Assignment_2
+│   ├── Assignment_3
+│   ├── Assignment_4
+│   ├── Assignment_5
+│   └── launch.json
+├── CS_641
+│   ├── Assignment_1
+│   ├── Assignment_3
+│   ├── Assignment_4
+│   ├── Assignment_5
+│   ├── Assignment_6
+│   ├── Assignment_7
+│   ├── Assignment_8
+│   ├── Assignment_9
+│   ├── Assignment_10
+│   ├── Assignment_11
+│   ├── CS_641.code-workspace
+│   ├── Canvas
+│   ├── Day_1
+│   ├── Day_2
+│   ├── Day_3
+│   ├── Day_4
+│   ├── Day_5
+│   ├── Day_6
+│   ├── Day_7
+│   ├── Day_8
+│   ├── Day_9
+│   ├── Day_10
+│   ├── Day_11
+│   ├── Photoshop\ Quiz
+│   ├── Responsive_env
+│   ├── gradient_dev
+│   └── live
+├── Misc
+├── README.md
+└── tree.txt
+
+40 directories, 4 files
