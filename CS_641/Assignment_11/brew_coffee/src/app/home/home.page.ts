@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BrewSettingsService } from '../services/brew-settings.service';
 
 @Component({
@@ -38,7 +39,11 @@ export class HomePage {
   totalCoffee = 0;
 
 
-  constructor(private brewSettings: BrewSettingsService) {
+  constructor(
+    private brewSettings: BrewSettingsService,
+    private router: Router
+  ) {
+
     // if (this.brewSettings.getFirstLaunch())
     // this.brewSettings.setFirstLaunch();
 
@@ -64,6 +69,11 @@ export class HomePage {
     console.log('The values are given as ', this.coffeeIntensity[this.coffeeSliderValue], this.peopleCount);
 
     console.log('Great Choice of coffee');
+    const coffeeData = {
+      coffeeNative: this.coffeeSliderValue * 0.30,
+      waterPeople: this.peopleCount * 150,
+      totalCoffee: this.coffeeNative * this.waterPeople
+    };
 
     this.coffeeNative = this.coffeeSliderValue * 0.30;
     this.waterPeople = this.peopleCount * 150;
@@ -72,6 +82,12 @@ export class HomePage {
     console.log('Happy Brewing!', this.totalCoffee);
     console.log('Hello Sensehack!');
     console.log('Kautilya Save');
+    console.log('Data printing:', coffeeData);
+
+
+    this.router.navigate(['coffee-view', { coffeeData }]);
+
+
   }
 
 }
