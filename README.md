@@ -12,6 +12,7 @@ Eg. CS = Computer Science
 ## Live projects
 
 - [Brew Coffee](https://sensehack.github.io/masters_comp_science/CS_641/live/brew_coffee)
+  [Firebase Deploy](https://sensehack-735ed.web.app/)
 
 - [Artist Finder](https://sensehack.github.io/masters_comp_science/CS_641/live/artistFinder/)
 
