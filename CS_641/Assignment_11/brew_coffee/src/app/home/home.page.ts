@@ -69,23 +69,26 @@ export class HomePage {
     console.log('The values are given as ', this.coffeeIntensity[this.coffeeSliderValue], this.peopleCount);
 
     console.log('Great Choice of coffee');
-    const coffeeData = {
-      coffeeNative: this.coffeeSliderValue * 0.30,
-      waterPeople: this.peopleCount * 150,
-      totalCoffee: this.coffeeNative * this.waterPeople
-    };
 
     this.coffeeNative = this.coffeeSliderValue * 0.30;
     this.waterPeople = this.peopleCount * 150;
     this.totalCoffee = this.coffeeNative * this.waterPeople;
 
-    console.log('Happy Brewing!', this.totalCoffee);
+    const coffeeData = {
+      coffeeNative: this.coffeeNative,
+      waterPeople: this.waterPeople,
+      totalCoffee: this.totalCoffee
+    };
+
+
+
+    console.log('Happy Brewing!', this.totalCoffee, coffeeData.totalCoffee);
     console.log('Hello Sensehack!');
     console.log('Kautilya Save');
     console.log('Data printing:', coffeeData);
+    this.brewSettings.setCoffeeObj(coffeeData);
 
-
-    this.router.navigate(['coffee-view', { coffeeData }]);
+    this.router.navigate(['coffee-view']);
 
 
   }

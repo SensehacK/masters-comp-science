@@ -7,7 +7,56 @@
 <ion-content>
   <ion-text>Yo Welcome to coffee results screen</ion-text>
 
-  <ion-button (click)="openApp()">
+  <div *ngIf="appDisplayMsg.length > 0">
+    {{ appDisplayMsg }}
+    <span>{{ errorMsg }} </span>
+
+    <ion-button [href]="gitCodeLink">
+      Report it!
+    </ion-button>
+  </div>
+
+  <ion-card class="coffee_data" *ngIf="coffeeData">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size="12">
+          <h3>Coffee Units:</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label class="custom_label">
+            Coffee : {{ coffeeData.coffeeNative | number:'.2' }}tbsp
+          </ion-label>
+        </ion-col>
+
+        <br />
+        <ion-col size="12">
+          <ion-label class="custom_label">
+            Water : {{ coffeeData.waterPeople }}ml
+          </ion-label>
+        </ion-col>
+
+        <hr />
+        <ion-col size="12">
+          <ion-label class="total_coffee">
+            Total Brewed Coffee
+            <br />
+            <span>{{ coffeeData.totalCoffee | number }}ml</span>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-button (click)="openApp('starbucks')">
     Starbucks
+  </ion-button>
+
+  <ion-button (click)="openApp('dunkin')">
+    Dunkin
+  </ion-button>
+  <ion-button (click)="openApp('mcdonalds')">
+    Mcdonalds
   </ion-button>
 </ion-content>

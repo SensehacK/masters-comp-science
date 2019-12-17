@@ -1,0 +1,39 @@
+h3 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+
+.coffee_data {
+  color: rgb(58, 11, 5);
+  background-color: #8eca3e;
+  box-shadow: 3px 4px 8px 5px #65e9b6;
+}
+
+.custom_label {
+  padding: 10%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.total_coffee {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.custom_apps {
+  box-shadow: 3px 4px 8px 5px #5a88da;
+
+  .custom_app {
+    font-size: 256px;
+  }
+}
+
+// ion-col {
+//   align-self: center;
+// }
+
+ion-row {
+  text-align: center;
+}

@@ -1,3 +1,4 @@
+import { Params } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
@@ -10,6 +11,8 @@ export class BrewSettingsService {
 
   private firstLaunch = true;
   private trackAppLaunches: number;
+  private coffeeData: {};
+
 
   constructor(private storage: Storage) {
     console.log('Hello Sensehack');
@@ -95,6 +98,15 @@ export class BrewSettingsService {
     this.storage.clear();
     alert('Settings Cleared');
 
+  }
+
+
+  getCoffeeObj() {
+    return this.coffeeData;
+  }
+
+  setCoffeeObj(data: {}) {
+    this.coffeeData = data;
   }
 
 
