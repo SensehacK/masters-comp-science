@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.page.scss'],
 })
 export class SettingsPage implements OnInit {
+  gitCodeLink = 'https://github.com/SensehacK';
+  linkedInLink = 'https://in.linkedin.com/in/kautilyasave';
 
   constructor() { }
 

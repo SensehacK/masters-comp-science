@@ -1,6 +1,17 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Brew Coffee Settings</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Settings
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,5 +29,14 @@
       <hr />
       <ion-label>Designed by Kuntal Survade</ion-label>
     </div>
+
+    <ion-button [href]="gitCodeLink">
+      <ion-icon slot="start" name="logo-github"></ion-icon>
+      Source Code
+    </ion-button>
+    <ion-button [href]="linkedInLink">
+      <ion-icon name="logo-linkedin"></ion-icon>
+      LinkedIn
+    </ion-button>
   </div>
 </ion-content>
