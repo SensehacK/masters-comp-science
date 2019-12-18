@@ -2,8 +2,6 @@ import { Params } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-import { CoffeeSync } from '../model/brew_coffee'
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,16 +12,6 @@ export class BrewSettingsService {
   private firstLaunch = true;
   private trackAppLaunches: number;
   private coffeeData: {};
-
-  private appSettingsSync: {
-    gitCodeURL: '',
-    appTodayMsg: '',
-    greetMsg: '',
-  };
-
-  private coffeeAppInterface: CoffeeSync;
-
-
 
 
   constructor(private storage: Storage) {
