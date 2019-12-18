@@ -1,7 +1,10 @@
 import { Params } from '@angular/router';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Storage } from '@ionic/storage';
-import { CoffeeSync } from '../model/brew_coffee'
+import { CoffeeSync } from '../model/brew_coffee';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,10 +23,15 @@ export class BrewSettingsService {
     greetMsg: '',
   };
 
+  // Variables
+  urlBrewCoffee = 'https://my-json-server.typicode.com/sensehack/demo/brew-coffee';
+
   private coffeeAppInterface: CoffeeSync;
 
 
-  constructor(private storage: Storage) {
+  constructor(
+    private storage: Storage,
+    private http: HttpClient) {
     console.log('Hello Sensehack');
     console.log('Managing states are tricky when the software product grows exponentially. Design Architecture Matters ~ Kautilya.');
 
@@ -85,6 +93,10 @@ export class BrewSettingsService {
     // TODO:
     //  Manage states efficiently & refactor as much as possible.
 
+
+    // Calling store Data Model
+    this.storeDataModel();
+
     this.storage.get('trackAppLaunches').then((val) => {
       console.log('Your App Launch is', val);
       this.trackAppLaunches = val + 1;
@@ -92,6 +104,50 @@ export class BrewSettingsService {
     });
 
   }
+
+  storeDataModel() {
+    // Calling Angular Http request object
+    this.retrieveBrewCoffeeSettings()
+      .subscribe(
+        data => {
+          console.log(data);
+          console.log('Printing data', data);
+          this.coffeeAppInterface = data;
+          this.storage.set('appDataSync', true);
+          // debugger;
+
+        },
+        err => {
+          console.log('Error', err);
+          alert('Having trouble getting the online settings');
+        }
+      );
+  }
+
+  retrieveBrewCoffeeSettings() {
+    return this.http.get<CoffeeSync>(this.urlBrewCoffee);
+  }
+
+
+  getAppSettings() {
+
+    return new Promise((resolve, reject) => {
+      this.storage.get('appDataSync').then((val) => {
+        if (val) {
+          console.log('App has got the data from sync', val);
+          resolve(this.coffeeAppInterface);
+        } else {
+          console.log('App has not got the data from sync', val);
+          // Calling initialize again()
+          this.storeDataModel();
+          reject('App data not sync yet');
+          this.getAppSettings();
+        }
+      });
+    });
+  }
+
+
 
   // Returns promise.
   getTrackAppLaunch() {

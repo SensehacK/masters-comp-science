@@ -1,7 +1,16 @@
 export interface CoffeeSync {
-    appMessages: Messages;
+    appSettings: AppSettings;
     socialMedia: Social;
-    appURL: URL;
+    appMessages: Messages;
+}
+
+export interface AppSettings {
+    background_color: string;
+    font_color: string;
+    font_size: number;
+    blankURL: string;
+    coffee_slider_val: number;
+    coffee_water_val: number;
 }
 
 export interface Social {
@@ -15,14 +24,11 @@ export interface Social {
 
 }
 
-export interface URL {
-    reportURL: string;
-    reportErrorURL: string;
-    emailURL: string;
-}
-
 export interface Messages {
     appTodayMsg: string;
     greetMsg: string;
     errorMsg: string;
+    sourceCodeURL: string;
+    reportErrorURL: string;
+    emailURL: string;
 }

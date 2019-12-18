@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BrewSettingsService } from '../services/brew-settings.service';
+import { CoffeeSync } from '../model/brew_coffee';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-home',
@@ -38,10 +41,13 @@ export class HomePage {
   waterPeople = 0;
   totalCoffee = 0;
 
+  coffeeAppData;
+
 
   constructor(
     private brewSettings: BrewSettingsService,
-    private router: Router
+    private router: Router,
+    private storage: Storage,
   ) {
 
     // if (this.brewSettings.getFirstLaunch())
@@ -49,6 +55,17 @@ export class HomePage {
 
     // Calling Initialize function
     this.brewSettings.initialize();
+
+    // const coffeeAppData =
+    this.brewSettings.getAppSettings()
+      .then((data) => {
+        console.log('Data promise ', data);
+        // debugger;
+        this.coffeeAppData = data;
+        console.log('Printing various settings *******************', this.coffeeAppData);
+      });
+
+
 
   }
 
@@ -70,9 +87,23 @@ export class HomePage {
 
     console.log('Great Choice of coffee');
 
-    this.coffeeNative = this.coffeeSliderValue * 0.30;
-    this.waterPeople = this.peopleCount * 150;
+    // this.coffeeNative = this.coffeeSliderValue * 0.30;
+    // this.waterPeople = this.peopleCount * 150;
+    // this.totalCoffee = this.coffeeNative * this.waterPeople;
+
+    debugger;
+    const coffeeSliderFormula = (typeof (this.coffeeAppData) !== 'undefined')
+      ? this.coffeeAppData.appSettings.coffee_slider_val : 0.30;
+    const waterUnitFormula = (typeof (this.coffeeAppData) !== 'undefined')
+      ? this.coffeeAppData.appSettings.coffee_water_val : 150;
+
+
+    // debugger;
+
+    this.coffeeNative = this.coffeeSliderValue * coffeeSliderFormula;
+    this.waterPeople = this.peopleCount * waterUnitFormula;
     this.totalCoffee = this.coffeeNative * this.waterPeople;
+
 
     const coffeeData = {
       coffeeNative: this.coffeeNative,
