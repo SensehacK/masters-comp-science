@@ -7,16 +7,7 @@
 <ion-content>
   <ion-text>Yo Welcome to coffee results screen</ion-text>
 
-  <div *ngIf="appDisplayMsg.length > 0">
-    {{ appDisplayMsg }}
-    <span>{{ errorMsg }} </span>
-
-    <ion-button [href]="gitCodeLink">
-      Report it!
-    </ion-button>
-  </div>
-
-  <ion-card class="coffee_data" *ngIf="coffeeData">
+  <ion-card class="coffee_data" *ngIf="coffeeData" class="ion-text-center">
     <ion-grid no-padding>
       <ion-row>
         <ion-col size="12">
@@ -59,4 +50,17 @@
   <ion-button (click)="openApp('mcdonalds')">
     Mcdonalds
   </ion-button>
+
+  <div *ngIf="appDisplayMsg.length > 0" class="errorCard">
+    <ion-card>
+      {{ appDisplayMsg }}
+      <span>{{ errorMsg }} </span>
+      <ion-button [href]="gitCodeLink">
+        Report it!
+      </ion-button>
+      <ion-button href="mailto:kautilyasave@gmail.com">
+        Email Me!
+      </ion-button>
+    </ion-card>
+  </div>
 </ion-content>

@@ -62,17 +62,9 @@
     </ion-button>
   </div>
 
-  <div *ngIf="totalCoffee > 0" class="ion-text-center">
-    <h3>
-      Coffee Units:
-    </h3>
-    <!-- <hr /> -->
-    <ion-label> Coffee : {{ coffeeNative | number:'.2' }}tbsp </ion-label>
-    <!-- <hr /> -->
-    <br />
-    <ion-label> Water : {{ waterPeople }}ml</ion-label>
-    <!-- <br /> -->
-    <hr />
-    <ion-label>Total Brewed Coffee : {{ totalCoffee | number }}ml </ion-label>
+  <div>
+    <ion-button (click)="openSettings()" class=" ion-text-uppercase">
+      Settings
+    </ion-button>
   </div>
 </ion-content>

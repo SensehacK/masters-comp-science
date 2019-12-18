@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'coffee-view',
     loadChildren: () => import('./coffee-view/coffee-view.module').then( m => m.CoffeeViewPageModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 ];
 
 @NgModule({

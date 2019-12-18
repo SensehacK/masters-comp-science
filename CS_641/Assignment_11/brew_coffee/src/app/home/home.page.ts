@@ -93,4 +93,9 @@ export class HomePage {
 
   }
 
+  openSettings() {
+    console.log('Hello Sensehack!');
+    this.router.navigate(['settings']);
+  }
+
 }
