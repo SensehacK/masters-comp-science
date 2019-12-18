@@ -19,7 +19,7 @@ export class CoffeeViewPage implements OnInit {
   appName = '';
   appDisplayMsg = '';
   errorMsg = 'Please submit a bug on this link';
-  gitCodeLink = "https://github.com/SensehacK/Masters_Comp_Science";
+  gitCodeLink = 'https://github.com/SensehacK/Masters_Comp_Science/issues';
 
   constructor(
     private brewSettings: BrewSettingsService,
