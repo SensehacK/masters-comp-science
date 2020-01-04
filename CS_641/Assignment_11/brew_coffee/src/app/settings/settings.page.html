@@ -21,22 +21,29 @@
 
     <div class="settingsC">
       <ion-label>Dark Mode</ion-label>
+      <!-- TODO: -->
       <ion-toggle>Dark Mode</ion-toggle>
     </div>
 
     <div class="credits">
       <ion-label>Developed with 💚by Kautilya Save</ion-label>
       <hr />
-      <ion-label>Designed by Kuntal Survade</ion-label>
+      <ion-label>
+        Designed by <ion-icon name="brush"></ion-icon> Kuntal Surwade
+      </ion-label>
     </div>
 
-    <ion-button [href]="gitCodeLink">
-      <ion-icon slot="start" name="logo-github"></ion-icon>
-      Source Code
-    </ion-button>
-    <ion-button [href]="linkedInLink">
-      <ion-icon name="logo-linkedin"></ion-icon>
-      LinkedIn
-    </ion-button>
+    <div>
+      <ion-button [href]="gitCodeLink">
+        <ion-icon slot="start" name="logo-github"></ion-icon>
+        Source Code
+      </ion-button>
+    </div>
+    <div>
+      <ion-button [href]="linkedInLink">
+        <ion-icon name="logo-linkedin"></ion-icon>
+        LinkedIn
+      </ion-button>
+    </div>
   </div>
 </ion-content>

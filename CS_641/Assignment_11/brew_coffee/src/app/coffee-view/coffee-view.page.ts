@@ -35,7 +35,7 @@ export class CoffeeViewPage implements OnInit {
     // Getting data off service class
     this.coffeeData = this.brewSettings.getCoffeeObj();
     // this.coffeeData = this.route.snapshot.paramMap.get('id');
-    // debugger;
+    // 
     if (typeof (this.coffeeData) === 'undefined' || this.coffeeData === 'null') {
       console.log('Hi in coffeedata condition', this.appDisplayMsg);
 

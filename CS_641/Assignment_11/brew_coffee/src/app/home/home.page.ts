@@ -1,3 +1,4 @@
+import { Messages } from './../model/brew_coffee';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BrewSettingsService } from '../services/brew-settings.service';
@@ -42,6 +43,7 @@ export class HomePage {
   totalCoffee = 0;
 
   coffeeAppData;
+  dailyMsg = 'Hello Mr.Robot!';
 
 
   constructor(
@@ -60,10 +62,21 @@ export class HomePage {
     this.brewSettings.getAppSettings()
       .then((data) => {
         console.log('Data promise ', data);
-        // debugger;
-        this.coffeeAppData = data;
-        console.log('Printing various settings *******************', this.coffeeAppData);
+
+
+        if (!(typeof (data) === 'undefined')) {
+          this.coffeeAppData = data;
+          console.log('Printing various settings *******************', this.coffeeAppData);
+          this.dailyMsg = this.coffeeAppData.appMisc.greetMsg ? this.coffeeAppData.appMisc.greetMsg : this.dailyMsg;
+          alert(this.dailyMsg);
+        }
+      })
+      .catch((err) => {
+        alert(this.dailyMsg);
       });
+
+    console.log(this.dailyMsg);
+    // alert(this.dailyMsg);
 
 
 
@@ -91,14 +104,14 @@ export class HomePage {
     // this.waterPeople = this.peopleCount * 150;
     // this.totalCoffee = this.coffeeNative * this.waterPeople;
 
-    debugger;
+
     const coffeeSliderFormula = (typeof (this.coffeeAppData) !== 'undefined')
       ? this.coffeeAppData.appSettings.coffee_slider_val : 0.30;
     const waterUnitFormula = (typeof (this.coffeeAppData) !== 'undefined')
       ? this.coffeeAppData.appSettings.coffee_water_val : 150;
 
 
-    // debugger;
+
 
     this.coffeeNative = this.coffeeSliderValue * coffeeSliderFormula;
     this.waterPeople = this.peopleCount * waterUnitFormula;

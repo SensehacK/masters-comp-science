@@ -105,6 +105,10 @@ export class BrewSettingsService {
 
   }
 
+  retrieveBrewCoffeeSettings() {
+    return this.http.get<CoffeeSync>(this.urlBrewCoffee);
+  }
+
   storeDataModel() {
     // Calling Angular Http request object
     this.retrieveBrewCoffeeSettings()
@@ -114,19 +118,16 @@ export class BrewSettingsService {
           console.log('Printing data', data);
           this.coffeeAppInterface = data;
           this.storage.set('appDataSync', true);
-          // debugger;
+          // 
 
         },
         err => {
           console.log('Error', err);
-          alert('Having trouble getting the online settings');
+          // alert('Having trouble getting the online settings');
         }
       );
   }
 
-  retrieveBrewCoffeeSettings() {
-    return this.http.get<CoffeeSync>(this.urlBrewCoffee);
-  }
 
 
   getAppSettings() {
