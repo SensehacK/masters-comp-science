@@ -6,6 +6,11 @@ import Playground_2 from './components/playground_2';
 import Rainbow from './components/rainbow';
 import Flex from './components/flex';
 import Nested from './components/nested_blocks';
+import MyFavList from './components/myFavList';
+import NewsArticle from './components/newsArticle';
+import GoogleLogo from './components/googleLogo';
+import SnapchatLogin from './components/snapchatLogin';
+import Venmo from './components/venmoTransfer';
 
 const App = () => {
   return (
@@ -16,7 +21,12 @@ const App = () => {
       <Playground_2 /> */}
       {/* <Rainbow /> */}
       {/* <Flex /> */}
-      <Nested />
+      {/* <Nested /> */}
+      {/* <MyFavList /> */}
+      {/* <NewsArticle /> */}
+      {/* <GoogleLogo /> */}
+      {/* <SnapchatLogin /> */}
+      <Venmo />
     </View>
   );
 };
