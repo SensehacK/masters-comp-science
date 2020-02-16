@@ -4,7 +4,7 @@ import {AppRegistry, Text, View, StyleSheet} from 'react-native';
 const Venmo = () => {
   return (
     //   This code is tested with real device and Xcode Simulator.
-
+    // Link https://github.com/SensehacK/masters-comp-science/blob/master/CS_639/Assets/Screenshots/Venmo%20Screen.png
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>Transfer Balance</Text>

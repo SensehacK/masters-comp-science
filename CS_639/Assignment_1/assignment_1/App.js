@@ -11,6 +11,7 @@ import NewsArticle from './components/newsArticle';
 import GoogleLogo from './components/googleLogo';
 import SnapchatLogin from './components/snapchatLogin';
 import Venmo from './components/venmoTransfer';
+import ScoreKeeper from './components/scoreKeeper';
 
 const App = () => {
   return (
@@ -26,7 +27,8 @@ const App = () => {
       {/* <NewsArticle /> */}
       {/* <GoogleLogo /> */}
       {/* <SnapchatLogin /> */}
-      <Venmo />
+      {/* <Venmo /> */}
+      <ScoreKeeper />
     </View>
   );
 };
