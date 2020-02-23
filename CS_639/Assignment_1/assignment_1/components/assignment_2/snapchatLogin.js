@@ -1,16 +1,26 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 
 const SnapchatLogin = () => {
   return (
     <View style={styles.container}>
       <View style={styles.yellowBlock}></View>
-      <View style={styles.redBlock}>
-        <Text>LOG IN</Text>
-      </View>
-      <View style={styles.blueBlock}>
-        <Text>SIGN UP</Text>
-      </View>
+      <TouchableHighlight
+        onPress={() => {
+          alert('You have successfully logged in.');
+        }}>
+        <View style={styles.redBlock}>
+          <Text>LOG IN</Text>
+        </View>
+      </TouchableHighlight>
+      <TouchableHighlight
+        onPress={() => {
+          alert('You have successfully signed up.');
+        }}>
+        <View style={styles.blueBlock}>
+          <Text>SIGN UP</Text>
+        </View>
+      </TouchableHighlight>
     </View>
   );
 };

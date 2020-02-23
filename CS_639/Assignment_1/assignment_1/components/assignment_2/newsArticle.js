@@ -1,19 +1,33 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 
 const NewsArticle = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.articleHeading}>Save your Eyes in Digital Life!</Text>
+      <TouchableHighlight
+        onPress={() => {
+          alert('Kautilya Save');
+        }}>
+        <Text style={styles.articleHeading}>
+          Save your Eyes in Digital Life!
+        </Text>
+      </TouchableHighlight>
 
       <Text style={styles.articleAuthor}>Kautilya Save</Text>
 
-      <Text style={styles.articleContent}>
-        In 21st century we have been surrounded by screens everywhere &
-        excessive dependency on digital lifestyle could lead to weak eye sight
-        or eye strain. This article would help you to reduce some symptoms
-        related to headache & eye strains.
-      </Text>
+      <TouchableHighlight
+        onPress={() => {
+          alert(
+            'https://medium.com/@kautilyasave/save-your-eyes-in-digital-life-d1269f50c06e',
+          );
+        }}>
+        <Text style={styles.articleContent}>
+          In 21st century we have been surrounded by screens everywhere &
+          excessive dependency on digital lifestyle could lead to weak eye sight
+          or eye strain. This article would help you to reduce some symptoms
+          related to headache & eye strains.
+        </Text>
+      </TouchableHighlight>
 
       <Text style={styles.articleSource}>
         https://medium.com/@kautilyasave/save-your-eyes-in-digital-life-d1269f50c06e
