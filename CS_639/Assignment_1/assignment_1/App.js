@@ -23,6 +23,7 @@ import TouchableButton from './components/assignment_2/touchableButton';
 import HomeLogin from './components/assignment_2/homeLogin';
 import TextInputC from './components/assignment_2/textInput';
 import TextInputApp from './components/assignment_2/TextInputApp';
+import IMessage from './components/assignment_2/imessage';
 
 const App = () => {
   return (
@@ -43,7 +44,8 @@ const App = () => {
       {/* <TouchableButton /> */}
       {/* <HomeLogin /> */}
       {/* <TextInputC /> */}
-      <TextInputApp />
+      {/* <TextInputApp /> */}
+      <IMessage />
     </View>
   );
 };
