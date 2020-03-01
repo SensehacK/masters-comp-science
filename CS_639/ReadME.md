@@ -13,3 +13,7 @@ Use
 Run this command on terminal
 
 > react-native run-ios
+
+## Debugging
+
+> npx react-devtools
