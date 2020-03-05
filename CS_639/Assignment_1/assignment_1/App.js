@@ -24,6 +24,13 @@ import HomeLogin from './components/assignment_2/homeLogin';
 import TextInputC from './components/assignment_2/textInput';
 import TextInputApp from './components/assignment_2/TextInputApp';
 import IMessage from './components/assignment_2/imessage';
+import GoogleSearch from './components/assignment_2/googleSearch';
+import FeedbackForm from './components/assignment_2/feedbackForm';
+import VenmoTransfer from './components/assignment_2/venmoTransferV2';
+import ScoreKeeperV3 from './components/main/scoreKeeperV3.3';
+import FoodOrder from './components/assignment_2/foodOrder';
+import SnapchatLoginV3 from './components/assignment_3/snapchatLogin';
+import MusicPlayer from './components/assignment_3/musicPlayer';
 
 const App = () => {
   return (
@@ -45,7 +52,15 @@ const App = () => {
       {/* <HomeLogin /> */}
       {/* <TextInputC /> */}
       {/* <TextInputApp /> */}
-      <IMessage />
+      {/* <IMessage /> */}
+      {/* <GoogleSearch /> */}
+      {/* <FeedbackForm /> */}
+      {/* <VenmoTransfer /> */}
+      {/* <ScoreKeeperV3 /> */}
+      {/* <FoodOrder /> */}
+      {/* <SnapchatLoginV3 /> */}
+
+      <MusicPlayer />
     </View>
   );
 };
