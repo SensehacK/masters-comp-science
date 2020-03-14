@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9007ef3-4919-480c-b412-370f62928b4d" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="a9007ef3-4919-480c-b412-370f62928b4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CS_610/Midterms/Question_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Masters_Comp_Science.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Masters_Comp_Science.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS_610/Assignment_3/JavaServlet/src/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/CS_610/Assignment_3/JavaServlet/src/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS_610/Misc/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/CS_610/Misc/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/ios/assignment_1/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/ios/assignment_1/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CS_610/Assignment_1/MyClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,60 +29,44 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="43" />
-    <option name="width" value="1260" />
-    <option name="height" value="680" />
+  <component name="ProjectId" id="1Z0PED22fqAvcWo0nktSB5Xx0qq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Masters_Comp_Science" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Masters_Comp_Science" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Masters_Comp_Science" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Masters_Comp_Science" type="462c0819:PsiDirectoryNode" />
-              <item name="CS_610" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Masters_Comp_Science" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Masters_Comp_Science" type="462c0819:PsiDirectoryNode" />
-              <item name="CS_610" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="E2E Tests (app)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/CS_641/Assignment_11/brew_coffee/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/CS_641/Assignment_9/canvas_ionic/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -97,52 +76,23 @@
       <option name="presentableId" value="Default" />
       <updated>1581517858157</updated>
       <workItem from="1581517865057" duration="124000" />
+      <workItem from="1583972940009" duration="130000" />
+      <workItem from="1583973173637" duration="1051000" />
+      <workItem from="1584201420956" duration="261000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="10" y="43" width="1260" height="680" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958949" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CS_610/Assignment_1/MyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="-1372" y="-22" key="IDE.errors.dialog" timestamp="1583974233448">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state x="-1372" y="-22" key="IDE.errors.dialog/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1583974233448" />
+    <state x="-1077" y="-146" key="SettingsEditor" timestamp="1583973114072">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state x="-1077" y="-146" key="SettingsEditor/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1583973114072" />
   </component>
 </project>
