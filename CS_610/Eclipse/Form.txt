@@ -29,7 +29,7 @@ public class Form extends HttpServlet {
 					if (value.length() > 0) {
 						formNameValid = true;
 					}
-					else
+					else if (!formNameValid)
 						out.printf("<p>Please enter a "+name+"!</p>");
 				}
 				else if (name.contains("Age") && formNameValid) {
