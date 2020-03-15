@@ -31,6 +31,8 @@ import ScoreKeeperV3 from './components/main/scoreKeeperV3.3';
 import FoodOrder from './components/assignment_2/foodOrder';
 import SnapchatLoginV3 from './components/assignment_3/snapchatLogin';
 import MusicPlayer from './components/assignment_3/musicPlayer';
+import GoogleSearchV3 from './components/assignment_3/googleSearchv3';
+import BackgroundImage from './components/assignment_3/backgroundImage';
 
 const App = () => {
   return (
@@ -59,8 +61,9 @@ const App = () => {
       {/* <ScoreKeeperV3 /> */}
       {/* <FoodOrder /> */}
       {/* <SnapchatLoginV3 /> */}
-
-      <MusicPlayer />
+      {/* <MusicPlayer /> */}
+      {/* <GoogleSearchV3 /> */}
+      <BackgroundImage />
     </View>
   );
 };
