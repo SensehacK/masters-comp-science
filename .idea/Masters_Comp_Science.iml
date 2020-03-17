@@ -53,6 +53,7 @@
       <excludeFolder url="file://$MODULE_DIR$/CS_641/Assignment_11/brew_coffee/dist" />
       <excludeFolder url="file://$MODULE_DIR$/CS_641/Assignment_11/brew_coffee/tmp" />
     </content>
+    <orderEntry type="jdk" jdkName="13" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9007ef3-4919-480c-b412-370f62928b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CS_610/Midterms/Question_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS_610/Midterms/Question_5_Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Masters_Comp_Science.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Masters_Comp_Science.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS_610/Assignment_3/JavaServlet/src/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/CS_610/Assignment_3/JavaServlet/src/Form.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CS_610/Misc/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/CS_610/Misc/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/ios/assignment_1/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/CS_639/Assignment_1/assignment_1/ios/assignment_1/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
@@ -42,13 +41,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/CS_641/Assignment_11/brew_coffee/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="Java Scratch.Java Config">
+    <configuration name="Java Config" type="Java Scratch">
+      <option name="MAIN_CLASS_NAME" value="Question_5_Client" />
+      <module name="Masters_Comp_Science" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CS_610/Midterms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (app)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/CS_641/Assignment_11/brew_coffee/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/CS_641/Assignment_11/brew_coffee/node_modules/protractor" />
       <protractor-options value="" />
       <envs />
       <scope-kind value="ALL" />
@@ -67,6 +79,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Java Scratch.Java Config" />
+      <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="npm.Angular CLI Server" />
+      <item itemvalue="Protractor.E2E Tests (app)" />
+    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,7 +96,7 @@
       <workItem from="1581517865057" duration="124000" />
       <workItem from="1583972940009" duration="130000" />
       <workItem from="1583973173637" duration="1051000" />
-      <workItem from="1584201420956" duration="261000" />
+      <workItem from="1584201420956" duration="1558000" />
     </task>
     <servers />
   </component>
@@ -86,13 +104,85 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1429" y="-182" key="#Project_Structure" timestamp="1584203840916">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state x="-1429" y="-182" key="#Project_Structure/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203840916" />
+    <state x="-1351" y="-93" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584203696349">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state x="-1351" y="-93" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203696349" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom" timestamp="1584203862060">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862060" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center" timestamp="1584203861905">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.center/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203861905" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left" timestamp="1584203861902">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.left/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203861902" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right" timestamp="1584203862057">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.0.right/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862057" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom" timestamp="1584203862065">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862065" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center" timestamp="1584203862062">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862062" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left" timestamp="1584203862061">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862061" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right" timestamp="1584203862063">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862063" />
+    <state width="1878" height="375" key="GridCell.Tab.2.bottom" timestamp="1584203862070">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.2.bottom/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862070" />
+    <state width="1878" height="375" key="GridCell.Tab.2.center" timestamp="1584203862067">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.2.center/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862067" />
+    <state width="1878" height="375" key="GridCell.Tab.2.left" timestamp="1584203862066">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.2.left/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862066" />
+    <state width="1878" height="375" key="GridCell.Tab.2.right" timestamp="1584203862069">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.2.right/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862069" />
+    <state width="1878" height="375" key="GridCell.Tab.3.bottom" timestamp="1584203862076">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.3.bottom/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862076" />
+    <state width="1878" height="375" key="GridCell.Tab.3.center" timestamp="1584203862072">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.3.center/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862072" />
+    <state width="1878" height="375" key="GridCell.Tab.3.left" timestamp="1584203862071">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.3.left/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862071" />
+    <state width="1878" height="375" key="GridCell.Tab.3.right" timestamp="1584203862074">
+      <screen x="-1920" y="-312" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.3.right/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203862074" />
     <state x="-1372" y="-22" key="IDE.errors.dialog" timestamp="1583974233448">
       <screen x="-1920" y="-312" width="1920" height="1080" />
     </state>
     <state x="-1372" y="-22" key="IDE.errors.dialog/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1583974233448" />
-    <state x="-1077" y="-146" key="SettingsEditor" timestamp="1583973114072">
+    <state x="-1077" y="-146" key="SettingsEditor" timestamp="1584203566820">
       <screen x="-1920" y="-312" width="1920" height="1080" />
     </state>
-    <state x="-1077" y="-146" key="SettingsEditor/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1583973114072" />
+    <state x="-1077" y="-146" key="SettingsEditor/0.0.1280.800/-1920.-312.1920.1080@-1920.-312.1920.1080" timestamp="1584203566820" />
   </component>
 </project>
