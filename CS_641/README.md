@@ -1,31 +1,32 @@
-# masters-comp-science
+# CS 641
 
-All of my work and practices at a singular destination which I'm using to track my progress with my masters.
-Hopefully my repository would aid future aspirants of Computer Science field to utilize some of my work or inspire all of us to collaborate and learn from each other.
+CS 641 course is "Mobile Web Development and Content".
 
 ## Folder Structures
 
-The folder structure starts "Initials of Major" + "Course Number"
-Eg. CS = Computer Science
-666 = Course number
+The folder structure follows for Angular Ionic projects
 
-## Live projects
+## Build Instructions
 
-- [Brew Coffee](https://sensehack.github.io/masters-comp-science/CS_641/live/brew_coffee)
-  [Firebase Deploy](https://sensehack-735ed.web.app/)
+Just follow basic angular ionic project build instructions
 
-- [Artist Finder](https://sensehack.github.io/masters-comp-science/CS_641/live/artistFinder/)
+Npm install ionic as global package to run commands.
 
-- [API Node + MySQL Docker](https://vast-reef-06229.herokuapp.com/)
-  [Source Code](https://github.com/SensehacK/nodejs)
+> npm install -g ionic
 
-- [Lyrics Finder](https://sensehack.github.io/masters-comp-science/CS_641/live/lyricsFinder/)
+Install package dependencies
 
-- [Grid Layout Portfolio](https://sensehack.github.io/masters-comp-science/CS_641/Assignment_3/Kautilya_Portfolio/)
+> npm install
 
-- [React Static Portfolio Blog](https://github.com/SensehacK/react-app)
+Serving the local build
 
-- [CSS Trials Basics](https://sensehack.github.io/masters-comp-science/CS_641/Assignment_1/assignment_1.html)
+> ionic serve
+
+Production Build:
+
+> ionic build --prod
+
+Link for [Ionic Cheatsheet](https://github.com/SensehacK/dev-cheatsheet/tree/master/ionic_cheatsheet)
 
 ## Course Structure
 
@@ -33,19 +34,6 @@ Didn't follow any specific guidelines towards it but tried to keep course folder
 
 ```text
 .
-├── CS_608
-│   ├── Algorithms
-│   ├── Assignment_2
-│   ├── Project_1
-│   ├── hackerRank
-│   └── py_hello
-├── CS_612
-│   ├── Assignment_1
-│   ├── Assignment_2
-│   ├── Assignment_3
-│   ├── Assignment_4
-│   ├── Assignment_5
-│   └── launch.json
 ├── CS_641
 │   ├── Assignment_1
 │   ├── Assignment_3
@@ -74,9 +62,6 @@ Didn't follow any specific guidelines towards it but tried to keep course folder
 │   ├── Responsive_env
 │   ├── gradient_dev
 │   └── live
-├── Misc
-├── README.md
-└── tree.txt
 ```
 
 ## Assets
