@@ -33,6 +33,9 @@ import SnapchatLoginV3 from './components/assignment_3/snapchatLogin';
 import MusicPlayer from './components/assignment_3/musicPlayer';
 import GoogleSearchV3 from './components/assignment_3/googleSearchv3';
 import BackgroundImage from './components/assignment_3/backgroundImage';
+import MobileResume from './components/assignment_3/mobileResume';
+import ButtonImage from './components/assignment_3/buttonImage';
+import QuoteApp from './components/assignment_3/quoteApp';
 
 const App = () => {
   return (
@@ -63,7 +66,10 @@ const App = () => {
       {/* <SnapchatLoginV3 /> */}
       {/* <MusicPlayer /> */}
       {/* <GoogleSearchV3 /> */}
-      <BackgroundImage />
+      {/* <BackgroundImage /> */}
+      {/* <MobileResume /> */}
+      {/* <ButtonImage /> */}
+      <QuoteApp />
     </View>
   );
 };
