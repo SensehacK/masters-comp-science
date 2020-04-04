@@ -26,31 +26,33 @@ export default class WeightVC extends Component {
     measureDisplay: 'none',
     ValueA: '0',
     ValueB: '0',
+    ValueC: '0',
+    ValueD: '0',
   };
 
   //   Other conversion functions
-  kmToMiles = (valueA) => {
+  kgToPounds = (valueA) => {
     this.setState({
       valueA,
-      valueB: parseInt(valueA) / 1.609,
+      valueB: String(parseInt(valueA) * 2.2),
     });
   };
-  milesToKm = (valueB) => {
+  poundsToKg = (valueB) => {
     this.setState({
       valueB,
-      valueA: parseInt(valueB) * 1.609,
+      valueA: String(parseInt(valueB) / 2.2),
     });
   };
-  cmToMeter = (valueA) => {
+  gmsToOunces = (valueC) => {
     this.setState({
-      valueA,
-      valueB: parseInt(valueA) / 100,
+      valueC,
+      valueD: String(parseInt(valueC) / 28.35),
     });
   };
-  meterToCm = (valueB) => {
+  ouncesToGms = (valueD) => {
     this.setState({
-      valueB,
-      valueB: parseInt(valueA) * 100,
+      valueD,
+      valueC: String(parseInt(valueD) * 28.35),
     });
   };
 
@@ -59,41 +61,41 @@ export default class WeightVC extends Component {
       <View style={styles.container}>
         <View style={styles.headContainer}>
           <View style={styles.headTextContainer}>
-            <Text style={styles.headText}>Weight Kautilya</Text>
+            <Text style={styles.headText}>Weight</Text>
           </View>
         </View>
 
         <View style={styles.conversionContainer}>
           <View style={styles.conversionHeadContainer}>
-            <Text style={styles.conversionHeadText}>KM to MILES</Text>
+            <Text style={styles.conversionHeadText}>KG to LB</Text>
           </View>
           <View style={styles.inputBoxContainer}>
             <TextInput
               style={styles.inputBox}
               value={this.state.valueA}
-              onChangeText={this.kmToMiles}
+              onChangeText={this.kgToPounds}
             />
             <TextInput
               style={styles.inputBox}
               value={this.state.valueB}
-              onChangeText={this.milesToKm}
+              onChangeText={this.poundsToKg}
             />
           </View>
         </View>
         <View style={styles.conversionContainer}>
           <View style={styles.conversionHeadContainer}>
-            <Text style={styles.conversionHeadText}>CentiMeter to Meter</Text>
+            <Text style={styles.conversionHeadText}>Grams to Ounces</Text>
           </View>
           <View style={styles.inputBoxContainer}>
             <TextInput
               style={styles.inputBox}
-              value={this.state.valueA}
-              onChangeText={this.cmToMeter}
+              value={this.state.valueC}
+              onChangeText={this.gmsToOunces}
             />
             <TextInput
               style={styles.inputBox}
-              value={this.state.valueB}
-              onChangeText={this.meterToCm}
+              value={this.state.valueD}
+              onChangeText={this.ouncesToGms}
             />
           </View>
         </View>
