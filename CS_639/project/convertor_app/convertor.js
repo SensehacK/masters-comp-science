@@ -45,16 +45,10 @@ export default class Convertor extends Component {
 
   //   Other conversion functions
   kmToMiles = (valueA) => {
-    console.log('Printing Value', valueA);
-    // console.log('Printing Value', typeof valueA);
-    console.log('Multiplying', parseInt(valueA) / 1.609);
-    console.log('setState Before', this.state.valueB);
     this.setState({
       valueA,
       valueB: String(parseInt(valueA) / 1.609),
     });
-
-    console.log('setState After', this.state.valueB);
   };
   milesToKm = (valueB) => {
     this.setState({
@@ -204,7 +198,7 @@ export default class Convertor extends Component {
 
             {/* Distance Display Component Layout */}
 
-            <View style={{display: this.state.distanceDisplay}}>
+            {/* <View style={{display: this.state.distanceDisplay}}>
               <View style={styles.headContainer}>
                 <TouchableHighlight onPress={this.homePage}>
                   <View style={styles.backButtonContainer}>
@@ -253,17 +247,17 @@ export default class Convertor extends Component {
                   />
                 </View>
               </View>
-            </View>
+            </View> */}
 
             {/* Weight Display Component Layout */}
-            {/* <View style={{display: this.state.distanceDisplay}}>
+            <View style={{display: this.state.distanceDisplay}}>
               <TouchableHighlight onPress={this.homePage}>
                 <View style={styles.backButtonContainer}>
                   <Text style={styles.backButtonText}>Back</Text>
                 </View>
               </TouchableHighlight>
               <DistanceVC />
-            </View> */}
+            </View>
 
             {/* Weight Display Component Layout */}
             <View style={{display: this.state.weightDisplay}}>

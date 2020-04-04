@@ -26,6 +26,34 @@ export default class DistanceVC extends Component {
     measureDisplay: 'none',
     ValueA: '0',
     ValueB: '0',
+    ValueC: '0',
+    ValueD: '0',
+  };
+
+  //   Other conversion functions
+  kmToMiles = (valueA) => {
+    this.setState({
+      valueA,
+      valueB: String(parseInt(valueA) / 1.609),
+    });
+  };
+  milesToKm = (valueB) => {
+    this.setState({
+      valueB,
+      valueA: String(parseInt(valueB) * 1.609),
+    });
+  };
+  cmToMeter = (valueC) => {
+    this.setState({
+      valueC,
+      valueD: String(parseInt(valueC) / 100),
+    });
+  };
+  meterToCm = (valueD) => {
+    this.setState({
+      valueD,
+      valueC: String(parseInt(valueD) * 100),
+    });
   };
 
   render() {
@@ -61,12 +89,12 @@ export default class DistanceVC extends Component {
           <View style={styles.inputBoxContainer}>
             <TextInput
               style={styles.inputBox}
-              value={this.state.valueA}
+              value={this.state.valueC}
               onChangeText={this.cmToMeter}
             />
             <TextInput
               style={styles.inputBox}
-              value={this.state.valueB}
+              value={this.state.valueD}
               onChangeText={this.meterToCm}
             />
           </View>
