@@ -23,8 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Convertor from './components/convertor';
-
+import Convertor from './convertor';
 
 const App: () => React$Node = () => {
   return (
@@ -41,7 +40,8 @@ const App: () => React$Node = () => {
             </View>
           )}
 
-		 <Convertor />
+          {/* Calling Convertor component */}
+          <Convertor />
         </ScrollView>
       </SafeAreaView>
     </>

@@ -14,7 +14,7 @@ import {
   TextInput,
 } from 'react-native';
 // import Constants from 'expo-constants';
-import DistanceVC from './distance';
+import DistanceVC from './components/distance';
 
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
