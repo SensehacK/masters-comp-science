@@ -26,7 +26,6 @@ let deviceWidth = Dimensions.get('window').width;
 export default class Convertor extends Component {
   constructor(props) {
     super(props);
-    this.kmToMiles = this.kmToMiles.bind(this);
   }
   state = {
     homeDisplay: 'flex',
@@ -35,38 +34,10 @@ export default class Convertor extends Component {
     measureDisplay: 'none',
     speedDisplay: 'none',
     calculatorDisplay: 'none',
-    ValueA: '0',
-    ValueB: '0',
   };
 
   _handleTextChange = (inputValue) => {
     this.setState({inputValue});
-  };
-
-  //   Other conversion functions
-  kmToMiles = (valueA) => {
-    this.setState({
-      valueA,
-      valueB: String(parseInt(valueA) / 1.609),
-    });
-  };
-  milesToKm = (valueB) => {
-    this.setState({
-      valueB,
-      valueA: parseInt(valueB) * 1.609,
-    });
-  };
-  cmToMeter = (valueA) => {
-    this.setState({
-      valueA,
-      valueB: parseInt(valueA) / 100,
-    });
-  };
-  meterToCm = (valueB) => {
-    this.setState({
-      valueB,
-      valueB: parseInt(valueA) * 100,
-    });
   };
 
   //   Dynamic view changing functions
@@ -196,59 +167,7 @@ export default class Convertor extends Component {
               </TouchableHighlight>
             </View>
 
-            {/* Distance Display Component Layout */}
-
-            {/* <View style={{display: this.state.distanceDisplay}}>
-              <View style={styles.headContainer}>
-                <TouchableHighlight onPress={this.homePage}>
-                  <View style={styles.backButtonContainer}>
-                    <Text style={styles.backButtonText}>Back</Text>
-                  </View>
-                </TouchableHighlight>
-
-                <View style={styles.headTextContainer}>
-                  <Text style={styles.headText}>Distance Conversion</Text>
-                </View>
-              </View>
-
-              <View style={styles.conversionContainer}>
-                <View style={styles.conversionHeadContainer}>
-                  <Text style={styles.conversionHeadText}>KM to MILES</Text>
-                </View>
-                <View style={styles.inputBoxContainer}>
-                  <TextInput
-                    style={styles.inputBox}
-                    value={this.state.valueA}
-                    onChangeText={this.kmToMiles}
-                  />
-                  <TextInput
-                    style={styles.inputBox}
-                    value={this.state.valueB}
-                    onChangeText={this.milesToKm}
-                  />
-                </View>
-              </View>
-              <View style={styles.conversionContainer}>
-                <View style={styles.conversionHeadContainer}>
-                  <Text style={styles.conversionHeadText}>
-                    CentiMeter to Meter
-                  </Text>
-                </View>
-                <View style={styles.inputBoxContainer}>
-                  <TextInput
-                    style={styles.inputBox}
-                    value={this.state.valueB}
-                    onChangeText={this.cmToMeter}
-                  />
-                  <TextInput
-                    style={styles.inputBox}
-                    value={this.state.valueB}
-                    onChangeText={this.meterToCm}
-                  />
-                </View>
-              </View>
-            </View> */}
-
+            {/* ################COMPONENTS################### */}
             {/* Weight Display Component Layout */}
             <View style={{display: this.state.distanceDisplay}}>
               <TouchableHighlight onPress={this.homePage}>
@@ -298,6 +217,8 @@ export default class Convertor extends Component {
               </TouchableHighlight>
               <CalculatorVC />
             </View>
+
+            {/* End Component Layout calls */}
           </View>
         </ScrollView>
       </SafeAreaView>
