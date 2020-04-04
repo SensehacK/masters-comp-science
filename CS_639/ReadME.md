@@ -2,7 +2,7 @@
 
 ## Creation of new project
 
-Use
+Use this command to create a new project without quotes in command.
 
 > react-native init “project_name”
 
