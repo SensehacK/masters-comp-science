@@ -14,6 +14,7 @@ import {
   TextInput,
 } from 'react-native';
 // import Constants from 'expo-constants';
+import DistanceVC from './distance';
 
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
@@ -60,6 +61,7 @@ export default class Convertor extends Component {
     });
   };
 
+  //   Dynamic view changing functions
   homePage = () =>
     this.setState((state) => ({
       homeDisplay: 'flex',
@@ -67,11 +69,22 @@ export default class Convertor extends Component {
       weightDisplay: 'none',
       measureDisplay: 'none',
     }));
+
+  // Adding Distance view component
   showDistance = () =>
     this.setState((state) => ({
       homeDisplay: 'none',
       distanceDisplay: 'flex',
       weightDisplay: 'none',
+      measureDisplay: 'none',
+    }));
+
+  // Adding Weight view component
+  showWeight = () =>
+    this.setState((state) => ({
+      homeDisplay: 'none',
+      distanceDisplay: 'none',
+      weightDisplay: 'flex',
       measureDisplay: 'none',
     }));
 
@@ -82,24 +95,36 @@ export default class Convertor extends Component {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.container}>
+            {/* Home display */}
             <View style={{display: this.state.homeDisplay}}>
+              {/* Heading */}
               <View style={styles.headContainer}>
                 <Text style={styles.headText}>Simple Conversion</Text>
               </View>
 
+              {/* Distance Button Layout */}
               <TouchableHighlight onPress={this.showDistance}>
                 <View style={styles.buttonContainer}>
                   <Text style={styles.buttonText}>Distance</Text>
                 </View>
               </TouchableHighlight>
 
-              <View style={styles.buttonContainer}>
-                <Text style={styles.buttonText}>Distance</Text>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Text style={styles.buttonText}>Distance</Text>
-              </View>
+              {/* Weight Button Layout */}
+              <TouchableHighlight onPress={this.showWeight}>
+                <View style={styles.buttonContainer}>
+                  <Text style={styles.buttonText}>Weight</Text>
+                </View>
+              </TouchableHighlight>
+
+              {/* Speed Button Layout */}
+              <TouchableHighlight onPress={this.showDistance}>
+                <View style={styles.buttonContainer}>
+                  <Text style={styles.buttonText}>Speed</Text>
+                </View>
+              </TouchableHighlight>
             </View>
+
+            {/* Distance Display Component Layout */}
             <View style={{display: this.state.distanceDisplay}}>
               <View style={styles.headContainer}>
                 <TouchableHighlight onPress={this.homePage}>
@@ -108,7 +133,7 @@ export default class Convertor extends Component {
                   </View>
                 </TouchableHighlight>
 
-                <View style={styles.containr}>
+                <View style={styles.headTextContainer}>
                   <Text style={styles.headText}>Distance Conversion</Text>
                 </View>
               </View>
@@ -150,6 +175,16 @@ export default class Convertor extends Component {
                 </View>
               </View>
             </View>
+
+            {/* Weight Display Component Layout */}
+            <View style={{display: this.state.weightDisplay}}>
+              <TouchableHighlight onPress={this.homePage}>
+                <View style={styles.backButtonContainer}>
+                  <Text style={styles.backButtonText}>Back</Text>
+                </View>
+              </TouchableHighlight>
+              <DistanceVC />
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -169,6 +204,10 @@ const styles = StyleSheet.create({
     width: deviceWidth,
     height: deviceHeight / 6,
     backgroundColor: 'blue',
+  },
+  headTextContainer: {
+    fontSize: deviceHeight / 21,
+    color: 'white',
   },
   headText: {
     fontSize: deviceHeight / 21,
