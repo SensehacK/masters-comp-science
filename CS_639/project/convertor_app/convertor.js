@@ -45,10 +45,16 @@ export default class Convertor extends Component {
 
   //   Other conversion functions
   kmToMiles = (valueA) => {
+    console.log('Printing Value', valueA);
+    // console.log('Printing Value', typeof valueA);
+    console.log('Multiplying', parseInt(valueA) / 1.609);
+    console.log('setState Before', this.state.valueB);
     this.setState({
       valueA,
-      valueB: parseInt(valueA) / 1.609,
+      valueB: String(parseInt(valueA) / 1.609),
     });
+
+    console.log('setState After', this.state.valueB);
   };
   milesToKm = (valueB) => {
     this.setState({
@@ -237,7 +243,7 @@ export default class Convertor extends Component {
                 <View style={styles.inputBoxContainer}>
                   <TextInput
                     style={styles.inputBox}
-                    value={this.state.valueA}
+                    value={this.state.valueB}
                     onChangeText={this.cmToMeter}
                   />
                   <TextInput
