@@ -42,6 +42,8 @@ export default class Convertor extends Component {
   _handleTextChange = (inputValue) => {
     this.setState({inputValue});
   };
+
+  //   Other conversion functions
   kmToMiles = (valueA) => {
     this.setState({
       valueA,
@@ -150,43 +152,53 @@ export default class Convertor extends Component {
 
               {/* Distance Button Layout */}
               <TouchableHighlight onPress={this.showDistance}>
-                <View style={styles.buttonContainer}>
-                  <Text style={styles.buttonText}>Distance</Text>
+                <View style={styles.buttonInContainer}>
+                  <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Distance</Text>
+                  </View>
                 </View>
               </TouchableHighlight>
 
               {/* Weight Button Layout */}
               <TouchableHighlight onPress={this.showWeight}>
-                <View style={styles.buttonContainer}>
-                  <Text style={styles.buttonText}>Weight</Text>
+                <View style={styles.buttonInContainer}>
+                  <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Weight</Text>
+                  </View>
                 </View>
               </TouchableHighlight>
 
               {/* Measure Button Layout */}
               <TouchableHighlight onPress={this.showMeasure}>
-                <View style={styles.buttonContainer}>
-                  <Text style={styles.buttonText}>Measure</Text>
+                <View style={styles.buttonInContainer}>
+                  <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Measure</Text>
+                  </View>
                 </View>
               </TouchableHighlight>
 
               {/* Speed Button Layout */}
               <TouchableHighlight onPress={this.showSpeed}>
-                <View style={styles.buttonContainer}>
-                  <Text style={styles.buttonText}>Speed</Text>
+                <View style={styles.buttonInContainer}>
+                  <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Speed</Text>
+                  </View>
                 </View>
               </TouchableHighlight>
 
               {/* Calculator Button Layout */}
               <TouchableHighlight onPress={this.showCalculator}>
-                <View style={styles.buttonContainer}>
-                  <Text style={styles.buttonText}>Calculator</Text>
+                <View style={styles.buttonInContainer}>
+                  <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Calculator</Text>
+                  </View>
                 </View>
               </TouchableHighlight>
             </View>
 
             {/* Distance Display Component Layout */}
 
-            {/* <View style={{display: this.state.distanceDisplay}}>
+            <View style={{display: this.state.distanceDisplay}}>
               <View style={styles.headContainer}>
                 <TouchableHighlight onPress={this.homePage}>
                   <View style={styles.backButtonContainer}>
@@ -235,17 +247,17 @@ export default class Convertor extends Component {
                   />
                 </View>
               </View>
-            </View> */}
+            </View>
 
             {/* Weight Display Component Layout */}
-            <View style={{display: this.state.distanceDisplay}}>
+            {/* <View style={{display: this.state.distanceDisplay}}>
               <TouchableHighlight onPress={this.homePage}>
                 <View style={styles.backButtonContainer}>
                   <Text style={styles.backButtonText}>Back</Text>
                 </View>
               </TouchableHighlight>
               <DistanceVC />
-            </View>
+            </View> */}
 
             {/* Weight Display Component Layout */}
             <View style={{display: this.state.weightDisplay}}>
@@ -314,9 +326,13 @@ const styles = StyleSheet.create({
     fontSize: deviceHeight / 21,
     color: 'white',
   },
+
+  buttonInContainer: {
+    alignItems: 'center',
+  },
   buttonContainer: {
-    height: deviceHeight / 5,
-    width: (3 * deviceWidth) / 4,
+    height: deviceHeight / 8,
+    width: (3 * deviceWidth) / 6,
     backgroundColor: 'blue',
     marginHorizontal: 'auto',
     marginTop: 40,

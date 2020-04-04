@@ -28,6 +28,32 @@ export default class WeightVC extends Component {
     ValueB: '0',
   };
 
+  //   Other conversion functions
+  kmToMiles = (valueA) => {
+    this.setState({
+      valueA,
+      valueB: parseInt(valueA) / 1.609,
+    });
+  };
+  milesToKm = (valueB) => {
+    this.setState({
+      valueB,
+      valueA: parseInt(valueB) * 1.609,
+    });
+  };
+  cmToMeter = (valueA) => {
+    this.setState({
+      valueA,
+      valueB: parseInt(valueA) / 100,
+    });
+  };
+  meterToCm = (valueB) => {
+    this.setState({
+      valueB,
+      valueB: parseInt(valueA) * 100,
+    });
+  };
+
   render() {
     return (
       <View style={styles.container}>
