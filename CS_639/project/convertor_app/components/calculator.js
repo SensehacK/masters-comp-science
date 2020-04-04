@@ -18,7 +18,7 @@ import {
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
 
-export default class DistanceVC extends Component {
+export default class CalculatorVC extends Component {
   state = {
     homeDisplay: 'flex',
     distanceDisplay: 'none',
@@ -33,7 +33,7 @@ export default class DistanceVC extends Component {
       <View style={styles.container}>
         <View style={styles.headContainer}>
           <View style={styles.headTextContainer}>
-            <Text style={styles.headText}>Distance Kautilya</Text>
+            <Text style={styles.headText}>Calculator Kautilya</Text>
           </View>
         </View>
 

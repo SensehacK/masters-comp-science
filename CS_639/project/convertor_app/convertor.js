@@ -15,6 +15,10 @@ import {
 } from 'react-native';
 // import Constants from 'expo-constants';
 import DistanceVC from './components/distance';
+import CalculatorVC from './components/calculator';
+import MeasureVC from './components/measure';
+import SpeedVC from './components/speed';
+import WeightVC from './components/weight';
 
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
@@ -29,6 +33,8 @@ export default class Convertor extends Component {
     distanceDisplay: 'none',
     weightDisplay: 'none',
     measureDisplay: 'none',
+    speedDisplay: 'none',
+    calculatorDisplay: 'none',
     ValueA: '0',
     ValueB: '0',
   };
@@ -62,12 +68,15 @@ export default class Convertor extends Component {
   };
 
   //   Dynamic view changing functions
+  // Home view
   homePage = () =>
     this.setState((state) => ({
       homeDisplay: 'flex',
       distanceDisplay: 'none',
       weightDisplay: 'none',
       measureDisplay: 'none',
+      speedDisplay: 'none',
+      calculatorDisplay: 'none',
     }));
 
   // Adding Distance view component
@@ -77,6 +86,8 @@ export default class Convertor extends Component {
       distanceDisplay: 'flex',
       weightDisplay: 'none',
       measureDisplay: 'none',
+      speedDisplay: 'none',
+      calculatorDisplay: 'none',
     }));
 
   // Adding Weight view component
@@ -86,6 +97,41 @@ export default class Convertor extends Component {
       distanceDisplay: 'none',
       weightDisplay: 'flex',
       measureDisplay: 'none',
+      speedDisplay: 'none',
+      calculatorDisplay: 'none',
+    }));
+
+  // Adding Measure view component
+  showMeasure = () =>
+    this.setState((state) => ({
+      homeDisplay: 'none',
+      distanceDisplay: 'none',
+      weightDisplay: 'none',
+      measureDisplay: 'flex',
+      speedDisplay: 'none',
+      calculatorDisplay: 'none',
+    }));
+
+  // Adding Speed view component
+  showSpeed = () =>
+    this.setState((state) => ({
+      homeDisplay: 'none',
+      distanceDisplay: 'none',
+      weightDisplay: 'none',
+      measureDisplay: 'none',
+      speedDisplay: 'flex',
+      calculatorDisplay: 'none',
+    }));
+
+  // Adding Calculator view component
+  showCalculator = () =>
+    this.setState((state) => ({
+      homeDisplay: 'none',
+      distanceDisplay: 'none',
+      weightDisplay: 'none',
+      measureDisplay: 'none',
+      speedDisplay: 'none',
+      calculatorDisplay: 'flex',
     }));
 
   render() {
@@ -116,16 +162,31 @@ export default class Convertor extends Component {
                 </View>
               </TouchableHighlight>
 
+              {/* Measure Button Layout */}
+              <TouchableHighlight onPress={this.showMeasure}>
+                <View style={styles.buttonContainer}>
+                  <Text style={styles.buttonText}>Measure</Text>
+                </View>
+              </TouchableHighlight>
+
               {/* Speed Button Layout */}
-              <TouchableHighlight onPress={this.showDistance}>
+              <TouchableHighlight onPress={this.showSpeed}>
                 <View style={styles.buttonContainer}>
                   <Text style={styles.buttonText}>Speed</Text>
+                </View>
+              </TouchableHighlight>
+
+              {/* Calculator Button Layout */}
+              <TouchableHighlight onPress={this.showCalculator}>
+                <View style={styles.buttonContainer}>
+                  <Text style={styles.buttonText}>Calculator</Text>
                 </View>
               </TouchableHighlight>
             </View>
 
             {/* Distance Display Component Layout */}
-            <View style={{display: this.state.distanceDisplay}}>
+
+            {/* <View style={{display: this.state.distanceDisplay}}>
               <View style={styles.headContainer}>
                 <TouchableHighlight onPress={this.homePage}>
                   <View style={styles.backButtonContainer}>
@@ -174,6 +235,16 @@ export default class Convertor extends Component {
                   />
                 </View>
               </View>
+            </View> */}
+
+            {/* Weight Display Component Layout */}
+            <View style={{display: this.state.distanceDisplay}}>
+              <TouchableHighlight onPress={this.homePage}>
+                <View style={styles.backButtonContainer}>
+                  <Text style={styles.backButtonText}>Back</Text>
+                </View>
+              </TouchableHighlight>
+              <DistanceVC />
             </View>
 
             {/* Weight Display Component Layout */}
@@ -183,7 +254,37 @@ export default class Convertor extends Component {
                   <Text style={styles.backButtonText}>Back</Text>
                 </View>
               </TouchableHighlight>
-              <DistanceVC />
+              <WeightVC />
+            </View>
+
+            {/* Measure Display Component Layout */}
+            <View style={{display: this.state.measureDisplay}}>
+              <TouchableHighlight onPress={this.homePage}>
+                <View style={styles.backButtonContainer}>
+                  <Text style={styles.backButtonText}>Back</Text>
+                </View>
+              </TouchableHighlight>
+              <MeasureVC />
+            </View>
+
+            {/* Speed Display Component Layout */}
+            <View style={{display: this.state.speedDisplay}}>
+              <TouchableHighlight onPress={this.homePage}>
+                <View style={styles.backButtonContainer}>
+                  <Text style={styles.backButtonText}>Back</Text>
+                </View>
+              </TouchableHighlight>
+              <SpeedVC />
+            </View>
+
+            {/* Calculator Display Component Layout */}
+            <View style={{display: this.state.calculatorDisplay}}>
+              <TouchableHighlight onPress={this.homePage}>
+                <View style={styles.backButtonContainer}>
+                  <Text style={styles.backButtonText}>Back</Text>
+                </View>
+              </TouchableHighlight>
+              <CalculatorVC />
             </View>
           </View>
         </ScrollView>
