@@ -19,6 +19,7 @@ import CalculatorVC from './components/calculator';
 import MeasureVC from './components/measure';
 import SpeedVC from './components/speed';
 import WeightVC from './components/weight';
+import TemperatureVC from './components/temperature';
 
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
@@ -47,6 +48,7 @@ export default class Convertor extends Component {
       homeDisplay: 'flex',
       distanceDisplay: 'none',
       weightDisplay: 'none',
+      temperatureDisplay: 'none',
       measureDisplay: 'none',
       speedDisplay: 'none',
       calculatorDisplay: 'none',
@@ -58,6 +60,7 @@ export default class Convertor extends Component {
       homeDisplay: 'none',
       distanceDisplay: 'flex',
       weightDisplay: 'none',
+      temperatureDisplay: 'none',
       measureDisplay: 'none',
       speedDisplay: 'none',
       calculatorDisplay: 'none',
@@ -69,6 +72,7 @@ export default class Convertor extends Component {
       homeDisplay: 'none',
       distanceDisplay: 'none',
       weightDisplay: 'flex',
+      temperatureDisplay: 'none',
       measureDisplay: 'none',
       speedDisplay: 'none',
       calculatorDisplay: 'none',
@@ -80,7 +84,20 @@ export default class Convertor extends Component {
       homeDisplay: 'none',
       distanceDisplay: 'none',
       weightDisplay: 'none',
+      temperatureDisplay: 'none',
       measureDisplay: 'flex',
+      speedDisplay: 'none',
+      calculatorDisplay: 'none',
+    }));
+
+  // Adding Measure view component
+  showTemperature = () =>
+    this.setState((state) => ({
+      homeDisplay: 'none',
+      distanceDisplay: 'none',
+      weightDisplay: 'none',
+      temperatureDisplay: 'flex',
+      measureDisplay: 'none',
       speedDisplay: 'none',
       calculatorDisplay: 'none',
     }));
@@ -91,6 +108,7 @@ export default class Convertor extends Component {
       homeDisplay: 'none',
       distanceDisplay: 'none',
       weightDisplay: 'none',
+      temperatureDisplay: 'none',
       measureDisplay: 'none',
       speedDisplay: 'flex',
       calculatorDisplay: 'none',
@@ -102,6 +120,7 @@ export default class Convertor extends Component {
       homeDisplay: 'none',
       distanceDisplay: 'none',
       weightDisplay: 'none',
+      temperatureDisplay: 'none',
       measureDisplay: 'none',
       speedDisplay: 'none',
       calculatorDisplay: 'flex',
@@ -148,6 +167,15 @@ export default class Convertor extends Component {
                 </View>
               </TouchableHighlight>
 
+              {/* Temperature Button Layout */}
+              <TouchableHighlight onPress={this.showTemperature}>
+                <View style={styles.buttonInContainer}>
+                  <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Temperature</Text>
+                  </View>
+                </View>
+              </TouchableHighlight>
+
               {/* Speed Button Layout */}
               <TouchableHighlight onPress={this.showSpeed}>
                 <View style={styles.buttonInContainer}>
@@ -186,6 +214,16 @@ export default class Convertor extends Component {
                 </View>
               </TouchableHighlight>
               <WeightVC />
+            </View>
+
+            {/* Temperature Display Component Layout */}
+            <View style={{display: this.state.temperatureDisplay}}>
+              <TouchableHighlight onPress={this.homePage}>
+                <View style={styles.backButtonContainer}>
+                  <Text style={styles.backButtonText}>Back</Text>
+                </View>
+              </TouchableHighlight>
+              <TemperatureVC />
             </View>
 
             {/* Measure Display Component Layout */}
