@@ -34,25 +34,25 @@ export default class DistanceVC extends Component {
   kmToMiles = (valueA) => {
     this.setState({
       valueA,
-      valueB: String(parseInt(valueA) / 1.609),
+      valueB: String((parseInt(valueA) / 1.609).toFixed(2)),
     });
   };
   milesToKm = (valueB) => {
     this.setState({
       valueB,
-      valueA: String(parseInt(valueB) * 1.609),
+      valueA: String((parseInt(valueB) * 1.609).toFixed(2)),
     });
   };
   cmToMeter = (valueC) => {
     this.setState({
       valueC,
-      valueD: String(parseInt(valueC) / 100),
+      valueD: String((parseInt(valueC) / 100).toFixed(2)),
     });
   };
   meterToCm = (valueD) => {
     this.setState({
       valueD,
-      valueC: String(parseInt(valueD) * 100),
+      valueC: String((parseInt(valueD) * 100).toFixed(2)),
     });
   };
 
@@ -61,7 +61,7 @@ export default class DistanceVC extends Component {
       <View style={styles.container}>
         <View style={styles.headContainer}>
           <View style={styles.headTextContainer}>
-            <Text style={styles.headText}>Distance Kautilya</Text>
+            <Text style={styles.headText}>Distance</Text>
           </View>
         </View>
 

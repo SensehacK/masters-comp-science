@@ -34,25 +34,25 @@ export default class WeightVC extends Component {
   kgToPounds = (valueA) => {
     this.setState({
       valueA,
-      valueB: String(parseInt(valueA) * 2.2),
+      valueB: String((parseInt(valueA) * 2.2).toFixed(2)),
     });
   };
   poundsToKg = (valueB) => {
     this.setState({
       valueB,
-      valueA: String(parseInt(valueB) / 2.2),
+      valueA: String((parseInt(valueB) / 2.2).toFixed(2)),
     });
   };
   gmsToOunces = (valueC) => {
     this.setState({
       valueC,
-      valueD: String(parseInt(valueC) / 28.35),
+      valueD: String((parseInt(valueC) / 28.35).toFixed(2)),
     });
   };
   ouncesToGms = (valueD) => {
     this.setState({
       valueD,
-      valueC: String(parseInt(valueD) * 28.35),
+      valueC: String((parseInt(valueD) * 28.35).toFixed(2)),
     });
   };
 

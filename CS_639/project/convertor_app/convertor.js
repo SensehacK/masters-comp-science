@@ -31,7 +31,7 @@ export default class Convertor extends Component {
   state = {
     homeDisplay: 'flex',
     distanceDisplay: 'none',
-    weightDisplay: 'none',
+    weightDisplay: 'none',	
     measureDisplay: 'none',
     speedDisplay: 'none',
     calculatorDisplay: 'none',

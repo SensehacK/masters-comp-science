@@ -26,6 +26,34 @@ export default class SpeedVC extends Component {
     measureDisplay: 'none',
     ValueA: '0',
     ValueB: '0',
+    ValueC: '0',
+    ValueD: '0',
+  };
+
+  //   Other conversion functions
+  mphToKph = (valueA) => {
+    this.setState({
+      valueA,
+      valueB: String((parseInt(valueA) * 1.609).toFixed(2)),
+    });
+  };
+  kphToMph = (valueB) => {
+    this.setState({
+      valueB,
+      valueA: String((parseInt(valueB) / 1.609).toFixed(2)),
+    });
+  };
+  knotToMps = (valueC) => {
+    this.setState({
+      valueC,
+      valueD: String((parseInt(valueC) * 1.151).toFixed(2)),
+    });
+  };
+  mpsToKnot = (valueD) => {
+    this.setState({
+      valueD,
+      valueC: String((parseInt(valueD) / 1.151).toFixed(2)),
+    });
   };
 
   render() {
@@ -33,41 +61,41 @@ export default class SpeedVC extends Component {
       <View style={styles.container}>
         <View style={styles.headContainer}>
           <View style={styles.headTextContainer}>
-            <Text style={styles.headText}>Speed Kautilya</Text>
+            <Text style={styles.headText}>Speed</Text>
           </View>
         </View>
 
         <View style={styles.conversionContainer}>
           <View style={styles.conversionHeadContainer}>
-            <Text style={styles.conversionHeadText}>KM to MILES</Text>
+            <Text style={styles.conversionHeadText}>Mph to Kph</Text>
           </View>
           <View style={styles.inputBoxContainer}>
             <TextInput
               style={styles.inputBox}
               value={this.state.valueA}
-              onChangeText={this.kmToMiles}
+              onChangeText={this.mphToKph}
             />
             <TextInput
               style={styles.inputBox}
               value={this.state.valueB}
-              onChangeText={this.milesToKm}
+              onChangeText={this.kphToMph}
             />
           </View>
         </View>
         <View style={styles.conversionContainer}>
           <View style={styles.conversionHeadContainer}>
-            <Text style={styles.conversionHeadText}>CentiMeter to Meter</Text>
+            <Text style={styles.conversionHeadText}>Knots to MilesPerSec</Text>
           </View>
           <View style={styles.inputBoxContainer}>
             <TextInput
               style={styles.inputBox}
-              value={this.state.valueA}
-              onChangeText={this.cmToMeter}
+              value={this.state.valueC}
+              onChangeText={this.knotToMps}
             />
             <TextInput
               style={styles.inputBox}
-              value={this.state.valueB}
-              onChangeText={this.meterToCm}
+              value={this.state.valueD}
+              onChangeText={this.mpsToKnot}
             />
           </View>
         </View>

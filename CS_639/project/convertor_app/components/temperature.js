@@ -34,26 +34,26 @@ export default class TemperatureVC extends Component {
   celToFaht = (valueA) => {
     this.setState({
       valueA,
-      valueB: String(parseInt(valueA) * 1.8 + 32),
+      valueB: String((parseInt(valueA) * 1.8 + 32).toFixed(2)),
     });
   };
   fahtToCel = (valueB) => {
     this.setState({
       valueB,
-      valueA: String((parseInt(valueB) - 32) * (5 / 9)),
+      valueA: String((parseInt(valueB) - 32) * (5 / 9).toFixed(2)),
     });
   };
 
   kelToCel = (valueC) => {
     this.setState({
       valueC,
-      valueD: String(parseInt(valueC) - 273.15),
+      valueD: String((parseInt(valueC) - 273.15).toFixed(2)),
     });
   };
   celToKel = (valueD) => {
     this.setState({
       valueD,
-      valueC: String(parseInt(valueD) + 273.15),
+      valueC: String((parseInt(valueD) + 273.15).toFixed(2)),
     });
   };
 
