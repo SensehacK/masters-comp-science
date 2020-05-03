@@ -29,6 +29,7 @@ export default class MeasureVC extends Component {
   };
 
   render() {
+    //TODO: Measure Code
     return (
       <View style={styles.container}>
         <View style={styles.headContainer}>

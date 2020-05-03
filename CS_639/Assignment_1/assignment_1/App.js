@@ -36,6 +36,10 @@ import BackgroundImage from './components/assignment_3/backgroundImage';
 import MobileResume from './components/assignment_3/mobileResume';
 import ButtonImage from './components/assignment_3/buttonImage';
 import QuoteApp from './components/assignment_3/quoteApp';
+import SpellChecker from './components/assignment_4/snapshotLoginV4';
+import Counter from './components/assignment_4/counter';
+import SpellChecker from './components/assignment_4/spellChecker';
+
 
 const App = () => {
   return (
@@ -69,7 +73,10 @@ const App = () => {
       {/* <BackgroundImage /> */}
       {/* <MobileResume /> */}
       {/* <ButtonImage /> */}
-      <QuoteApp />
+      {/* <QuoteApp /> */}
+      {/* <SnapchatLoginV4 /> */}
+      {/* <Counter /> */}
+      <SpellChecker />
     </View>
   );
 };
