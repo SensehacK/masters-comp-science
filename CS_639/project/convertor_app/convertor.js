@@ -20,6 +20,8 @@ import MeasureVC from './components/measure';
 import SpeedVC from './components/speed';
 import WeightVC from './components/weight';
 import TemperatureVC from './components/temperature';
+import globalStyle from './style';
+
 
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
@@ -31,7 +33,8 @@ export default class Convertor extends Component {
   state = {
     homeDisplay: 'flex',
     distanceDisplay: 'none',
-    weightDisplay: 'none',	
+	weightDisplay: 'none',
+	temperatureDisplay: 'none',
     measureDisplay: 'none',
     speedDisplay: 'none',
     calculatorDisplay: 'none',
@@ -129,10 +132,12 @@ export default class Convertor extends Component {
   render() {
     return (
       <SafeAreaView>
+		<View style={globalStyle.backgroundColor}>  
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.container}>
+		  
             {/* Home display */}
             <View style={{display: this.state.homeDisplay}}>
               {/* Heading */}
@@ -148,6 +153,10 @@ export default class Convertor extends Component {
                   </View>
                 </View>
               </TouchableHighlight>
+			 
+			 
+			 
+			 <View style= {globalStyle.buttonMain}>
 
               {/* Weight Button Layout */}
               <TouchableHighlight onPress={this.showWeight}>
@@ -166,6 +175,9 @@ export default class Convertor extends Component {
                   </View>
                 </View>
               </TouchableHighlight>
+
+
+			  </View>
 
               {/* Temperature Button Layout */}
               <TouchableHighlight onPress={this.showTemperature}>
@@ -255,10 +267,10 @@ export default class Convertor extends Component {
               </TouchableHighlight>
               <CalculatorVC />
             </View>
-
             {/* End Component Layout calls */}
           </View>
         </ScrollView>
+		</View>
       </SafeAreaView>
     );
   }
@@ -288,10 +300,11 @@ const styles = StyleSheet.create({
 
   buttonInContainer: {
     alignItems: 'center',
+	
   },
   buttonContainer: {
-    height: deviceHeight / 8,
-    width: (3 * deviceWidth) / 6,
+    height: deviceHeight / 10,
+    width: (3 * deviceWidth) / 7,
     backgroundColor: 'blue',
     marginHorizontal: 'auto',
     marginTop: 40,
@@ -300,7 +313,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {
-    fontSize: deviceHeight / 24,
+    fontSize: deviceHeight / 30,
     color: 'white',
   },
   conversionHeadContainer: {

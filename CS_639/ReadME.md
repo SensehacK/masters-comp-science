@@ -8,6 +8,19 @@ Use this command to create a new project without quotes in command.
 
 ## Running the React App
 
+### Install dependency
+
+We have to install all of the dependencies in the project workspace.
+
+Node Modules dependency installation
+
+> npm install
+
+Cocoapods iOS dependency
+
+> pod install
+
+
 ### Xcode iOS Deploy
 
 Run this command on terminal
