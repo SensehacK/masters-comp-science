@@ -37,13 +37,15 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
 
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Distance">
+        <Stack.Navigator initialRouteName="Simple Converter">
           <Stack.Screen name="Currency" component={Currency} />
           <Stack.Screen name="Distance" component={DistanceVC} />
           <Stack.Screen name="Measure" component={MeasureVC} />
           <Stack.Screen name="Speed" component={SpeedVC} />
           <Stack.Screen name="Temperature" component={TemperatureVC} />
           <Stack.Screen name="Weight" component={WeightVC} />
+          <Stack.Screen name="Simple Converter" component={Converter} />
+
 
 
         </Stack.Navigator>

@@ -184,7 +184,7 @@ export default class Currency extends Component {
               onPress={this.clear}>
               <View style={styles.inputBoxContainer}>
                 <View style={styles.button} >
-                  <Text>
+                  <Text style={styles.btnText}>
                     Clear
                   </Text>
                 </View>
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         width: deviceWidth,
         height: deviceHeight / 10,
-        backgroundColor: '#b734cf',
+        backgroundColor: '#2f6e20',
     },
     headTextContainer: {
         fontSize: deviceHeight / 21,
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     button:{
         height:deviceHeight/14,
         width:(3*deviceWidth)/8,
-        backgroundColor: '#b734cf',
+        backgroundColor: '#2f6e20',
 
         borderRadius:5,
         borderColor:'red',
@@ -309,9 +309,11 @@ const styles = StyleSheet.create({
         transform: [
             { scaleX: 1.5 },
             { scaleY: 1.5 },
-        ]
-
-    }
-
-
+        ],
+        color:'white',
+    
+      },
+      btnText:{
+        color:'white',
+      }
 });

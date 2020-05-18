@@ -236,7 +236,7 @@ export default class TemperatureVC extends Component {
               onPress={this.clear}>
               <View style={styles.inputBoxContainer}>
                 <View style={styles.button} >
-                  <Text>
+                  <Text style={styles.btnText}>
                     Clear
                   </Text>
                 </View>
@@ -262,7 +262,7 @@ headContainer: {
     justifyContent: 'space-around',
     width: deviceWidth,
     height: deviceHeight / 10,
-    backgroundColor: '#b734cf',
+    backgroundColor: '#2f6e20',
 },
 headTextContainer: {
     fontSize: deviceHeight / 21,
@@ -280,7 +280,7 @@ buttonContainer:{
 button:{
     height:deviceHeight/14,
     width:(3*deviceWidth)/8,
-    backgroundColor: '#b734cf',
+    backgroundColor: '#2f6e20',
 
     borderRadius:5,
     borderColor:'red',
@@ -360,7 +360,11 @@ pickerHeader: {
     transform: [
         { scaleX: 1.5 },
         { scaleY: 1.5 },
-    ]
+    ],
+    color:'white',
 
-}
+  },
+  btnText:{
+    color:'white',
+  }
 });
