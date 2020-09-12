@@ -1,4 +1,5 @@
 {
-    "python.pythonPath": "/Users/SensehacK/anaconda3/bin/python",
-    "python.linting.enabled": true
+    "python.pythonPath": "C:\\Users\\Kautilya\\anaconda3\\python.exe",
+	"python.linting.enabled": true,
+	"python.dataScience.jupyterServerURI": "local"
 }
