@@ -1,6 +1,6 @@
 
 *.map
-*.ipynb
+CS_608/*.ipynb
 *.cache
 
 
