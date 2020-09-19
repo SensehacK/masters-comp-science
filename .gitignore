@@ -1,6 +1,7 @@
 
 *.map
 CS_608/*.ipynb
+*.ipynb_checkpoints
 *.cache
 
 
