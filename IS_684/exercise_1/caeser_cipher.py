@@ -22,6 +22,7 @@ for char in caeser_str:
         continue
 
     isUpperCase = char.isupper()
+    # Lowercase
     index_int = alphabet.find(char.lower())+3
 
     if index_int > 25:
