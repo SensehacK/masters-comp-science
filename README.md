@@ -17,13 +17,13 @@ Eg. CS = Computer Science
 - [Artist Finder](https://sensehack.github.io/masters-comp-science/CS_641/live/artistFinder/)
 
 - [API Node + MySQL Docker](https://vast-reef-06229.herokuapp.com/)
-  [Source Code](https://github.com/SensehacK/nodejs)
+  [Source Code](https://github.com/SensehacK/masters-comp-science/tree/master/CS_612/Assignment_5)
 
 - [Lyrics Finder](https://sensehack.github.io/masters-comp-science/CS_641/live/lyricsFinder/)
 
 - [Grid Layout Portfolio](https://sensehack.github.io/masters-comp-science/CS_641/Assignment_3/Kautilya_Portfolio/)
 
-- [React Static Portfolio Blog](https://github.com/SensehacK/react-app)
+- [React Static Portfolio Blog](https://github.com/SensehacK/masters-comp-science/tree/master/CS_612/Assignment_4)
 
 - [CSS Trials Basics](https://sensehack.github.io/masters-comp-science/CS_641/Assignment_1/assignment_1.html)
 
@@ -45,6 +45,7 @@ Didn't follow any specific guidelines towards it but tried to keep course folder
 │   ├── Assignment_3
 │   ├── Assignment_4
 │   ├── Assignment_5
+│   ├── Assignment_6
 │   └── launch.json
 ├── CS_641
 │   ├── Assignment_1
@@ -98,7 +99,7 @@ All of my coding cheat sheets which I usually refer back and forth as normally I
 
 Sometimes due to limited network connectivity, I can't check with the documentation so this is my personal Coding Diary / Cheat sheet maintained by me.
 
-[Sense Dev Cheat sheet](https://sensehack.github.io/dev-cheatsheet/)
+[Sense Dev Cheat sheet](https://kautilyasave.gitbook.io/dev/)
 [Source Code](https://github.com/SensehacK/dev-cheatsheet)
 
 ## Tools 🛠
