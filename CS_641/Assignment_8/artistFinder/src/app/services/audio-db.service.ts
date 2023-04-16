@@ -13,8 +13,8 @@ import { AlbumsDB, Album } from '../../model/audioDB/albumDB';
 export class AudioDBService {
 
   // Variables
-  urlArtistInfo = 'https://www.theaudiodb.com/api/v1/json/195233/search.php?s=';
-  urlArtistAlbum = 'https://theaudiodb.com/api/v1/json/195233/searchalbum.php?s=';
+  urlArtistInfo = 'https://theaudiodb.com/api/v1/json/2/discography.php?s=';
+  urlArtistAlbum = 'https://theaudiodb.com/api/v1/json/2/discography.php?s=';
 
   artistName: string;
   albumD = []; // Array of Album Object
